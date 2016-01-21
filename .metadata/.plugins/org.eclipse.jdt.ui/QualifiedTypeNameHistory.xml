@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.VictorSP"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Compressor"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.SuperShifter"/>
+<fullyQualifiedTypeName name="java.awt.Robot"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.Pnuematics"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.JoystickTankDrive"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.Pressurize"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
+</qualifiedTypeNameHistroy>
