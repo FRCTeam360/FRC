@@ -10,4 +10,7 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.JoystickTankDrive"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.Pressurize"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.JoystickButton"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.ShiftUp"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.ShiftDown"/>
 </qualifiedTypeNameHistroy>
