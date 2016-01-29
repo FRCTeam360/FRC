@@ -9,7 +9,7 @@ public class Math {
 	public boolean johnCena() {
 		logger.entry();
 		logger.error("Error!");
-		return logger.exit(false); 
+		return logger.exit(false);
 	}
 
 }
