@@ -1,0 +1,11 @@
+package org.usfirst.frc.team360.robot.subsystems;
+
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
+public class Logger {
+	
+	private static final Logger logger = (Logger) LogManager.getLogger(Logger.class);
+	
+	public static void main(final String)
+}

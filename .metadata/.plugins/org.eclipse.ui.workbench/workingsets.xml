@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1453771930427_1" label="hguo" name="hguo">
+<item elementID="=RainMakerXVII/src&lt;org.usfirst.frc.team360.robot.subsystems" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1453080010963_0" label="Window Working Set" name="Aggregate for window 1453080010962"/>
 </workingSetManager>

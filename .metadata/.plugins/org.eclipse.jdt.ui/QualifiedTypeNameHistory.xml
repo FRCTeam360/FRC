@@ -10,4 +10,6 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.JoystickTankDrive"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.Pressurize"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
 </qualifiedTypeNameHistroy>
