@@ -10,6 +10,7 @@ import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
+import org.usfirst.frc.team360.robot.commands.usbSave;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
@@ -33,6 +34,7 @@ public class Robot extends IterativeRobot {
     Command pressurize;
     Command shiftup;
     Command shiftdown;
+    Command usbsave;
 	public static OI oi;
 	
 
@@ -48,6 +50,7 @@ public class Robot extends IterativeRobot {
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
     	drivetrain = new DriveTrain();
+    	usbsave = new usbSave();
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
@@ -76,6 +79,7 @@ public class Robot extends IterativeRobot {
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out.
+    		usbsave.start();
         
     }
 

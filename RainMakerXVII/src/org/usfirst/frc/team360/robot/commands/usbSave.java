@@ -4,9 +4,11 @@ import edu.wpi.first.wpilibj.command.Command;
 import java.io.*;
 import java.util.ArrayList;
 
-public class usbSave {
-	public static void main(String[] arg) {
-		
+import org.usfirst.frc.team360.robot.Robot;
+
+public class usbSave extends Command {
+	  protected void initialize() {
+	    	
 		boolean powerSwitch=true;
 		int x=9, y=150, z= 675;
 		String name="Galormadron", setting="on", plant="rutabaga";
@@ -18,7 +20,7 @@ public class usbSave {
 		stuff.add("Five");
 		
 		try{
-			FileOutputStream saveFile=new FileOutputStream("u/usbSaveFile.sav");
+			FileOutputStream saveFile=new FileOutputStream("u/usbSaveFile.txt");
 			
 			// Might need to change saveFile to u/usbSaveFile
 			ObjectOutputStream save = new ObjectOutputStream(saveFile);
@@ -38,5 +40,23 @@ public class usbSave {
 			catch(Exception exc){
 			exc.printStackTrace();
 		}
+	}
+	  protected boolean isFinished() {
+	        return true;
+	    }
+	@Override
+	protected void execute() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	protected void end() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	protected void interrupted() {
+		// TODO Auto-generated method stub
+		
 	}
 }
