@@ -16,5 +16,27 @@ public class usbSave {
 		stuff.add("Three");
 		stuff.add("Four");
 		stuff.add("Five");
+		
+		try{
+			FileOutputStream saveFile=new FileOutputStream("u/usbSaveFile.sav");
+			
+			// Might need to change saveFile to u/usbSaveFile
+			ObjectOutputStream save = new ObjectOutputStream(saveFile);
+
+			save.writeObject(powerSwitch);
+			save.writeObject(x);
+			save.writeObject(y);
+			save.writeObject(z);
+			save.writeObject(name);
+			save.writeObject(setting);
+			save.writeObject(plant);
+			save.writeObject(stuff);
+
+			save.close();
+			}
+		
+			catch(Exception exc){
+			exc.printStackTrace();
+		}
 	}
 }
