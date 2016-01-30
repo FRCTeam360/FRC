@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.VictorSP"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Compressor"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.SuperShifter"/>
 <fullyQualifiedTypeName name="java.awt.Robot"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.Pnuematics"/>
@@ -12,4 +11,7 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
 </qualifiedTypeNameHistroy>
