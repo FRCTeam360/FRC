@@ -5648,3 +5648,117 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 !MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
 !SUBENTRY 1 org.eclipse.core.expressions 4 201 2016-01-24 20:19:29.482
 !MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.jdt.internal.core.CompilationUnit
+!SESSION 2016-01-30 15:24:00.381 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/josh/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/josh/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-30 15:25:34.503
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-30 15:25:45.641
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-30 15:25:45.671
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-30 15:25:45.698
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-30 15:25:45.756
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-30 15:25:45.812
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-30 15:25:45.923
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-01-30 15:27:33.780
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-01-30 15:27:33.811
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-01-30 15:43:57.809
+!MESSAGE [org.usfirst.frc.team360.robot.subsystems [in src [in RainMakerXVII]]
+  DriveTrain.java
+    package org.usfirst.frc.team360.robot.subsystems
+    import edu.wpi.first.wpilibj.VictorSP
+    import edu.wpi.first.wpilibj.command.Subsystem
+    import org.usfirst.frc.team360.robot.*
+    import org.usfirst.frc.team360.robot.commands.JoystickTankDrive
+    class DriveTrain
+      VictorSP motorR1
+      VictorSP motorR2
+      VictorSP motorL1
+      VictorSP motorL2
+      void drive(double, double)
+      void driveR(double)
+      void driveL(double)
+      void stopR()
+      void stopL()
+      void initDefaultCommand()
+  Pneumatics.java
+    package org.usfirst.frc.team360.robot.subsystems
+    import edu.wpi.first.wpilibj.Compressor
+    import edu.wpi.first.wpilibj.command.Subsystem
+    import org.usfirst.frc.team360.robot.*
+    import org.usfirst.frc.team360.robot.commands.Pressurize
+    class Pneumatics
+      Compressor comp
+      void pressurize()
+      void stop()
+      void initDefaultCommand()
+  SuperShifter.java
+    package org.usfirst.frc.team360.robot.subsystems
+    import edu.wpi.first.wpilibj.DoubleSolenoid
+    import edu.wpi.first.wpilibj.command.Subsystem
+    import org.usfirst.frc.team360.robot.*
+    class SuperShifter
+      DoubleSolenoid superShifter
+      void open()
+      void close()
+      void initDefaultCommand()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-01-30 15:43:57.848
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-01-30 15:43:57.878
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-01-30 15:43:57.894
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-01-30 15:44:07.531
+!MESSAGE Class: RaspberryPiServer Package: org.usfirst.frc.team360.robot.subsystems
+
+!ENTRY org.eclipse.recommenders.rcp 2 23 2016-01-30 21:12:53.886
+!MESSAGE Failed to parse news feed
+!STACK 0
+java.net.UnknownHostException: www.codetrails.com: unknown error
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:907)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1302)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1255)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1171)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1105)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:102)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.getRSSFeed(CheckForProjectNewsJob.java:138)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.doRun(CheckForProjectNewsJob.java:89)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.run(CheckForProjectNewsJob.java:62)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
