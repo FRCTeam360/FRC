@@ -1,23 +1,6 @@
-INDEX VERSION 1.127+C:\Users\360\Desktop\FRC\.metadata\.plugins\org.eclipse.jdt.core
-2488111423.index
-3699641884.index
-559390872.index
-3046574904.index
-1431365861.index
-1825659293.index
-522689238.index
-3700886420.index
-3579399264.index
-970626710.index
-3872267451.index
-2094789591.index
-2541245157.index
-2938872725.index
-54792484.index
-1571712741.index
-3296867124.index
-4142789474.index
-260295031.index
-2326175388.index
-931267183.index
-4275448310.index
+INDEX VERSION 1.127+C:\Users\user\Desktop\FRC\.metadata\.plugins\org.eclipse.jdt.core
+2081394399.index
+320907819.index
+411497035.index
+1840164666.index
+3446155943.index
