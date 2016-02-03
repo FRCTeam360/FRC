@@ -1,6 +1,7 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
 import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -19,7 +20,7 @@ public class RaspberryPiServer extends Subsystem {
 	ServerSocket server;
 	Socket clientSocket = null;
 	PrintWriter out;
-	BufferedReader in;
+	DataInputStream input;
 	public void startConnection() {
 		int portNumber = 25500;
 
@@ -27,7 +28,7 @@ public class RaspberryPiServer extends Subsystem {
 		    server = new ServerSocket(portNumber);
 		    clientSocket = server.accept();
 		    out = new PrintWriter(clientSocket.getOutputStream(), true);
-		    in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+		    input = new DataInputStream(clientSocket.getInputStream());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

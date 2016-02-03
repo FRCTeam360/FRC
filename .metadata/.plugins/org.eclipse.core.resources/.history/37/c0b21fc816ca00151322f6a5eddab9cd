@@ -17,7 +17,7 @@ public class RaspberryPiServer extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	ServerSocket server;
-	Socket clientSocket = null;
+	Socket clientSocket;
 	PrintWriter out;
 	BufferedReader in;
 	public void startConnection() {

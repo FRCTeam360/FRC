@@ -8,6 +8,8 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
+import org.usfirst.frc.team360.robot.commands.ShiftDown;
+import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
@@ -29,6 +31,8 @@ public class Robot extends IterativeRobot {
 	
     Command joysticktankdrive;
     Command pressurize;
+    Command shiftup;
+    Command shiftdown;
     
 	public static OI oi;
 	
@@ -47,6 +51,8 @@ public class Robot extends IterativeRobot {
     	drivetrain = new DriveTrain();
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
+        shiftup = new ShiftUp();
+        shiftdown = new ShiftDown();
 		oi = new OI();
     }
 	
