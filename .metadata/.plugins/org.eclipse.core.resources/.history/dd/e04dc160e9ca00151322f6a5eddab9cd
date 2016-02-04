@@ -34,7 +34,6 @@ public class RaspberryPiServer extends Subsystem {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("hi");
 	}
 	public void run(){
 //		 if ((responseLine = is.readLine()) != null) {

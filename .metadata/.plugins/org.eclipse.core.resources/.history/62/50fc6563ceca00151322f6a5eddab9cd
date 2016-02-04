@@ -20,7 +20,6 @@ public class RaspberryPiServer extends Subsystem {
 	Socket clientSocket = null;
 	PrintWriter out;
 	BufferedReader in;
-	String responseLine;
 	public void startConnection() {
 		int portNumber = 25500;
 
@@ -29,16 +28,16 @@ public class RaspberryPiServer extends Subsystem {
 		    clientSocket = server.accept();
 		    out = new PrintWriter(clientSocket.getOutputStream(), true);
 		    in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-		    responseLine = "";
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("hi");
 	}
 	public void run(){
-//		 if ((responseLine = is.readLine()) != null) {
-//             System.out.println("Server: " + responseLine);
+		String inputLine, outputLine;
+        
+	    // Initiate conversation with clien
+	        
 	}
 	public void stop(){
 		try {

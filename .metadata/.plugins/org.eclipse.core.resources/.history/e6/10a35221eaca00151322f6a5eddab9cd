@@ -10,8 +10,10 @@ import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
+import org.usfirst.frc.team360.robot.commands.getCameraValue;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
+import org.usfirst.frc.team360.robot.subsystems.RaspberryPiServer;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 
 
@@ -27,13 +29,14 @@ public class Robot extends IterativeRobot {
 	public static DriveTrain drivetrain;
 	public static SuperShifter supershifter;
 	public static Pneumatics pneumatics;
+	public static RaspberryPiServer raspberrypiserver;
 	
 	
     Command joysticktankdrive;
     Command pressurize;
     Command shiftup;
     Command shiftdown;
-    
+    Command getcameravalue;
 	public static OI oi;
 	
 
@@ -48,11 +51,13 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
+    	raspberrypiserver = new RaspberryPiServer();
     	drivetrain = new DriveTrain();
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
         shiftdown = new ShiftDown();
+        getcameravalue = new getCameraValue();
 		oi = new OI();
     }
 	
@@ -95,6 +100,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         joysticktankdrive.start();
         pressurize.start();
+        getcameravalue.start();
     }
     
     /**
