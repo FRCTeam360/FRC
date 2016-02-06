@@ -20,12 +20,10 @@ public class usbSave extends Command {
 			// Might need to change saveFile to u/usbSaveFile
 			ObjectOutputStream save = new ObjectOutputStream(saveFile);
 
-			/*save.writeObject(motorR.get());
+			save.writeObject(motorR.get());
 			save.writeObject(motorL.get());
 			save.writeObject(motorRL.get());
-			save.writeObject(motorLR.get());*/
-			
-			System.out.println("Test!");
+			save.writeObject(motorLR.get());
 			           
 			save.close();
 			}
