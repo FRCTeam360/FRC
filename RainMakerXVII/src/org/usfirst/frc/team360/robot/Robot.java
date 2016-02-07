@@ -13,6 +13,7 @@ import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
+import org.usfirst.frc.team360.robot.subsystems.navX;
 
 
 /**
@@ -27,6 +28,7 @@ public class Robot extends IterativeRobot {
 	public static DriveTrain drivetrain;
 	public static SuperShifter supershifter;
 	public static Pneumatics pneumatics;
+	public static navX navx; 
 	
 	
     Command joysticktankdrive;
@@ -47,12 +49,16 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
+    	navx = new navX(); 
     	drivetrain = new DriveTrain();
+    	
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
         shiftdown = new ShiftDown();
+        
 		oi = new OI();
+		
     }
 	
 	public void disabledPeriodic() {
@@ -98,7 +104,7 @@ public class Robot extends IterativeRobot {
     
     /**
      * This function is called periodically during test mode
-     */
+  */
     public void testPeriodic() {
         LiveWindow.run();
     }
