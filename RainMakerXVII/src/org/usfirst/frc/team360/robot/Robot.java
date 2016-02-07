@@ -13,7 +13,7 @@ import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
-import org.usfirst.frc.team360.robot.subsystems.navX2;
+import org.usfirst.frc.team360.robot.subsystems.navX;
 
 
 /**
@@ -28,7 +28,7 @@ public class Robot extends IterativeRobot {
 	public static DriveTrain drivetrain;
 	public static SuperShifter supershifter;
 	public static Pneumatics pneumatics;
-	public static navX2 navX; 
+	public static navX navx; 
 	
 	
     Command joysticktankdrive;
@@ -49,12 +49,14 @@ public class Robot extends IterativeRobot {
         // instantiate the command used for the autonomous period
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
-    	navX2 navX = new navX2(); 
+    	navx = new navX(); 
     	drivetrain = new DriveTrain();
+    	
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
         shiftdown = new ShiftDown();
+        
 		oi = new OI();
 		
     }

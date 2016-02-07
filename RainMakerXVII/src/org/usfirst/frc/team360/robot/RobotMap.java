@@ -1,7 +1,10 @@
 package org.usfirst.frc.team360.robot;
+import com.kauailabs.navx.frc.AHRS;
+
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.VictorSP;
 
 /**
@@ -22,6 +25,8 @@ public class RobotMap {
     // public static double rangefinderModule = 1;
 	
 	//motors
+	public static AHRS ahrs = new AHRS(SPI.Port.kMXP); /* Alternatives:  SPI.Port.kMXP, I2C.Port.kMXP or SerialPort.Port.kUSB */
+	
 	public static VictorSP motorR1 = new VictorSP(0);
 	public static VictorSP motorR2 = new VictorSP(1);
 	public static VictorSP motorL1 = new VictorSP(2);
