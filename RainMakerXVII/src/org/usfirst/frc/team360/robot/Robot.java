@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
@@ -31,6 +32,7 @@ public class Robot extends IterativeRobot {
 	public static Pneumatics pneumatics;
 	public static RaspberryPiServer raspberrypiserver;
 	
+	public LiveWindow livewindow;
 	
     Command joysticktankdrive;
     Command pressurize;
@@ -38,7 +40,7 @@ public class Robot extends IterativeRobot {
     Command shiftdown;
     Command getcameravalue;
 	public static OI oi;
-	
+	String i = "";
 
 
     /**
@@ -46,8 +48,6 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-    	
-        
         // instantiate the command used for the autonomous period
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
@@ -75,6 +75,10 @@ public class Robot extends IterativeRobot {
      */
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
+    	RobotMap.motorL1.set(OI.joyL.getRawAxis(1));
+    	RobotMap.motorR1.set(OI.joyL.getRawAxis(1));
+    	RobotMap.motorL2.set(OI.joyL.getRawAxis(1));
+    	RobotMap.motorR2.set(OI.joyL.getRawAxis(1));
     }
 
     public void teleopInit() {
@@ -97,11 +101,14 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-    	System.out.println("hi");
+    	//SmartDashboard.putString("output", "er");
+		//SmartDashboard.putString("ou", i + Double.toString(Math.random()));
+    	SmartDashboard.putDouble("o", OI.joyL.getRawAxis(1));
         Scheduler.getInstance().run();
         joysticktankdrive.start();
         pressurize.start();
         getcameravalue.start();
+        //getcameravalue.start();
     }
     
     /**

@@ -15,8 +15,8 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 public class OI {
     public static Joystick joyR = new Joystick(0);
     public static Joystick joyL = new Joystick(1);
-    public static Button buttonUp = new JoystickButton(joyR, 0);
-    public static Button buttonDown = new JoystickButton(joyL, 0);
+    public static Button buttonUp = new JoystickButton(joyR, 1);
+    public static Button buttonDown = new JoystickButton(joyL, 1);
     public OI(){
     	buttonUp.whenPressed(new ShiftUp());
     	buttonDown.whenPressed(new ShiftDown());

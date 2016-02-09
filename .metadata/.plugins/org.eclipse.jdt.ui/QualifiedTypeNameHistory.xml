@@ -21,7 +21,9 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.RaspberryPiServer"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
+<fullyQualifiedTypeName name="java.io.DataOutputStream"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="java.io.DataInputStream"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.getCameraValue"/>
 </qualifiedTypeNameHistroy>
