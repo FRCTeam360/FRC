@@ -12,20 +12,22 @@ public class usbSave extends Command {
 	VictorSP motorL = RobotMap.motorR2;  
 	VictorSP motorRL = RobotMap.motorL1;
 	VictorSP motorLR = RobotMap.motorL2;  
-	FileOutputStream saveFile;
-	ObjectOutputStream save;
 	protected void initialize() {
 		
 		try{
-			 saveFile=new FileOutputStream("u/usbSaveFile.sav");
+			FileOutputStream saveFile=new FileOutputStream("u/usbSaveFile.sav");
 			
 			// Might need to change saveFile to u/usbSaveFile
-			 save = new ObjectOutputStream(saveFile);
+			ObjectOutputStream save = new ObjectOutputStream(saveFile);
 
-			
+			save.writeObject(motorR.get());
+			save.writeObject(motorL.get());
+			save.writeObject(motorRL.get());
+			save.writeObject(motorLR.get());
 			
 			System.out.println("Test!");
 			           
+			save.close();
 			}
 		
 			catch(Exception exc){
@@ -38,25 +40,12 @@ public class usbSave extends Command {
 	@Override
 	protected void execute() {
 		// TODO Auto-generated method stub
-		try {
-			save.writeObject(motorR.get());
-			save.writeObject(motorL.get());
-			save.writeObject(motorRL.get());
-			save.writeObject(motorLR.get());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 	@Override
 	protected void end() {
 		// TODO Auto-generated method stub
-		try {
-			save.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 	@Override
 	protected void interrupted() {
