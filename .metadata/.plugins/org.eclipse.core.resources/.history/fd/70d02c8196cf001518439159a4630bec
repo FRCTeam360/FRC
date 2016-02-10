@@ -80,8 +80,7 @@ import org.usfirst.frc.team360.robot.RobotMap;
 
 @SuppressWarnings("unused")
 public class usbSave extends Command {
-		FileOutputStream fop;
-		String content;
+		
 		VictorSP motorR = RobotMap.motorR1;  
 		VictorSP motorL = RobotMap.motorR2;  
 		VictorSP motorRL = RobotMap.motorL1;
@@ -91,15 +90,15 @@ public class usbSave extends Command {
 		protected void initialize() {
 		
 		File file = new File("u/newfile.txt");
-		content = ("Starting Log");
+		String content = ("Starting Log");
 
-		try  {
-			fop = new FileOutputStream(file);
+		try (FileOutputStream fop = new FileOutputStream(file)) {
+			
 			byte[] contentInBytes = content.getBytes();
 			
 			fop.write(contentInBytes);
 			fop.flush();
-
+			fop.close();
 
 			if (!file.exists()) {
 				file.createNewFile();
@@ -114,9 +113,10 @@ public class usbSave extends Command {
 		@Override
 		protected void execute() {
 			try {
-				byte[] contentInBytes = content.getBytes();
-				
-				fop.write(contentInBytes);
+				save.writeObject(motorR.get());
+				save.writeObject(motorL.get());
+				save.writeObject(motorRL.get());
+				save.writeObject(motorLR.get());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -134,17 +134,12 @@ public class usbSave extends Command {
 		@Override
 		protected void end() {
 			// TODO Auto-generated method stub
-			try {
-				fop.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
 		}
 
 		@Override
 		protected void interrupted() {
 			// TODO Auto-generated method stub
-			end();
+			
 		}
 }

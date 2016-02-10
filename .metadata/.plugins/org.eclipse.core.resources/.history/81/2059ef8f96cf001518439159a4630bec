@@ -134,12 +134,7 @@ public class usbSave extends Command {
 		@Override
 		protected void end() {
 			// TODO Auto-generated method stub
-			try {
-				fop.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			fop.close();
 		}
 
 		@Override
