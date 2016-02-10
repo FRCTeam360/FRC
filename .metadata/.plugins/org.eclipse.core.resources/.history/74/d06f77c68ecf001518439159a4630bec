@@ -28,7 +28,7 @@ public class usbSave extends Command {
 			           
 			}
 		
-			catch(Exception etc){
+			catch(Exception exc){
 			exc.printStackTrace();
 		}
 	}
@@ -88,7 +88,7 @@ public class usbSave {
 		ObjectOutputStream save = null;
 
 		File file = new File("u/newfile.txt");
-		String content = "Starting Log";
+		String content = "This is the text content";
 
 		try (FileOutputStream fop = new FileOutputStream(file)) {
 
@@ -107,6 +107,7 @@ public class usbSave {
 			save.writeObject(motorRL.get());
 			save.writeObject(motorLR.get());
 			
+			System.out.println("Done");
 
 		} catch (IOException e) {
 			e.printStackTrace();
