@@ -12,15 +12,15 @@ public class usbSave extends Command {
 	VictorSP motorL = RobotMap.motorR2;  
 	VictorSP motorRL = RobotMap.motorL1;
 	VictorSP motorLR = RobotMap.motorL2;  
-	FileOutputStream Textfile;
+	FileOutputStream saveFile;
 	ObjectOutputStream save;
 	protected void initialize() {
 		
 		try{
-			 Textfile=new FileOutputStream("u/usbSaveFile.txt");
+			 saveFile=new FileOutputStream("u/usbSaveFile.sav");
 			
 			// Might need to change saveFile to u/usbSaveFile
-			 save = new ObjectOutputStream(Textfile);
+			 save = new ObjectOutputStream(saveFile);
 
 			
 			
