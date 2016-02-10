@@ -6516,3 +6516,123 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 18:49:15.511
 !MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 18:54:02.317
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 18:54:02.360
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 18:56:14.800
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 18:56:14.819
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 18:58:33.197
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 18:58:33.213
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:01:51.746
+!MESSAGE [org.usfirst.frc.team360.robot.commands [in src [in RainMakerXVII]]
+  Pressurize.java
+    package org.usfirst.frc.team360.robot.commands
+    import org.usfirst.frc.team360.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class Pressurize
+      Pressurize()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  ShiftDown.java
+    package org.usfirst.frc.team360.robot.commands
+    import org.usfirst.frc.team360.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class ShiftDown
+      ShiftDown()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  ShiftUp.java
+    package org.usfirst.frc.team360.robot.commands
+    import org.usfirst.frc.team360.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    class ShiftUp
+      ShiftUp()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  JoystickTankDrive.java
+    package org.usfirst.frc.team360.robot.commands
+    import edu.wpi.first.wpilibj.command.Command
+    import org.usfirst.frc.team360.robot.*
+    class JoystickTankDrive
+      JoystickTankDrive()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()
+  getCameraValue.java
+    package org.usfirst.frc.team360.robot.commands
+    import java.io.BufferedReader
+    import java.io.IOException
+    import java.io.InputStreamReader
+    import java.io.PrintWriter
+    import java.net.ServerSocket
+    import java.net.Socket
+    import org.usfirst.frc.team360.robot.Robot
+    import edu.wpi.first.wpilibj.command.Command
+    import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard
+    class getCameraValue
+      String i
+      getCameraValue()
+      void initialize()
+      void execute()
+      boolean isFinished()
+      void end()
+      void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:01:51.763
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:01:51.796
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:01:51.812
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:01:54.877
+!MESSAGE Class: ma Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:07:00.057
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:07:00.072
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:07:13.725
+!MESSAGE Last deploy running
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:07:14.245
+!MESSAGE Waiting
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:07:14.263
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:07:14.280
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:08:53.289
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-08 19:08:53.313
+!MESSAGE Targets: deploy, Mode: run

@@ -104,11 +104,11 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
     	//SmartDashboard.putString("output", "er");
 		//SmartDashboard.putString("ou", i + Double.toString(Math.random()));
-    	SmartDashboard.putDouble("o", OI.joyL.getRawAxis(1));
+    //	SmartDashboard.putDouble("o", OI.joyL.getRawAxis(1));
         Scheduler.getInstance().run();
-        //ma.execute();
-        joysticktankdrive.start();
-        pressurize.start();
+        ma.start();
+        //getcameravalue.start();
+        //getcameravalue.start();
     }
     
     /**
