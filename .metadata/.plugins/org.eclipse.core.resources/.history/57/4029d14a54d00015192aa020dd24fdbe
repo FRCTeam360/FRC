@@ -109,10 +109,7 @@ public class usbSave extends Command {
 		protected void execute() {
 			try {
 				byte[] contentInBytes = content.getBytes();
-				//save.writeObject(motorR.get());
-				//save.writeObject(motorL.get());
-				//save.writeObject(motorRL.get());
-				//save.writeObject(motorLR.get());
+				
 				fop.write(contentInBytes);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
