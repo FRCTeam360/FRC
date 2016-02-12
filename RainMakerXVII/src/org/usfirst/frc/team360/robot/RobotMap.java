@@ -27,6 +27,7 @@ public class RobotMap {
 	public static VictorSP motorL1 = new VictorSP(2);
 	public static VictorSP motorL2 = new VictorSP(3);
 	
+	
 	//supershifter pneumatics 
 	public static DoubleSolenoid superShifter = new DoubleSolenoid(0, 1);
 	//compressor 
