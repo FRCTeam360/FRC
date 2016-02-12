@@ -12,7 +12,6 @@ import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.commands.getCameraValue;
-import org.usfirst.frc.team360.robot.commands.ma;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.RaspberryPiServer;
@@ -33,16 +32,12 @@ public class Robot extends IterativeRobot {
 	public static Pneumatics pneumatics;
 	public static RaspberryPiServer raspberrypiserver;
 	
-	public LiveWindow livewindow;
-	
     Command joysticktankdrive;
     Command pressurize;
     Command shiftup;
     Command shiftdown;
     Command getcameravalue;
 	public static OI oi;
-	String i = "";
-
 
     /**
      * This function is run when the robot is first started up and should be
@@ -54,11 +49,13 @@ public class Robot extends IterativeRobot {
     	pneumatics = new Pneumatics();
     	raspberrypiserver = new RaspberryPiServer();
     	drivetrain = new DriveTrain();
+    	
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
         shiftdown = new ShiftDown();
         getcameravalue = new getCameraValue();
+        
 		oi = new OI();
     }
 	
@@ -101,7 +98,8 @@ public class Robot extends IterativeRobot {
     /**
      * This function is called periodically during operator control
      */
-    public void teleopPeriodic() {
+    @SuppressWarnings("deprecation")
+	public void teleopPeriodic() {
     	//SmartDashboard.putString("output", "er");
 		//SmartDashboard.putString("ou", i + Double.toString(Math.random()));
     	SmartDashboard.putDouble("o", OI.joyL.getRawAxis(1));
