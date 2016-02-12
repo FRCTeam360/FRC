@@ -17,4 +17,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SPI.Port"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.navX2"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.navXPrintAngle"/>
 </qualifiedTypeNameHistroy>

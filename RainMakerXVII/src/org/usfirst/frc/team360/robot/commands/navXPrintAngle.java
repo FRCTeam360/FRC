@@ -3,6 +3,7 @@ package org.usfirst.frc.team360.robot.commands;
 import org.usfirst.frc.team360.robot.Robot;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -22,7 +23,7 @@ public class navXPrintAngle extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.navx.getAngle();
+    	SmartDashboard.putNumber("sd", Robot.navx.getAngle());
     	
     }
 

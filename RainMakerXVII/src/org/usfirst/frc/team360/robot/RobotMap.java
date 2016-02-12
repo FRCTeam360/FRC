@@ -1,6 +1,5 @@
 package org.usfirst.frc.team360.robot;
 import com.kauailabs.navx.frc.AHRS;
-
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
@@ -37,8 +36,9 @@ public class RobotMap {
 	public static Encoder encoder2 = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
 	
 	
-	//supershifter pneumatics 
+	//supershifter shooter pneumatics 
 	public static DoubleSolenoid superShifter = new DoubleSolenoid(0, 1);
+	public static DoubleSolenoid Shooter = new DoubleSolenoid(0, 1) ;
 	//compressor 
 	public static Compressor compressor = new Compressor();
 }

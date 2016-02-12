@@ -35,6 +35,7 @@ public class Robot extends IterativeRobot {
     Command pressurize;
     Command shiftup;
     Command shiftdown;
+    Command navxgetangle;
 	public static OI oi;
 	
 
@@ -52,6 +53,7 @@ public class Robot extends IterativeRobot {
     	navx = new navX(); 
     	drivetrain = new DriveTrain();
     	
+    	shiftdown = new navXPrintAngle;
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
