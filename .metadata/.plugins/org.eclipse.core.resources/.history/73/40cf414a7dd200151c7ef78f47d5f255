@@ -1,21 +1,25 @@
 package org.usfirst.frc.team360.robot.commands;
-import org.usfirst.frc.team360.robot.Robot; 
+
+import org.usfirst.frc.team360.robot.Robot;
+import org.usfirst.frc.team360.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class CatapultDown extends Command {
+public class CatapultUp extends Command {
 
-    public CatapultDown() {
+    public CatapultUp() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(Robot.catapult);
+
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.catapult.close();
+    	Robot.catapult.open(); 
     }
 
     // Called repeatedly when this Command is scheduled to run
