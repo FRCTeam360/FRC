@@ -1,19 +1,23 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
+import org.usfirst.frc.team360.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import org.usfirst.frc.team360.robot.*;
-import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 /**
  *
  */
 public class DriveTrain extends Subsystem {
-	VictorSP motorR1 = RobotMap.motorR1;
-	VictorSP motorR2 = RobotMap.motorR2;
-	VictorSP motorL1 = RobotMap.motorL1;
-	VictorSP motorL2 = RobotMap.motorL2;
+	public static VictorSP motorR1 = RobotMap.motorR1;
+	public static VictorSP motorR2 = RobotMap.motorR2;
+	public static VictorSP motorL1 = RobotMap.motorL1;
+	public static VictorSP motorL2 = RobotMap.motorL2;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
+		public String getMotor(){
+			return "Motor R1: " + Double.toString(motorR1.get()) + ", Motor R2: " + Double.toString(motorR2.get()) 
+				+ ", Motor L1: " + Double.toString(motorL1.get()) + ", MotorL2: " + Double.toString(motorL2.get());
+		}
 	  public void drive(double motorR, double motorL) {
 		  motorR1.set(motorR);
 		  motorR2.set(motorR);
@@ -33,6 +37,12 @@ public class DriveTrain extends Subsystem {
 		  motorR2.stopMotor();  
 	  }
 	  public void stopL(){
+		  motorL1.stopMotor();
+		  motorL2.stopMotor();
+	  }
+	  public void stop(){
+		  motorR1.stopMotor();
+		  motorR2.stopMotor();
 		  motorL1.stopMotor();
 		  motorL2.stopMotor();
 	  }
