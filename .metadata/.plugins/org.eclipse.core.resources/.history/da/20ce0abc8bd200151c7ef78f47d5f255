@@ -59,9 +59,6 @@ public class Robot extends IterativeRobot {
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
     	drivetrain = new DriveTrain();
-    	catapult = new Catapult();
-    	intakearm = new IntakeArms();
-    	intakemotor = new IntakeMotor();
     	
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
