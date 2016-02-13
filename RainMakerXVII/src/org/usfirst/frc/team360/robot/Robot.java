@@ -1,30 +1,25 @@
 
 package org.usfirst.frc.team360.robot;
 
-import edu.wpi.first.wpilibj.CameraServer;
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.CameraServer;
-import edu.wpi.first.wpilibj.SampleRobot;
-import edu.wpi.first.wpilibj.Timer;
-
-import org.usfirst.frc.team360.robot.commands.ExampleCommand;
+import org.usfirst.frc.team360.robot.commands.AutonomousLong;
+import org.usfirst.frc.team360.robot.commands.AutonomousShort;
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.commands.usbSave;
-
-import org.usfirst.frc.team360.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
+
+import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 /**
@@ -43,14 +38,6 @@ public class Robot extends IterativeRobot {
         server.setQuality(50);
         server.startAutomaticCapture("cam0");
     }
-
-    public void operatorControl() {
-
-        while (isOperatorControl() && isEnabled()) {
-            /** robot code here! **/
-            Timer.delay(0.005);
-        }
-    }
 	
 	Command autonomousCommand;
 	SendableChooser autoChooser;
@@ -65,8 +52,9 @@ public class Robot extends IterativeRobot {
     Command shiftup;
     Command shiftdown;
     Command usbSave;
+    Command AutonomousShort;
+    Command AutonomousLong;
 	public static OI oi;
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	
 
 
@@ -77,8 +65,8 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
     	
     	autoChooser = new SendableChooser();
-        autoChooser.addDefault("Default Auto", new ExampleCommand());
-//        autoChooser.addObject("My Auto", new MyAutoCommand());
+        autoChooser.addDefault("AutonomousShort", new AutonomousShort());
+        autoChooser.addObject("AutonomousLong", new AutonomousLong());
         SmartDashboard.putData("Auto mode", autoChooser);
     	
         // instantiate the command used for the autonomous period
@@ -113,7 +101,7 @@ public class Robot extends IterativeRobot {
     public void teleopInit() {
 		usbSave.start();
     	// This makes sure that the autonomous stops running when
-        // teleop starts running. If you want the autonomous to 
+        // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
         // this line or comment it out.
         
@@ -134,6 +122,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         joysticktankdrive.start();
         pressurize.start();
+//		usbSave.start();
     }
     
     /**

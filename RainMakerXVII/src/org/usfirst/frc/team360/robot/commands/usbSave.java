@@ -5,9 +5,13 @@ import edu.wpi.first.wpilibj.command.Command;
 import java.io.*;
 import org.usfirst.frc.team360.robot.Robot;
 import org.usfirst.frc.team360.robot.RobotMap;
+import edu.wpi.first.wpilibj.Timer;
 
 @SuppressWarnings("unused")
-public class usbSave extends Command {
+public class usbSave extends Command {  
+	
+	
+	
 		FileOutputStream fop;
 		String content;
 		VictorSP motorR = RobotMap.motorR1;
@@ -24,7 +28,8 @@ public class usbSave extends Command {
 		content = ("motorL = " + motorL.get());
 		content = ("motorRL = " + motorRL.get());
 		content = ("motorLR = " + motorLR.get());
-		
+		content = ("time: " + Timer.getMatchTime());
+		// if program does not work, replace motor"R, L, RL, LR".get() with RobotMap.motor"R, L, RL, LR".get()
 		try  {
 			fop = new FileOutputStream(file);
 			byte[] contentInBytes = content.getBytes();
@@ -49,12 +54,7 @@ public class usbSave extends Command {
 				byte[] contentInBytes = content.getBytes();
 				fop.write(contentInBytes);
 				
-				/*VictorSP motorR = RobotMap.motorR1;
-				VictorSP motorL = RobotMap.motorR2;
-				VictorSP motorRL = RobotMap.motorL1;
-				VictorSP motorLR = RobotMap.motorL2;
-				
-				content = ("motorR = " + motorR.get());
+			/*	content = ("motorR = " + motorR.get());
 				content = ("motorL = " + motorL.get());
 				content = ("motorRL = " + motorRL.get());
 				content = ("motorLR = " + motorLR.get());*/

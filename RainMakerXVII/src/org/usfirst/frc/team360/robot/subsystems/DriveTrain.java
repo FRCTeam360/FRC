@@ -1,9 +1,9 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
+import org.usfirst.frc.team360.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import org.usfirst.frc.team360.robot.*;
-import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 /**
  *
  */
@@ -33,6 +33,12 @@ public class DriveTrain extends Subsystem {
 		  motorR2.stopMotor();  
 	  }
 	  public void stopL(){
+		  motorL1.stopMotor();
+		  motorL2.stopMotor();
+	  }
+	  public void stop(){
+		  motorR1.stopMotor();
+		  motorR2.stopMotor();
 		  motorL1.stopMotor();
 		  motorL2.stopMotor();
 	  }
