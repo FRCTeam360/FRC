@@ -1,5 +1,4 @@
 package org.usfirst.frc.team360.robot;
-
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.VictorSP;
@@ -26,9 +25,12 @@ public class RobotMap {
 	public static VictorSP motorR2 = new VictorSP(1);
 	public static VictorSP motorL1 = new VictorSP(2);
 	public static VictorSP motorL2 = new VictorSP(3);
-	
+	public static VictorSP intakeMotor = new VictorSP(0); 
+
 	//supershifter pneumatics 
 	public static DoubleSolenoid superShifter = new DoubleSolenoid(0, 1);
+	public static DoubleSolenoid catapultTusks = new DoubleSolenoid(2, 3);
+	public static DoubleSolenoid intakeArms = new DoubleSolenoid(2,3);
 	//compressor 
 	public static Compressor compressor = new Compressor();
 }

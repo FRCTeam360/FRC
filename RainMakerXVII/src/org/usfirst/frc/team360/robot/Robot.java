@@ -1,15 +1,22 @@
 
 package org.usfirst.frc.team360.robot;
-
-import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.IterativeRobot; 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+
+import org.usfirst.frc.team360.robot.commands.CatapultDown;
+import org.usfirst.frc.team360.robot.commands.CatapultUp;
+import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
+import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
+import org.usfirst.frc.team360.robot.subsystems.Catapult;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team360.robot.subsystems.IntakeArms;
+import org.usfirst.frc.team360.robot.subsystems.IntakeMotor;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 
@@ -26,11 +33,20 @@ public class Robot extends IterativeRobot {
 	public static DriveTrain drivetrain;
 	public static SuperShifter supershifter;
 	public static Pneumatics pneumatics;
+	public static Catapult catapult;
+	public static IntakeArms intakearm;
+	public static IntakeMotor intakemotor; 
+	
+	
 	
     Command joysticktankdrive;
     Command pressurize;
     Command shiftup;
     Command shiftdown;
+    Command catapultup;
+    Command catapultdown; 
+    Command intakearmup; 
+    Command intakearmdown;
     
 	public static OI oi;
 
@@ -48,6 +64,11 @@ public class Robot extends IterativeRobot {
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
         shiftdown = new ShiftDown();
+        catapultdown = new CatapultDown();
+        catapultup = new CatapultUp();
+        intakearmdown = new IntakeArmDown();
+        intakearmup = new IntakeArmUp();
+        
         
 		oi = new OI();
     }
