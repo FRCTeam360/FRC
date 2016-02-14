@@ -19,7 +19,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
- 
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -30,21 +30,14 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 	
-    CameraServer server1;
-   // CameraServer server2;
+    CameraServer server;
 
     public Robot() {
-        server1 = CameraServer.getInstance();
-        server1.setQuality(50);
-        server1.startAutomaticCapture("cam0");
-        
-        //server2 = CameraServer.getInstance();
-       // server2.setQuality(50);
-       // server2.startAutomaticCapture("cam1");
-    	
-	}
-    
-    
+        server = CameraServer.getInstance();
+        server.setQuality(50);
+        server.startAutomaticCapture("cam0");
+    }
+	
 	Command autonomousCommand;
 	SendableChooser autoChooser;
 

@@ -35,7 +35,7 @@ public class usbSave extends Command {
 		protected void execute() {
 			content = "";
 
-			content = Robot.drivetrain.getMotor();
+			content += Robot.drivetrain.getMotor();
 			content += ("time: " + Timer.getMatchTime());
 			// if program does not work, replace motor"R, L, RL, LR".get() with RobotMap.motor"R, L, RL, LR".get()
 			try  {
