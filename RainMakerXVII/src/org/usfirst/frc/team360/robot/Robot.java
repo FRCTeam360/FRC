@@ -12,12 +12,14 @@ import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
+import org.usfirst.frc.team360.robot.commands.PrintNavXAngle;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.subsystems.Catapult;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.IntakeArms;
 import org.usfirst.frc.team360.robot.subsystems.IntakeMotor;
+import org.usfirst.frc.team360.robot.subsystems.NavX;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 
@@ -37,7 +39,7 @@ public class Robot extends IterativeRobot {
 	public static Catapult catapult;
 	public static IntakeArms intakearm;
 	public static IntakeMotor intakemotor; 
-	
+	public static NavX navx;
 	
 	
     Command joysticktankdrive;
@@ -48,6 +50,7 @@ public class Robot extends IterativeRobot {
     Command catapultdown; 
     Command intakearmup; 
     Command intakearmdown;
+    Command printnavxangle;
     
 	public static OI oi;
 
@@ -63,6 +66,7 @@ public class Robot extends IterativeRobot {
     	catapult = new Catapult();
     	intakearm = new IntakeArms();
     	intakemotor = new IntakeMotor();
+    	navx = new NavX();
     	
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
@@ -72,10 +76,11 @@ public class Robot extends IterativeRobot {
         catapultup = new CatapultUp();
         intakearmdown = new IntakeArmDown();
         intakearmup = new IntakeArmUp();
-        
+        printnavxangle = new PrintNavXAngle();
         
 		oi = new OI();
     }
+    
 	
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
@@ -116,6 +121,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         joysticktankdrive.start();
         pressurize.start();
+        printnavxangle.start();
     }
     
     /**

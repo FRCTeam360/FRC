@@ -17,7 +17,6 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.RaspberryPiServer"/>
 <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="java.io.DataInputStream"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.getCameraValue"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.ma"/>
@@ -26,6 +25,9 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.OI"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.DriveTrain"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.DriveFinish"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.NavX"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.PrintNavXAngle"/>
 </qualifiedTypeNameHistroy>
