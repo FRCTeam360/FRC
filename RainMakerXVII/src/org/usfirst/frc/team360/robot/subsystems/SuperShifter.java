@@ -8,14 +8,14 @@ import org.usfirst.frc.team360.robot.*;
  */
 public class SuperShifter extends Subsystem {
     
-	public static DoubleSolenoid superShifter = RobotMap.superShifter;  
+	//public static DoubleSolenoid superShifter = RobotMap.superShifter;  
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	public void open(){ 
-		superShifter.set(DoubleSolenoid.Value.kForward);
+	//	superShifter.set(DoubleSolenoid.Value.kForward);
 	}
 	public void close() {
-		superShifter.set(DoubleSolenoid.Value.kReverse);
+	//	superShifter.set(DoubleSolenoid.Value.kReverse);
 	}
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
