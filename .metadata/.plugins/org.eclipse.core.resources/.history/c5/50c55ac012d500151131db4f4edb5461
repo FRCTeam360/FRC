@@ -24,12 +24,6 @@ public class DriveTrain extends Subsystem {
 		  motorL1.set(-motorL);
 		  motorL2.set(-motorL);
 	  }
-	  public void driveBackwards(double motorR, double motorL) {
-		  motorR1.set(-motorR);
-		  motorR2.set(-motorR);
-		  motorL1.set(motorL);
-		  motorL2.set(motorL);
-	  }
 	  public void driveR(double RMotor){
 		  motorR1.set(RMotor);
 		  motorR2.set(RMotor);
