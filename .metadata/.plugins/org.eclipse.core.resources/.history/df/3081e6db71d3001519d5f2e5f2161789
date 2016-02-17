@@ -30,17 +30,18 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 	
-    CameraServer server;
-   
+    CameraServer server1;
+   // CameraServer server2;
 
     public Robot() {
-        server = CameraServer.getInstance();
-        server.setQuality(50);
-        server.startAutomaticCapture("cam0");
+        server1 = CameraServer.getInstance();
+        server1.setQuality(50);
+        server1.startAutomaticCapture("cam0");
         
-   
-        
-
+        //server2 = CameraServer.getInstance();
+       // server2.setQuality(50);
+       // server2.startAutomaticCapture("cam1");
+    	
 	}
     
     
@@ -106,6 +107,10 @@ public class Robot extends IterativeRobot {
 
     public void teleopInit() {
 		usbSave.start();
+    	// This makes sure that the autonomous stops running when
+        // teleop starts running. If you want the autonomous to
+        // continue until interrupted by another command, remove
+        // this line or comment it out.
         
     }
 
@@ -124,6 +129,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         joysticktankdrive.start();
         pressurize.start();
+//		usbSave.start();
     }
     
     /**

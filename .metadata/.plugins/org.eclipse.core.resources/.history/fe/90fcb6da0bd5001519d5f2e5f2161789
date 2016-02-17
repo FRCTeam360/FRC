@@ -16,7 +16,7 @@ public class DriveTrain extends Subsystem {
     // here. Call these from Commands.
 		public String getMotor(){
 			return "Motor R1: " + Double.toString(motorR1.get()) + ", Motor R2: " + Double.toString(motorR2.get()) 
-				+ ", Motor L1: " + Double.toString(motorL1.get()) + ", Motor L2: " + Double.toString(motorL2.get());
+				+ ", Motor L1: " + Double.toString(motorL1.get()) + ", MotorL2: " + Double.toString(motorL2.get());
 		}
 	  public void drive(double motorR, double motorL) {
 		  motorR1.set(motorR);
@@ -29,8 +29,8 @@ public class DriveTrain extends Subsystem {
 		  motorR2.set(RMotor);
 	  }
 	  public void driveL(double LMotor){
-		  motorL1.set(-LMotor);
-		  motorL2.set(-LMotor);
+		  motorL1.set(LMotor);
+		  motorL2.set(LMotor);
 	  }
 	  public void stopR(){
 		  motorR1.stopMotor();
