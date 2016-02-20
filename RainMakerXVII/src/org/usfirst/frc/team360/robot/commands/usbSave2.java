@@ -23,7 +23,7 @@ public class usbSave2 extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	try {
-    		content = (Robot.drivetrain.getMotor());
+
     		file = new File("u/newfile2.txt"); //file location
 				
 			//if file doesnt exist, then create it
@@ -42,6 +42,7 @@ public class usbSave2 extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	try {
+    		content = (Robot.drivetrain.getMotor());
 			bw.write(content);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

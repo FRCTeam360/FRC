@@ -2,7 +2,7 @@ package org.usfirst.frc.team360.robot;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.Talon;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -22,10 +22,10 @@ public class RobotMap {
     // public static int rangefinderModule = 1;
 	
 	//motors
-	public static VictorSP motorR1 = new VictorSP(0);
-	public static VictorSP motorR2 = new VictorSP(1);
-	public static VictorSP motorL1 = new VictorSP(2);
-	public static VictorSP motorL2 = new VictorSP(3);
+	public static Talon motorR1 = new Talon(0);
+	public static Talon motorR2 = new Talon(1);
+	public static Talon motorL1 = new Talon(2);
+	public static Talon motorL2 = new Talon(3);
 	
 	
 	//supershifter pneumatics 

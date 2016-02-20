@@ -2,24 +2,21 @@ package org.usfirst.frc.team360.robot.subsystems;
 
 import org.usfirst.frc.team360.robot.RobotMap;
 
-import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 /**
  *
  */
 public class DriveTrain extends Subsystem {
-	public static VictorSP motorR1 = RobotMap.motorR1;
-	public static VictorSP motorR2 = RobotMap.motorR2;
-	public static VictorSP motorL1 = RobotMap.motorL1;
-	public static VictorSP motorL2 = RobotMap.motorL2;
+	public static Talon motorR1 = RobotMap.motorR1;
+	public static Talon motorR2 = RobotMap.motorR2;
+	public static Talon motorL1 = RobotMap.motorL1;
+	public static Talon motorL2 = RobotMap.motorL2;
 
 		public String getMotor(){
 			
-//			String newLine = System.getProperty("line.separator");
-			String newLine = System.lineSeparator();
-			
-			return ("Motor R1=" + motorR1.get() + newLine + "Motor R2=" + motorR2.get() + newLine +
-					"Motor L1=" + motorL1.get() + newLine + "Motor L2=" +motorL2.get() + newLine);
+			return (" Motor R1=" + motorR1.get() + " Motor R2=" + motorR2.get() + 
+					" Motor L1=" + motorL1.get() + " Motor L2=" + motorL2.get());
 		}
 	  public void drive(double motorR, double motorL) {
 		  motorR1.set(motorR);
