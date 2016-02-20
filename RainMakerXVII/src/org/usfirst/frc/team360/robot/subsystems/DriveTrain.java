@@ -1,6 +1,6 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
-import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.VictorSP; 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team360.robot.*;
 //import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
@@ -39,5 +39,9 @@ public class DriveTrain extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
     }
+	public void setSafetyEnabled(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 

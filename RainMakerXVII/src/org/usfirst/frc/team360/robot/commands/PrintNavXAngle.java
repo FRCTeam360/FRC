@@ -13,6 +13,7 @@ public class PrintNavXAngle extends Command {
     public PrintNavXAngle() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    		requires(Robot.navx);
     }
 
     // Called just before this Command runs the first time

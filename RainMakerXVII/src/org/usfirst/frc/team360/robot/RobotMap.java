@@ -1,7 +1,4 @@
 package org.usfirst.frc.team360.robot;
-import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
-
-
 import com.kauailabs.navx.frc.AHRS;
 
 import edu.wpi.first.wpilibj.Compressor;
@@ -39,6 +36,7 @@ public class RobotMap {
 	public static DoubleSolenoid intakeArms = new DoubleSolenoid(4, 5);
 	
 	public static AHRS ahrs = new AHRS(Port.kMXP); 
+	
 	
 	//compressor 
 	public static Compressor compressor = new Compressor();
