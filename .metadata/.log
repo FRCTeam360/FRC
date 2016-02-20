@@ -11214,3 +11214,118 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-14 13:11:14.461
 !MESSAGE Installedjava
+!SESSION 2016-02-20 12:53:37.081 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/josh/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/josh/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-02-20 12:53:46.702
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2016-02-20 12:53:53.854
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-20 12:54:04.222
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-20 12:54:04.276
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-20 12:54:04.304
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-20 12:54:04.338
+!MESSAGE Installedcpp
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-20 12:54:04.467
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-20 12:54:04.719
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 12:54:17.840
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 12:54:17.898
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 12:55:01.971
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 12:55:02.023
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 13:34:43.547
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 13:34:43.612
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 13:53:10.116
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 13:53:10.206
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 13:54:01.712
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 13:54:01.790
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 14:35:22.580
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 14:35:22.694
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:04:14.987
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:04:15.008
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:04:40.332
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:04:40.352
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:05:13.632
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:05:13.650
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:05:56.644
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:05:56.664
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:15:26.854
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:15:26.910
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:16:17.015
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:16:17.033
+!MESSAGE Targets: simulate, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:16:24.407
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:16:24.426
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:28:19.087
+!MESSAGE Running ant file: /Users/josh/Desktop/FRC/RainMakerXVII/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-20 15:28:19.131
+!MESSAGE Targets: deploy, Mode: run

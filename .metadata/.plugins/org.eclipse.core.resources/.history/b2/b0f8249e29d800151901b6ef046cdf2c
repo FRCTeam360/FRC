@@ -61,7 +61,6 @@ public class RPIServer extends Subsystem {
 		if(RobotMap.angle1.get() == true){
 			angle += 1;
 		}
-		angle /= 2; //angle is from 0-120 and we want 0-60 so we /2
 		return angle;
 	}
 	

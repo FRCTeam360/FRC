@@ -33,10 +33,10 @@ public class RobotMap {
 	//compressor 
 	public static Compressor compressor = new Compressor();
 	
-	public static DigitalInput angle1 = new DigitalInput(6);//1
-	public static DigitalInput angle2 = new DigitalInput(7);//2
-	public static DigitalInput angle3 = new DigitalInput(8);//4
-	public static DigitalInput angle4 = new DigitalInput(9);//8
+	public static DigitalInput angle1 = new DigitalInput(9);//1
+	public static DigitalInput angle2 = new DigitalInput(8);//2
+	public static DigitalInput angle3 = new DigitalInput(7);//4
+	public static DigitalInput angle4 = new DigitalInput(6);//8
 	public static DigitalInput angle5 = new DigitalInput(23);//16
 	public static DigitalInput angle6 = new DigitalInput(22);//32
 	public static DigitalInput angle7 = new DigitalInput(21);//64
