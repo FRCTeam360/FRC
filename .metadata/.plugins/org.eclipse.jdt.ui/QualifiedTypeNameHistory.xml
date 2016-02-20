@@ -17,4 +17,5 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.RobotMap"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.VictorSP"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.VictorSP"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 </qualifiedTypeNameHistroy>

@@ -17,6 +17,7 @@ public class AutonomousShort extends CommandGroup {
 		addSequential(new Drive(1, 3));
 		addSequential(new DriveBackwards(1, 3));
 		addSequential(new Drive(1, 3));
+		//below is just me durping around and testing stuff
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
