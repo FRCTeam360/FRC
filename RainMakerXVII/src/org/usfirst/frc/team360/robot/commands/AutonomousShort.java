@@ -17,12 +17,6 @@ public class AutonomousShort extends CommandGroup {
 		addSequential(new Drive(1, 3));
 		addSequential(new DriveBackwards(1, 3));
 		addSequential(new Drive(1, 3));
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		addSequential(new Drive(1,1));
+	//	addSequential(new Drive(1,1));
 	}
 }

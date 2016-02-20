@@ -18,7 +18,7 @@ public class DriveTrain extends Subsystem {
 		public String getMotor(){
 	
 			double motordisplay = motorR1.get();
-			SmartDashboard.putNumber("value motorR1", motordisplay );
+		//	SmartDashboard.putNumber("value motorR1", motordisplay );
 			//String motorstring = Double.toString(motordisplay);
 			//SmartDashboard.putString("string value:", motorstring);
 			return "Motor R1: " + Double.toString(motorR1.get()) + ", Motor R2: " + Double.toString(motorR2.get()) 
