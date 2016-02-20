@@ -105,7 +105,7 @@ public class Robot extends IterativeRobot {
     }
 
     public void teleopInit() {
-		usbSave2.start(); //use usbSave when done
+		//usbSave2.start(); //use usbSave when done
         
     }
 
@@ -124,6 +124,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
         joysticktankdrive.start();
         pressurize.start();
+        usbSave2.start(); //use usbSave when done
     }
     
     /**
