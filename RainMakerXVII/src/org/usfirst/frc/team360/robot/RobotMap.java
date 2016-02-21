@@ -6,6 +6,7 @@ import com.kauailabs.navx.frc.AHRS;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.VictorSP;
 
@@ -31,12 +32,15 @@ public class RobotMap {
 	public static VictorSP motorR2 = new VictorSP(1);
 	public static VictorSP motorL1 = new VictorSP(2);
 	public static VictorSP motorL2 = new VictorSP(3);
-	public static VictorSP intakeMotor = new VictorSP(4); 
+	public static VictorSP intakeMotor = new VictorSP(6); 
 
 	//supershifter pneumatics 
 	public static DoubleSolenoid superShifter = new DoubleSolenoid(0, 1);
-	public static DoubleSolenoid catapultTusks = new DoubleSolenoid(2, 3);
-	public static DoubleSolenoid intakeArms = new DoubleSolenoid(4, 5);
+	public static DoubleSolenoid catapultTusks = new DoubleSolenoid(5, 4);
+	public static DoubleSolenoid intakeArms = new DoubleSolenoid(3, 2);
+	
+	public static Encoder encR = new Encoder(3, 2);
+	public static Encoder encL = new Encoder(0, 1);
 	
 	public static AHRS ahrs = new AHRS(Port.kMXP); 
 	

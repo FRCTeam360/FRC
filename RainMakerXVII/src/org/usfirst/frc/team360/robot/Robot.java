@@ -10,11 +10,13 @@ import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
 import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
+import org.usfirst.frc.team360.robot.commands.IntakeMotors;
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.PrintNavXAngle;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
+import org.usfirst.frc.team360.robot.commands.getEncs;
 import org.usfirst.frc.team360.robot.subsystems.Catapult;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.IntakeArms;
@@ -50,12 +52,15 @@ public class Robot extends IterativeRobot {
     Command catapultdown; 
     Command intakearmup; 
     Command intakearmdown;
+    Command intakemotors;
     Command printnavxangle;
+    Command getencs;
     
 	public static OI oi;
 
     /**
-     * This function is run when the robot is first started up and should be
+     * This func
+     * tion is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
@@ -77,6 +82,8 @@ public class Robot extends IterativeRobot {
         intakearmdown = new IntakeArmDown();
         intakearmup = new IntakeArmUp();
         printnavxangle = new PrintNavXAngle();
+        intakemotors = new IntakeMotors();
+        getencs = new getEncs();
         
 		oi = new OI();
     }
@@ -122,6 +129,7 @@ public class Robot extends IterativeRobot {
         joysticktankdrive.start();
         pressurize.start();
         printnavxangle.start();
+        getencs.start();
     }
     
     /**

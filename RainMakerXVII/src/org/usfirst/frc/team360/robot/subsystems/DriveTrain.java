@@ -1,5 +1,6 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team360.robot.*;
@@ -12,9 +13,21 @@ public class DriveTrain extends Subsystem {
 	VictorSP motorR2 = RobotMap.motorR2;
 	VictorSP motorL1 = RobotMap.motorL1;
 	VictorSP motorL2 = RobotMap.motorL2;
+	Encoder encR = RobotMap.encR;
+	Encoder encL = RobotMap.encL;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	  public void drive(double motorR, double motorL) {
+	public DriveTrain(){
+		encL.reset();
+		encR.reset();
+	}
+	public int getREnc(){
+		return encR.get();
+	}
+	public int getLEnc(){
+		return encL.get();
+	}
+	public void drive(double motorR, double motorL) {
 		  motorR1.set(motorR);
 		  motorR2.set(motorR);
 		  motorL1.set(-motorL);
@@ -25,8 +38,8 @@ public class DriveTrain extends Subsystem {
 		  motorR2.set(RMotor);
 	  }
 	  public void driveL(double LMotor){
-		  motorL1.set(LMotor);
-		  motorL2.set(LMotor);
+		  motorL1.set(-LMotor);
+		  motorL2.set(-LMotor);
 	  }
 	  public void stopR(){
 		  motorR1.stopMotor();

@@ -4,8 +4,11 @@ import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
 import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
+import org.usfirst.frc.team360.robot.commands.IntakeMotors;
+import org.usfirst.frc.team360.robot.commands.IntakeMotorsOut;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
+import org.usfirst.frc.team360.robot.commands.Shoot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -25,16 +28,21 @@ public class OI {
     public static Button buttonDown = new JoystickButton(joyL, 1);
     public static Button buttonIntakeArmUp = new JoystickButton(joyOI, 1);
     public static Button buttonIntakeArmDown = new JoystickButton(joyOI, 2);
-    public static Button buttonCatapultUp = new JoystickButton(joyOI, 3);
-    public static Button buttonCatapultDown = new JoystickButton(joyOI, 4);
-    
+//    public static Button buttonCatapultUp = new JoystickButton(joyOI, 3);
+//    public static Button buttonCatapultDown = new JoystickButton(joyOI, 4);
+    public static Button buttonShoot = new JoystickButton(joyOI, 15);
+    public static Button buttonIntakeMotor = new JoystickButton(joyOI, 9);
+    public static Button buttonIntakeMotorOut = new JoystickButton(joyOI, 7);
     public OI(){
     	buttonUp.whenPressed(new ShiftUp());
     	buttonDown.whenPressed(new ShiftDown());
-    	buttonCatapultUp.whenPressed(new CatapultUp());
-    	buttonCatapultDown.whenPressed(new CatapultDown());
+   // 	buttonCatapultUp.whenPressed(new CatapultUp());
+   // 	buttonCatapultDown.whenPressed(new CatapultDown());
     	buttonIntakeArmUp.whenPressed(new IntakeArmUp());
     	buttonIntakeArmDown.whenPressed(new IntakeArmDown());
+    	buttonIntakeMotor.whileHeld(new IntakeMotors());
+    	buttonIntakeMotorOut.whileHeld(new IntakeMotorsOut());
+    	buttonShoot.whenPressed(new Shoot());
     }
 }
 

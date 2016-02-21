@@ -12,11 +12,13 @@ public class IntakeMotor extends Subsystem {
 	VictorSP IntakeMotor = RobotMap.intakeMotor;
 	
 	
-	public void run(){
-		IntakeMotor.set(1.0);
+	public void runMotor(double speed){
+		IntakeMotor.set(speed);
 	}
 	
-    
+    public void stop(){
+    	IntakeMotor.stopMotor();
+    }
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
