@@ -1,6 +1,7 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
 import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.PIDController;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -19,7 +20,11 @@ public class PIDSubsystem extends Subsystem implements edu.wpi.first.wpilibj.PID
 	VictorSP motorR1 = RobotMap.motorR1; 
 	VictorSP motorR2 = RobotMap.motorR2; 
 	VictorSP motorL1 = RobotMap.motorL1; 
-	VictorSP motorL2 = RobotMap.motorL2; 
+	VictorSP motorL2 = RobotMap.motorL2;
+	
+	Encoder enc1 = new Encoder(6, 7, false, Encoder.EncodingType.k4X);
+	Encoder enc2 = new Encoder (8, 9, false, Encoder.EncodingType.k4X);
+	
 	DriveTrain myRobot; 
 	PIDController turnController;
 	
@@ -31,6 +36,9 @@ public class PIDSubsystem extends Subsystem implements edu.wpi.first.wpilibj.PID
 	  static final double kF = 0.00;
 	
 	public void PIDInput(){
+		
+		enc1.get();
+		enc2.get();
 		
 		
 	}

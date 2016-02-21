@@ -3,6 +3,7 @@ import com.kauailabs.navx.frc.AHRS;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.VictorSP;
 
@@ -35,7 +36,8 @@ public class RobotMap {
 	public static DoubleSolenoid catapultTusks = new DoubleSolenoid(2, 3);
 	public static DoubleSolenoid intakeArms = new DoubleSolenoid(4, 5);
 	
-	public static AHRS ahrs = new AHRS(Port.kMXP); 
+	//navX encoders//
+	public static AHRS ahrs = new AHRS(Port.kMXP);
 	
 	
 	//compressor 
