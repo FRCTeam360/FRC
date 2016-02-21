@@ -9,7 +9,7 @@ import com.kauailabs.navx.frc.AHRS;
 
 
 
-public class navX extends Subsystem {
+public class NavX extends Subsystem {
 	AHRS ahrs = RobotMap.ahrs; 
 			public double getAngle(){
 				return ahrs.getAngle();
