@@ -47,4 +47,5 @@ public class RobotMap {
 	public static DigitalInput distance5 = new DigitalInput(13);//16
 	public static DigitalInput distance6 = new DigitalInput(11);//32
 	public static DigitalInput distance7 = new DigitalInput(10);//64
+	public static DigitalInput test = new DigitalInput(0);
 }
