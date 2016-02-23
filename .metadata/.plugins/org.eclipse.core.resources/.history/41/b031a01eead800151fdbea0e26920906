@@ -10,8 +10,7 @@ import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 
 
 public class NavX extends Subsystem{
-	public static AHRS ahrs = RobotMap.ahrs;  
-	DriveTrain myRobot; 
+	public static AHRS ahrs = RobotMap.ahrs;    
 	
 	public double getAngle(){
 		
