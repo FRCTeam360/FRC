@@ -4,6 +4,7 @@ import org.usfirst.frc.team360.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.Timer;
 /**
  *
  */
@@ -15,8 +16,8 @@ public class DriveTrain extends Subsystem {
 
 		public String getMotor(){
 			
-			return (" Motor R1=" + motorR1.get() + " Motor R2=" + motorR2.get() + 
-					" Motor L1=" + motorL1.get() + " Motor L2=" + motorL2.get());
+			return ("      Motor R1=" + motorR1.get() + " Motor R2=" + motorR2.get() +
+					" Motor L1=" + motorL1.get() + " Motor L2=" + motorL2.get() + " Time=" + Timer.getMatchTime());
 		}
 	  public void drive(double motorR, double motorL) {
 		  motorR1.set(motorR);
