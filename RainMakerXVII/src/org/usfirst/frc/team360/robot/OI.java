@@ -4,6 +4,7 @@ import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
 import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
+import org.usfirst.frc.team360.robot.commands.NavXPID;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
 
@@ -22,6 +23,7 @@ public class OI {
     public static Joystick joyOI = new Joystick(2); 
     //joyK is for the separate "joystick" keyboard device....
     public static Button buttonUp = new JoystickButton(joyR, 1);
+    public static Button buttonBack = new JoystickButton(joyR, 2);
     public static Button buttonDown = new JoystickButton(joyL, 1);
     public static Button buttonIntakeArmUp = new JoystickButton(joyOI, 1);
     public static Button buttonIntakeArmDown = new JoystickButton(joyOI, 2);
@@ -35,6 +37,7 @@ public class OI {
     	buttonCatapultDown.whenPressed(new CatapultDown());
     	buttonIntakeArmUp.whenPressed(new IntakeArmUp());
     	buttonIntakeArmDown.whenPressed(new IntakeArmDown());
+    	buttonBack.whenPressed(new NavXPID(170));
     }
 }
 

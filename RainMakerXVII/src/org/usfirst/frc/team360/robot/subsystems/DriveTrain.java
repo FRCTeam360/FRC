@@ -1,8 +1,10 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
+import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.VictorSP; 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team360.robot.*;
+import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 //import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 /**
  *
@@ -12,6 +14,8 @@ public class DriveTrain extends Subsystem {
 	VictorSP motorR2 = RobotMap.motorR2;
 	VictorSP motorL1 = RobotMap.motorL1;
 	VictorSP motorL2 = RobotMap.motorL2;
+	Encoder encR =  RobotMap.encR;
+	Encoder encL =  RobotMap.encL;
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 	  public void drive(double motorR, double motorL) {
@@ -25,8 +29,8 @@ public class DriveTrain extends Subsystem {
 		  motorR2.set(RMotor);
 	  }
 	  public void driveL(double LMotor){
-		  motorL1.set(LMotor);
-		  motorL2.set(LMotor);
+		  motorL1.set(-LMotor);
+		  motorL2.set(-LMotor);
 	  }
 	  public void stopR(){
 		  motorR1.stopMotor();
@@ -36,12 +40,15 @@ public class DriveTrain extends Subsystem {
 		  motorL1.stopMotor();
 		  motorL2.stopMotor();
 	  }
+	  public double getEncR(){
+		  return encR.getRaw();
+	  }
+	  public double getEncL(){
+		  return encL.getRaw();
+	  }
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
+    	setDefaultCommand(new JoystickTankDrive());
     }
-	public void setSafetyEnabled(boolean b) {
-		// TODO Auto-generated method stub
-		
-	}
 }
 

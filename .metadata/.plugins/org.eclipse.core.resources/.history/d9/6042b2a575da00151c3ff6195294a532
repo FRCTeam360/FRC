@@ -1,0 +1,38 @@
+package org.usfi = 0;rst.frc.team360.robot.subsystems;
+
+import org.usfirst.frc.team360.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.command.Subsystem;
+
+/**
+ *
+ */
+public class NavXPIDSubsystem extends Subsystem {
+	
+    // Put methods for controlling this subsystem
+    // here. Call these from Commands.
+	double integral = 0;
+	double error = 0;
+	double prevError = 0;
+	double derivative = 0;
+	double dt = .002;
+	double output = 0;
+    public void initDefaultCommand() {
+        // Set the default command for a subsystem here.
+        //setDefaultCommand(new MySpecialCommand());
+    }
+    public void runPID(VictorSP motorR1, VictorSP motorR2, VictorSP motorL1, VictorSP motorL2){
+    	motorR1.set(output);
+    	motorR2.set(output);
+    	motorL1.set(-output);
+    	motorL2.set(-output);
+    }
+    public void doPID(double position, double setPoint){
+    	error = position - setPoint;
+    	integral = integral + (error * dt);
+    	derivative = (error - prevError) / dt;
+    	output = (RobotMap.kPNavX * error) + (RobotMap.kINavX * integral) + (RobotMap.kDNavX * derivative);
+    }
+}
+

@@ -25,6 +25,9 @@ public class RobotMap {
     // public static int rangefinderModule = 1;
 	
 	//motors
+	public static final double kPNavX = .018;
+	public static final double kINavX = .00001;
+	public static final double kDNavX = .000015;
 	public static VictorSP motorR1 = new VictorSP(0);
 	public static VictorSP motorR2 = new VictorSP(1);
 	public static VictorSP motorL1 = new VictorSP(2);
@@ -39,6 +42,8 @@ public class RobotMap {
 	//navX encoders//
 	public static AHRS ahrs = new AHRS(Port.kMXP);
 	
+	public static Encoder encR = new Encoder(2, 3);
+	public static Encoder encL = new Encoder(0, 1);
 	
 	//compressor 
 	public static Compressor compressor = new Compressor();

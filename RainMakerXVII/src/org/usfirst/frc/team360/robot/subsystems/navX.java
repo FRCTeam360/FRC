@@ -12,12 +12,25 @@ import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 public class NavX extends Subsystem{
 	public static AHRS ahrs = RobotMap.ahrs;  
 	DriveTrain myRobot; 
-	
+
 	public double getAngle(){
-		
+
 		return ahrs.getAngle();
-		
-		 
+
+
+	}
+	public void reset(){
+		  ahrs.reset();	
+		 ahrs.resetDisplacement();
+	}
+	public float getDisplacementX(){
+		return ahrs.getVelocityX();
+	}
+	public float getDisplacementY(){
+		return ahrs.getVelocityY();
+	}
+	public float getDisplacementZ(){
+		return ahrs.getVelocityZ();
 	}
 	/*public void operatorControl() {
 	      PID.setSafetyEnabled(false);
@@ -27,8 +40,8 @@ public class NavX extends Subsystem{
 	              ahrs.reset();
 	} */ 
 	protected void initDefaultCommand() {
-		
-	
-		
+
+
+
 	}
 }

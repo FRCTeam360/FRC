@@ -5,12 +5,14 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
 import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
+import org.usfirst.frc.team360.robot.commands.NavXPID;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.PrintNavXAngle;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
@@ -20,6 +22,7 @@ import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.IntakeArms;
 import org.usfirst.frc.team360.robot.subsystems.IntakeMotor;
 import org.usfirst.frc.team360.robot.subsystems.NavX;
+import org.usfirst.frc.team360.robot.subsystems.NavXPIDSubsystem;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 
@@ -40,8 +43,9 @@ public class Robot extends IterativeRobot {
 	public static IntakeArms intakearm;
 	public static IntakeMotor intakemotor; 
 	public static NavX navx;
+	public static NavXPIDSubsystem navxpidsubsystem;
 	
-	
+
     Command joysticktankdrive;
     Command pressurize;
     Command shiftup;
@@ -51,8 +55,9 @@ public class Robot extends IterativeRobot {
     Command intakearmup; 
     Command intakearmdown;
     Command printnavxangle;
-    
-	public static OI oi;
+    Command navxpid;
+
+    public static OI oi;
 
     /**
      * This function is run when the robot is first started up and should be
@@ -67,7 +72,8 @@ public class Robot extends IterativeRobot {
     	intakearm = new IntakeArms();
     	intakemotor = new IntakeMotor();
     	navx = new NavX();
-    	
+    	navxpidsubsystem = new NavXPIDSubsystem();
+ 
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
@@ -77,18 +83,19 @@ public class Robot extends IterativeRobot {
         intakearmdown = new IntakeArmDown();
         intakearmup = new IntakeArmUp();
         printnavxangle = new PrintNavXAngle();
+        navxpid = new NavXPID(180);
         
 		oi = new OI();
     }
-    
-	
+
+
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
 	}
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-        
+      navx.reset();  
     }
 
     /**
@@ -96,6 +103,8 @@ public class Robot extends IterativeRobot {
      */
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
+        navxpid.start();
+        printnavxangle.start();
     }
 
     public void teleopInit() {
@@ -103,7 +112,7 @@ public class Robot extends IterativeRobot {
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        
+        navx.reset();
     }
 
     /**
@@ -119,11 +128,16 @@ public class Robot extends IterativeRobot {
      */
 	public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        joysticktankdrive.start();
+ //       joysticktankdrive.start();
         pressurize.start();
         printnavxangle.start();
+        SmartDashboard.putNumber("encr", drivetrain.getEncR());
+        SmartDashboard.putNumber("encl", drivetrain.getEncL());
+        SmartDashboard.putNumber("disX", navx.getDisplacementX());
+        SmartDashboard.putNumber("disY", navx.getDisplacementY());
+        SmartDashboard.putNumber("disZ", navx.getDisplacementZ());
     }
-    
+
     /**
      * This function is called periodically during test mode
      */
