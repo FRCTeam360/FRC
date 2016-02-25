@@ -1,10 +1,12 @@
 
 package org.usfirst.frc.team360.robot;
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot; 
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
@@ -12,6 +14,7 @@ import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
 import org.usfirst.frc.team360.robot.commands.IntakeMotors;
 import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
+import org.usfirst.frc.team360.robot.commands.NavXPID;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.PrintNavXAngle;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
@@ -22,6 +25,7 @@ import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team360.robot.subsystems.IntakeArms;
 import org.usfirst.frc.team360.robot.subsystems.IntakeMotor;
 import org.usfirst.frc.team360.robot.subsystems.NavX;
+import org.usfirst.frc.team360.robot.subsystems.NavXPIDSubsystem;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 
@@ -42,7 +46,7 @@ public class Robot extends IterativeRobot {
 	public static IntakeArms intakearm;
 	public static IntakeMotor intakemotor; 
 	public static NavX navx;
-	
+	public static NavXPIDSubsystem navxpidsubsystem;
 	
     Command joysticktankdrive;
     Command pressurize;
@@ -55,7 +59,9 @@ public class Robot extends IterativeRobot {
     Command intakemotors;
     Command printnavxangle;
     Command getencs;
+    Command navxpid;
     
+    CameraServer server;
 	public static OI oi;
 
     /**
@@ -65,6 +71,10 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
+    	server = CameraServer.getInstance();
+    	server.setQuality(50);
+    	server.startAutomaticCapture("cam0");
+    	
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
     	drivetrain = new DriveTrain();
@@ -72,6 +82,8 @@ public class Robot extends IterativeRobot {
     	intakearm = new IntakeArms();
     	intakemotor = new IntakeMotor();
     	navx = new NavX();
+    	navxpidsubsystem = new NavXPIDSubsystem();
+    	
     	
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
@@ -80,6 +92,7 @@ public class Robot extends IterativeRobot {
         catapultdown = new CatapultDown();
         catapultup = new CatapultUp();
         intakearmdown = new IntakeArmDown();
+        navxpid = new NavXPID(180);
         intakearmup = new IntakeArmUp();
         printnavxangle = new PrintNavXAngle();
         intakemotors = new IntakeMotors();
@@ -130,6 +143,8 @@ public class Robot extends IterativeRobot {
         pressurize.start();
         printnavxangle.start();
         getencs.start();
+        SmartDashboard.putNumber("encr", drivetrain.getREnc());
+        SmartDashboard.putNumber("encl", drivetrain.getLEnc());
     }
     
     /**

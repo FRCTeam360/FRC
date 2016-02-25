@@ -22,7 +22,7 @@ public class IntakeMotorsOut extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.intakemotor.runMotor(-.54);
+    	Robot.intakemotor.runMotor(-.8);
     	}
     
 
