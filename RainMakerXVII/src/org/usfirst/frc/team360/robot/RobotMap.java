@@ -1,9 +1,7 @@
 package org.usfirst.frc.team360.robot;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 
-
 import com.kauailabs.navx.frc.AHRS;
-
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
@@ -27,7 +25,10 @@ public class RobotMap {
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
 	
-	//motors
+	//
+	public static final double kPNavX = .018;
+	public static final double kINavX = .00001;
+	public static final double kDNavX = .000015;
 	public static VictorSP motorR1 = new VictorSP(0);
 	public static VictorSP motorR2 = new VictorSP(1);
 	public static VictorSP motorL1 = new VictorSP(2);
