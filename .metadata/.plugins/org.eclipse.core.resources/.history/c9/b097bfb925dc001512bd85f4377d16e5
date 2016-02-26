@@ -57,7 +57,12 @@ public class usbSave2 extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	Robot.logger.finished();
+    	try {
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     // Called when another command which requires one or more of the same

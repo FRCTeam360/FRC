@@ -9,7 +9,6 @@ import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.commands.usbSave2;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
-import org.usfirst.frc.team360.robot.subsystems.Logger;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 
@@ -30,7 +29,16 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	
+    CameraServer server;
+   
 
+    public Robot() {
+        server = CameraServer.getInstance();
+        server.setQuality(50);
+        server.startAutomaticCapture("cam0");
+	}
+    
     
 	Command autonomousCommand;
 	SendableChooser autoChooser;
@@ -38,7 +46,7 @@ public class Robot extends IterativeRobot {
 	public static DriveTrain drivetrain;
 	public static SuperShifter supershifter;
 	public static Pneumatics pneumatics;
-	public static Logger logger;
+	
 	
     Command joysticktankdrive;
     Command pressurize;
@@ -60,7 +68,7 @@ public class Robot extends IterativeRobot {
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
     	drivetrain = new DriveTrain();
-    	logger = new Logger();
+    	
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
