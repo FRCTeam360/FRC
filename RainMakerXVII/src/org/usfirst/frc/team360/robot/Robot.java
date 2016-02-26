@@ -1,5 +1,6 @@
 
 package org.usfirst.frc.team360.robot;
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot; 
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -57,6 +58,7 @@ public class Robot extends IterativeRobot {
     Command printnavxangle;
     Command navxpid;
 
+   CameraServer server;
     public static OI oi;
 
     /**
@@ -65,6 +67,11 @@ public class Robot extends IterativeRobot {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
+    	server = CameraServer.getInstance();
+    	server.setQuality(50);
+    	server.startAutomaticCapture("cam0");
+    
+    	
     	supershifter = new SuperShifter();
     	pneumatics = new Pneumatics();
     	drivetrain = new DriveTrain();
@@ -84,6 +91,7 @@ public class Robot extends IterativeRobot {
         intakearmup = new IntakeArmUp();
         printnavxangle = new PrintNavXAngle();
         navxpid = new NavXPID(180);
+        intakemotor = new IntakeMotor();
         
 		oi = new OI();
     }

@@ -39,4 +39,5 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.NavXPID"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.JoystickTankDrive"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CameraServer"/>
 </qualifiedTypeNameHistroy>
