@@ -145,6 +145,7 @@ public class Robot extends IterativeRobot {
         getencs.start();
         SmartDashboard.putNumber("encr", drivetrain.getREnc());
         SmartDashboard.putNumber("encl", drivetrain.getLEnc());
+        SmartDashboard.putBoolean("pneu", RobotMap.intake.get());
     }
     
     /**

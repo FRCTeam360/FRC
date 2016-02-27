@@ -20,7 +20,6 @@
 <fullyQualifiedTypeName name="java.io.DataInputStream"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.getCameraValue"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.ma"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.RobotMap"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.VictorSP"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.OI"/>
@@ -37,4 +36,6 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.getEncs"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CameraServer"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DigitalInput"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.RobotMap"/>
 </qualifiedTypeNameHistroy>

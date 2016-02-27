@@ -26,18 +26,18 @@ public class OI {
     //joyK is for the separate "joystick" keyboard device....
     public static Button buttonUp = new JoystickButton(joyR, 1);
     public static Button buttonDown = new JoystickButton(joyL, 1);
-    public static Button buttonIntakeArmUp = new JoystickButton(joyOI, 1);
-    public static Button buttonIntakeArmDown = new JoystickButton(joyOI, 2);
-//    public static Button buttonCatapultUp = new JoystickButton(joyOI, 3);
-//    public static Button buttonCatapultDown = new JoystickButton(joyOI, 4);
+    public static Button buttonIntakeArmUp = new JoystickButton(joyOI, 2);
+    public static Button buttonIntakeArmDown = new JoystickButton(joyOI, 1);
+    public static Button buttonCatapultUp = new JoystickButton(joyOI, 3);
+    public static Button buttonCatapultDown = new JoystickButton(joyOI, 4);
     public static Button buttonShoot = new JoystickButton(joyOI, 15);
     public static Button buttonIntakeMotor = new JoystickButton(joyOI, 9);
     public static Button buttonIntakeMotorOut = new JoystickButton(joyOI, 7);
     public OI(){
     	buttonUp.whenPressed(new ShiftUp());
     	buttonDown.whenPressed(new ShiftDown());
-   // 	buttonCatapultUp.whenPressed(new CatapultUp());
-   // 	buttonCatapultDown.whenPressed(new CatapultDown());
+    	buttonCatapultUp.whenPressed(new CatapultUp());
+    	buttonCatapultDown.whenPressed(new CatapultDown());
     	buttonIntakeArmUp.whenPressed(new IntakeArmUp());
     	buttonIntakeArmDown.whenPressed(new IntakeArmDown());
     	buttonIntakeMotor.whileHeld(new IntakeMotors());

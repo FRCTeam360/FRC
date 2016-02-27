@@ -2,16 +2,21 @@ package org.usfirst.frc.team360.robot.commands;
 
 import org.usfirst.frc.team360.robot.Robot;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
 public class IntakeArmUp extends Command {
-
+ Timer time;
     public IntakeArmUp() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	time = new Timer(); 
+    	time.reset();
+    	time.start();
+
     	requires(Robot.intakearm);
     }
 
@@ -26,15 +31,18 @@ public class IntakeArmUp extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return true;
+        return time.get() > .6;
+        
     }
 
     // Called once after isFinished returns true
     protected void end() {
+    	time.stop();
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	end();
     }
 }

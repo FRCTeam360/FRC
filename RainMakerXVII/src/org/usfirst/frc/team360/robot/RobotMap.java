@@ -3,6 +3,7 @@ import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
 
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.SPI.Port;
@@ -38,12 +39,13 @@ public class RobotMap {
 	//supershifter pneumatics 
 	public static DoubleSolenoid superShifter = new DoubleSolenoid(0, 1);
 	public static DoubleSolenoid catapultTusks = new DoubleSolenoid(5, 4);
-	public static DoubleSolenoid intakeArms = new DoubleSolenoid(3, 2);
+	public static DoubleSolenoid intakeArms = new DoubleSolenoid(2, 3 );
 	
 	public static Encoder encR = new Encoder(3, 2);
 	public static Encoder encL = new Encoder(0, 1);
 	
-	public static AHRS ahrs = new AHRS(Port.kMXP); 
+	public static AHRS ahrs = new AHRS(Port.kMXP);
+	public static DigitalInput intake = new DigitalInput(4);
 	
 	//compressor 
 	public static Compressor compressor = new Compressor();
