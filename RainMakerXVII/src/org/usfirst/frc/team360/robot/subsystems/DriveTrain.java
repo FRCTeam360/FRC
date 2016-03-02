@@ -15,23 +15,31 @@ public class DriveTrain extends Subsystem {
 	VictorSP motorL2 = RobotMap.motorL2;
 	Encoder encR = RobotMap.encR;
 	Encoder encL = RobotMap.encL;
-    // Put methods for controlling this subsystem
+
+	// Put methods for controlling this subsystem
     // here. Call these from Commands.
 	public DriveTrain(){
 		encL.reset();
 		encR.reset();
 	}
+	public void resetREnc(){
+	
+		encR.reset();
+	}
+	public void resetLEnc(){
+		encL.reset();
+	}
 	public int getREnc(){
-		return encR.get();
+		return encR.get()*-1;
 	}
 	public int getLEnc(){
-		return encL.get();
+		return encL.get()*-1;
 	}
 	public void drive(double motorR, double motorL) {
-		  motorR1.set(-motorR);
-		  motorR2.set(-motorR);
-		  motorL1.set(motorL);
-		  motorL2.set(motorL);
+		  motorR1.set(motorR);
+		  motorR2.set(motorR);
+		  motorL1.set(-motorL * .95);
+		  motorL2.set(-motorL * .95);
 	  }
 	  public void driveR(double RMotor){
 		  motorR1.set(RMotor);
@@ -48,6 +56,12 @@ public class DriveTrain extends Subsystem {
 	  public void stopL(){
 		  motorL1.stopMotor();
 		  motorL2.stopMotor();
+	  }
+	  public void stop(){
+		  motorL1.stopMotor();
+		  motorL2.stopMotor();
+		  motorR1.stopMotor();
+		  motorR2.stopMotor(); 
 	  }
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.

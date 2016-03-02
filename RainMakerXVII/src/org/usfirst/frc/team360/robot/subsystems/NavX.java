@@ -11,11 +11,15 @@ import com.kauailabs.navx.frc.AHRS;
 
 public class NavX extends Subsystem {
 	AHRS ahrs = RobotMap.ahrs; 
-			public double getAngle(){
-				return ahrs.getAngle();
-				
+	
+	public double getAngle(){
+		return ahrs.getAngle();				
 	}
 
+	public void reset(){
+		ahrs.reset();
+	}
+	
 	protected void initDefaultCommand() {
 		
 	}

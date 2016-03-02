@@ -43,6 +43,7 @@ public class RobotMap {
 	
 	public static Encoder encR = new Encoder(3, 2);
 	public static Encoder encL = new Encoder(0, 1);
+
 	
 	public static AHRS ahrs = new AHRS(Port.kMXP);
 	public static DigitalInput intake = new DigitalInput(4);

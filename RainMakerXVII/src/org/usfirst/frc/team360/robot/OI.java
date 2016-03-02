@@ -9,6 +9,7 @@ import org.usfirst.frc.team360.robot.commands.IntakeMotorsOut;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.commands.Shoot;
+import org.usfirst.frc.team360.robot.commands.resetEnc;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -26,6 +27,7 @@ public class OI {
     //joyK is for the separate "joystick" keyboard device....
     public static Button buttonUp = new JoystickButton(joyR, 1);
     public static Button buttonDown = new JoystickButton(joyL, 1);
+    public static Button buttonReset = new JoystickButton(joyL, 2);
     public static Button buttonIntakeArmUp = new JoystickButton(joyOI, 2);
     public static Button buttonIntakeArmDown = new JoystickButton(joyOI, 1);
     public static Button buttonCatapultUp = new JoystickButton(joyOI, 3);
@@ -36,13 +38,14 @@ public class OI {
     public OI(){
     	buttonUp.whenPressed(new ShiftUp());
     	buttonDown.whenPressed(new ShiftDown());
-    	buttonCatapultUp.whenPressed(new CatapultUp());
-    	buttonCatapultDown.whenPressed(new CatapultDown());
+ //   	buttonCatapultUp.whenPressed(new CatapultUp());
+  //  	buttonCatapultDown.whenPressed(new CatapultDown());
     	buttonIntakeArmUp.whenPressed(new IntakeArmUp());
     	buttonIntakeArmDown.whenPressed(new IntakeArmDown());
     	buttonIntakeMotor.whileHeld(new IntakeMotors());
     	buttonIntakeMotorOut.whileHeld(new IntakeMotorsOut());
     	buttonShoot.whenPressed(new Shoot());
+    	buttonReset.whenPressed(new resetEnc());
     }
 }
 

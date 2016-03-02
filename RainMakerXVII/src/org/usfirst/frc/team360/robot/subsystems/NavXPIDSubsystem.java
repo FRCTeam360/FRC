@@ -1,8 +1,10 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
+import org.usfirst.frc.team360.robot.Robot;
 import org.usfirst.frc.team360.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  *
@@ -23,10 +25,14 @@ public class NavXPIDSubsystem extends Subsystem {
     }
 
     public double doPID(double position, double setPoint){
-    	error = position - setPoint;
-    	integral = integral + (error * dt);
-    	derivative = (error - prevError) / dt;
-    	output = (RobotMap.kPNavX * error) + (RobotMap.kINavX * integral) + (RobotMap.kDNavX * derivative);
+    	error = Robot.navx.getAngle() - setPoint;
+        SmartDashboard.putNumber("error", error);
+        SmartDashboard.putNumber("set", setPoint);
+        SmartDashboard.putNumber("pos", Robot.navx.getAngle());
+    	integral = integral + (error);
+    	derivative = (error - prevError);
+    	output = (RobotMap.kPNavX * error);// + (RobotMap.kINavX * integral) + (RobotMap.kDNavX * derivative);
+    	prevError = error;
     	if(output > 1){
     		output = 1;
     	} else if(output < -1){

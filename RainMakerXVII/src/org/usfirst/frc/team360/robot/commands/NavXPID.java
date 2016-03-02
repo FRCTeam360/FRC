@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class NavXPID extends Command {
 	double speed = 0;
+	double point = 0;
 	double myLength = 0;
     public NavXPID(double length) {
         // Use requires() here to declare subsystem dependencies
@@ -19,11 +20,12 @@ public class NavXPID extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	point = Robot.navx.getAngle() + 90;
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	speed = Robot.navxpidsubsystem.doPID(Robot.navx.getAngle(), myLength);
+    	speed = Robot.navxpidsubsystem.doPID(point, myLength);
     	Robot.drivetrain.drive(speed, -speed);
     }
 
