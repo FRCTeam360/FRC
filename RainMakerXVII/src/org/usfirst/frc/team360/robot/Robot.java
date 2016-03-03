@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import org.usfirst.frc.team360.robot.commands.AutoLowBarShoot;
 import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
 import org.usfirst.frc.team360.robot.commands.DriveEncs;
@@ -101,7 +102,7 @@ public class Robot extends IterativeRobot implements PIDOutput {
     	navx = new NavX();
     	navxpidsubsystem = new NavXPIDSubsystem();
     	
-    	pidnav = new PIdNav(5);
+    	pidnav = new PIdNav(90);
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
         shiftup = new ShiftUp();
@@ -126,7 +127,7 @@ public class Robot extends IterativeRobot implements PIDOutput {
 	      turnController.setSetpoint(270);
 	      
 	      auto = new SendableChooser();
-	      auto.addDefault("drive", new DriveEncs(1850, .5));
+	      auto.addDefault("drive", new AutoLowBarShoot());
 	      SmartDashboard.putData("auto" , auto);
     }
     
@@ -139,12 +140,13 @@ public class Robot extends IterativeRobot implements PIDOutput {
     public void autonomousInit() {
         // schedule the autonomous command (example)
     	navx.reset();
+    	drivetrain.resetREnc();
     	autoCommand = (Command) auto.getSelected();
     	if(autoCommand != null){
     		autoCommand.start();
     	}
     	//turnController.enable();
-    	//pidnav.start();
+    //	pidnav.start();
     //	turnController.enable();
 
     }
@@ -161,15 +163,17 @@ public class Robot extends IterativeRobot implements PIDOutput {
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
      //   navxpid.start();
-    //    printnavxangle.start();
+        printnavxangle.start();
+      SmartDashboard.putNumber("encr", drivetrain.getREnc());
+            SmartDashboard.putNumber("encl", drivetrain.getLEnc());
         
         //setpoint is 90 -get navx angle
         
     	//drivetrain.drive(speed, -speed);
        // driveencs.start();
-        SmartDashboard.putNumber("encr", drivetrain.getREnc());
-        SmartDashboard.putNumber("encl", drivetrain.getLEnc());
-        SmartDashboard.putNumber("navx", navx.getAngle());
+    //    SmartDashboard.putNumber("encr", drivetrain.getREnc());
+    //    SmartDashboard.putNumber("encl", drivetrain.getLEnc());
+    //		SmartDashboard.putNumber("navx", navx.getAngle());
     }
 
     
@@ -200,9 +204,9 @@ public class Robot extends IterativeRobot implements PIDOutput {
         pressurize.start();
         printnavxangle.start();
         getencs.start();
-        SmartDashboard.putNumber("encr", drivetrain.getREnc());
-        SmartDashboard.putNumber("encl", drivetrain.getLEnc());
-        SmartDashboard.putBoolean("pneu", RobotMap.intake.get());
+   //     SmartDashboard.putNumber("encr", drivetrain.getREnc());
+   //     SmartDashboard.putNumber("encl", drivetrain.getLEnc());
+   //     SmartDashboard.putBoolean("pneu", RobotMap.intake.get());
     }
     
     /**

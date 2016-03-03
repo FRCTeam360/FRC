@@ -23,10 +23,11 @@ public class PIdNav extends Command {
     	requires(Robot.drivetrain);
     }
     double speed = 0;
-    double kPNavX = .0234;
+   // double kPNavX = .02;
     double integrel = 0;
-    double kINavX = 0.000002;
+   // double kINavX = 0.00000005;
     double prevError = 0;
+    int direction = 1;
     // Called just before this Command runs the first time
     protected void initialize() {
     }
@@ -39,12 +40,15 @@ public class PIdNav extends Command {
     		error = point + 360 - Robot.navx.getAngle();
     	} else if(point < Robot.navx.getAngle() && Robot.navx.getAngle()-point < 180){
     		error = -1 * (Robot.navx.getAngle() - point);
+    		direction = -1;
     	} else if(point > Robot.navx.getAngle() && point - Robot.navx.getAngle() > 180){
     		error = -1 * (Robot.navx.getAngle() + 360 - point);
+    		direction = -1;
     	}
     //	speed =  .5;
-    	integrel += error * kINavX ;
-    	speed = kPNavX * error + integrel;
+   // 	integrel += error * kINavX ;
+    //	speed = kPNavX * error + integrel;
+    	speed = .5 * direction;
     	if(speed > 1){
     		speed = 1;
     	} else if(speed < -1){

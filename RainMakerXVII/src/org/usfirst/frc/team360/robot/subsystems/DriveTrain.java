@@ -29,6 +29,10 @@ public class DriveTrain extends Subsystem {
 	public void resetLEnc(){
 		encL.reset();
 	}
+	public void resetEncs(){
+		encL.reset();
+		encR.reset();
+	}
 	public int getREnc(){
 		return encR.get()*-1;
 	}
