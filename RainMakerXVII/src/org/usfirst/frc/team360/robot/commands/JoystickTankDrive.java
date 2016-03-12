@@ -21,12 +21,12 @@ public class JoystickTankDrive extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	if(Math.abs(OI.joyR.getRawAxis(1)) >= .01){
-    		Robot.drivetrain.driveR(-1*OI.joyR.getRawAxis(1));
+    		Robot.drivetrain.driveR(OI.joyR.getRawAxis(1));
     	} else {
     		Robot.drivetrain.stopR();
     	}
     	if(Math.abs(OI.joyL.getRawAxis(1)) >= .01){
-    		Robot.drivetrain.driveL(-1*OI.joyL.getRawAxis(1));
+    		Robot.drivetrain.driveL(OI.joyL.getRawAxis(1));
     	} else {
     		Robot.drivetrain.stopL();
     	}

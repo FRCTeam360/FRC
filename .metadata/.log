@@ -9542,3 +9542,1942 @@ java.net.UnknownHostException: www.codetrails.com
 	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.doRun(CheckForProjectNewsJob.java:89)
 	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.run(CheckForProjectNewsJob.java:62)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:51:17.428
+!MESSAGE [L/RainMakerXVII/src/org/usfirst/frc/team360/robot/Robot.java]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:51:17.429
+!MESSAGE class org.eclipse.core.internal.resources.File
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:51:17.459
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:51:17.460
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:51:28.599
+!MESSAGE Class: RPIServer Package: org.usfirst.frc.team360.robot.subsystems
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:55:11.224
+!MESSAGE [L/RainMakerXVII/src/org/usfirst/frc/team360/robot/subsystems/RPIServer.java]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:55:11.225
+!MESSAGE class org.eclipse.core.internal.resources.File
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:55:11.235
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:55:11.236
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:55:28.235
+!MESSAGE Class: PrintRPIData Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:59:26.031
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 14:59:26.032
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:05:37.827
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:05:37.827
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:22:50.230
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:22:50.231
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:26:55.846
+!MESSAGE [L/RainMakerXVII/src/org/usfirst/frc/team360/robot/RobotMap.java]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:26:55.846
+!MESSAGE class org.eclipse.core.internal.resources.File
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:26:55.856
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:26:55.857
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:27:04.168
+!MESSAGE Class: RPIAngle Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:29:11.256
+!MESSAGE [L/RainMakerXVII/src/org/usfirst/frc/team360/robot/Robot.java]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:29:11.256
+!MESSAGE class org.eclipse.core.internal.resources.File
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:29:11.268
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:29:11.269
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:29:17.252
+!MESSAGE Class: RPIDistance Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:30:59.767
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:30:59.768
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:31:58.609
+!MESSAGE [L/RainMakerXVII/src/org/usfirst/frc/team360/robot/Robot.java]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:31:58.610
+!MESSAGE class org.eclipse.core.internal.resources.File
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:31:58.619
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:31:58.620
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 15:32:04.806
+!MESSAGE Class: turnToCameraAngle Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:50:04.779
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:50:04.780
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:51:29.667
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:51:29.667
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:51:41.074
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:51:41.074
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:53:04.141
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:53:04.142
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:53:52.104
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:53:52.104
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:54:49.528
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:54:49.529
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:56:03.566
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 16:56:03.566
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:01:47.996
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:01:47.996
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:16:55.177
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:16:55.177
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:27:20.555
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:27:20.555
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:33:32.676
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:33:32.676
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:35:20.902
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:35:20.903
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:36:57.057
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:36:57.057
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:39:40.893
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:39:40.893
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:45:42.262
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:45:42.263
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:49:02.673
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:49:02.741
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:49:23.905
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:49:23.905
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:50:54.606
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:50:54.606
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:52:17.577
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:52:17.577
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:54:11.437
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:54:11.437
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:57:01.376
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 17:57:01.377
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:01:41.074
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:01:41.074
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:02:37.380
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:02:37.381
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:03:12.733
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:03:12.734
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:04:21.144
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:04:21.144
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:05:33.273
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:05:33.273
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:16:22.719
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:16:22.720
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:20:49.671
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:20:49.671
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:21:41.696
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:21:41.697
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:22:23.548
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:22:23.548
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:23:24.987
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:23:24.988
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:24:15.567
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:24:15.568
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:25:46.719
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:25:46.720
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:27:14.103
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:27:14.103
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:32:40.483
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:32:40.484
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:36:29.620
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:36:29.621
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:45:15.902
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:45:15.902
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:47:29.997
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:47:29.997
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:47:45.244
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:47:45.244
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:50:25.675
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:50:25.675
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:51:05.664
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:51:05.664
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:52:11.615
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:52:11.616
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:55:01.509
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:55:01.509
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:56:53.547
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:56:53.548
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:58:29.546
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-03 18:58:29.546
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:07:44.620
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:07:44.621
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:10:35.489
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:10:35.490
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:32:05.227
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:32:05.228
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:33:45.815
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:33:45.816
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:35:59.380
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:35:59.381
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:36:54.402
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:36:54.403
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:37:40.646
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 11:37:40.646
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:00:03.526
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:00:03.526
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:16:46.691
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:16:46.691
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:19:27.738
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:19:27.738
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:20:37.494
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:20:37.494
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:22:37.045
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 12:22:37.045
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:07:52.217
+!MESSAGE [L/RainMakerXVII/src/org/usfirst/frc/team360/robot/Robot.java]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:07:52.218
+!MESSAGE class org.eclipse.core.internal.resources.File
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:07:52.222
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:07:52.223
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:08:00.521
+!MESSAGE Class: AutoLowBarCross Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:55:21.291
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:55:21.291
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:56:45.126
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:56:45.126
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:59:36.961
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 14:59:36.962
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 15:38:11.872
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 15:38:11.873
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 15:38:44.191
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 15:38:44.192
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:26:19.760
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:26:19.761
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:29:29.049
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:29:29.050
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:30:15.189
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:30:15.190
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:30:48.456
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:30:48.457
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:31:37.853
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:31:37.854
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:32:00.878
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:32:00.878
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:32:36.648
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:32:36.648
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:33:04.056
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:33:04.056
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:33:34.952
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:33:34.953
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:34:23.751
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:34:23.752
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:34:33.129
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:34:33.130
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:35:12.573
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:35:12.573
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:35:23.551
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:35:23.552
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:36:51.485
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:36:51.486
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:37:44.797
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:37:44.798
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:39:31.022
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:39:31.023
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:40:07.153
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:40:07.153
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:41:19.191
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:41:19.192
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:42:04.050
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:42:04.050
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:46:40.385
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:46:40.386
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:52:35.340
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 16:52:35.340
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:01:29.446
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:01:29.447
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:38:13.025
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:38:13.026
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:38:53.035
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:38:53.036
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:40:26.274
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:40:26.274
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:52:53.118
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:52:53.118
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:54:24.207
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-04 17:54:24.208
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:04:58.750
+!MESSAGE [[Working copy] JoystickTankDrive.java [in org.usfirst.frc.team360.robot.commands [in src [in RainMakerXVII]]]
+  package org.usfirst.frc.team360.robot.commands
+  import edu.wpi.first.wpilibj.command.Command
+  import org.usfirst.frc.team360.robot.*
+  class JoystickTankDrive
+    JoystickTankDrive()
+    void initialize()
+    void execute()
+    boolean isFinished()
+    void end()
+    void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:04:58.751
+!MESSAGE class org.eclipse.jdt.internal.core.CompilationUnit
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:04:58.755
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:04:58.756
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:05:06.894
+!MESSAGE Class: nullPointTHROW Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:06:33.694
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:06:33.694
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:07:51.294
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:07:51.295
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-03-05 08:16:58.434
+!MESSAGE Failed to download jre:jre:call:zip:1.0.0
+!STACK 0
+org.eclipse.aether.resolution.ArtifactResolutionException: Could not transfer artifact jre:jre:zip:call:1.0.0-SNAPSHOT from/to models (http://download.eclipse.org/recommenders/models/mars/): download.eclipse.org
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:444)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:294)
+	at org.eclipse.recommenders.models.ModelRepository.resolveInternal(ModelRepository.java:190)
+	at org.eclipse.recommenders.models.ModelRepository.resolve(ModelRepository.java:172)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelRepository.resolve(EclipseModelRepository.java:167)
+	at org.eclipse.recommenders.internal.models.rcp.DownloadModelArchiveJob.run(DownloadModelArchiveJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact jre:jre:zip:call:1.0.0-SNAPSHOT from/to models (http://download.eclipse.org/recommenders/models/mars/): download.eclipse.org
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:43)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:355)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:581)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:249)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:520)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421)
+	... 8 more
+Caused by: java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.impl.client.DecompressingHttpClient.execute(DecompressingHttpClient.java:158)
+	at org.eclipse.aether.transport.http.HttpTransporter.execute(HttpTransporter.java:287)
+	at org.eclipse.aether.transport.http.HttpTransporter.implGet(HttpTransporter.java:243)
+	at org.eclipse.aether.spi.connector.transport.AbstractTransporter.get(AbstractTransporter.java:59)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask(BasicRepositoryConnector.java:447)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:350)
+	... 13 more
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2016-03-05 08:16:58.456
+!MESSAGE jre:jre:call:zip:1.0.0 could not be resolved from the model repositories. Are you offline?
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:17:07.393
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:17:07.393
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:17:48.086
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:17:48.087
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:19:38.695
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:19:38.695
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:51:38.070
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 08:51:38.071
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 09:52:28.237
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 09:52:28.237
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 10:01:05.547
+!MESSAGE [[Working copy] nullPointTHROW.java [in org.usfirst.frc.team360.robot.commands [in src [in RainMakerXVII]]]
+  package org.usfirst.frc.team360.robot.commands
+  import edu.wpi.first.wpilibj.command.Command
+  class nullPointTHROW
+    nullPointTHROW()
+    void initialize()
+    void execute()
+    boolean isFinished()
+    void end()
+    void interrupted()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 10:01:05.548
+!MESSAGE class org.eclipse.jdt.internal.core.CompilationUnit
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 10:01:05.557
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 10:01:05.558
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 10:01:15.137
+!MESSAGE Class: cameras Package: org.usfirst.frc.team360.robot.subsystems
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:25:24.723
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:25:24.724
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:28:03.369
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:28:03.369
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:30:00.114
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:30:00.115
+!MESSAGE Targets: simulate, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:30:17.374
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:30:17.374
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:31:17.011
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:31:17.011
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:32:01.234
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:32:01.234
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:53:17.035
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 11:53:17.037
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 12:27:25.739
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 12:27:25.739
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 13:18:51.756
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 13:18:51.756
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 13:19:24.218
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 13:19:24.218
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 14:15:30.010
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-05 14:15:30.010
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-07 16:46:11.304
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-07 16:46:11.305
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2016-03-09 15:26:59.965
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/mars/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2016-03-09 15:27:00.097
+!MESSAGE Unknown Host: http://download.eclipse.org/eclipse/updates/4.5/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2016-03-09 15:27:00.156
+!MESSAGE Unknown Host: http://download.eclipse.org/webtools/repository/mars/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2016-03-09 15:27:00.228
+!MESSAGE Unknown Host: http://first.wpi.edu/FRC/roborio/release/eclipse/content.xml
+!STACK 0
+java.net.UnknownHostException: first.wpi.edu
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2016-03-09 15:27:00.280
+!MESSAGE Unknown Host: http://download.eclipse.org/mylyn/releases/mars/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:34:29.339
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:34:29.340
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:35:35.703
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:35:35.703
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:37:00.005
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:37:00.005
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:43:20.550
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:43:20.550
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:44:22.376
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:44:22.376
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:47:14.381
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:47:14.381
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:48:10.868
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:48:10.868
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:48:52.887
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:48:52.888
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:50:40.207
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:50:40.208
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:51:30.225
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:51:30.225
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:52:42.934
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:52:42.935
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:53:21.571
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:53:21.572
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:55:38.343
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:55:38.343
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:56:21.002
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:56:21.003
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:58:04.029
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 15:58:04.029
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:01:03.006
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:01:03.007
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:04:15.598
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:04:15.598
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:05:02.736
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:05:02.737
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:09:42.217
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:09:42.217
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:12:57.795
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:12:57.796
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:14:46.615
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:14:46.615
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:15:19.630
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:15:19.631
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:15:50.480
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:15:50.480
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:18:35.127
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:18:35.127
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:24:44.853
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:24:44.853
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:28:07.659
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:28:07.660
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:28:20.293
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:28:20.293
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:32:58.579
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:32:58.579
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:39:38.752
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:39:38.753
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:44:12.098
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:44:12.099
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:45:39.904
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:45:39.905
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:46:25.670
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:46:25.671
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:46:58.288
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:46:58.288
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:47:41.913
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:47:41.913
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:50:16.904
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:50:16.904
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:53:41.558
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 16:53:41.558
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:17:15.365
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:17:15.366
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:19:14.437
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:19:14.437
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:20:43.861
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:20:43.862
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:23:53.448
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:23:53.448
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:42:11.373
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:42:11.374
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:42:52.954
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:42:52.955
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:43:26.243
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:43:26.244
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:47:39.385
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:47:39.386
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:48:37.909
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:48:37.909
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:49:49.460
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:49:49.461
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:53:49.925
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-09 17:53:49.926
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:13:20.345
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:13:20.345
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:15:27.738
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:15:27.739
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:21:49.120
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:21:49.121
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:33:06.394
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 16:33:06.394
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 17:21:08.438
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 17:21:08.438
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 17:32:23.425
+!MESSAGE [L/RainMakerXVII/src/org/usfirst/frc/team360/robot/commands/RPIAngle.java]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 17:32:23.426
+!MESSAGE class org.eclipse.core.internal.resources.File
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 17:32:23.429
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 17:32:23.429
+!MESSAGE Project: P/RainMakerXVII
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 17:32:33.644
+!MESSAGE Class: driveStraightPID Package: org.usfirst.frc.team360.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:06:41.911
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:06:41.912
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:08:36.307
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:08:36.307
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:09:11.080
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:09:11.080
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:15:01.440
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:15:01.440
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:16:30.170
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:16:30.170
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:18:35.743
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:18:35.744
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:21:11.441
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:21:11.441
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:26:33.920
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:26:33.920
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:33:47.936
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:33:47.936
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:34:25.344
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-10 18:34:25.344
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:19:13.700
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:19:13.701
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:23:16.937
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:23:16.938
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:34:01.196
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:34:01.196
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:43:48.951
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:43:48.952
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:50:54.323
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:50:54.324
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:55:16.376
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 13:55:16.377
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:00:42.466
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:00:42.466
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:02:04.823
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:02:04.823
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:03:16.371
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:03:16.371
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:03:58.316
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:03:58.317
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:06:34.622
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:06:34.622
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:07:29.647
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:07:29.647
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:10:32.703
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:10:32.703
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:14:20.346
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:14:20.346
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:15:09.838
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:15:09.839
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:15:58.469
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:15:58.469
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:21:21.963
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:21:21.963
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:24:00.624
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:24:00.624
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:26:30.446
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:26:30.446
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:27:23.732
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:27:23.733
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:33:36.741
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:33:36.742
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:45:56.193
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 14:45:56.194
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:26:08.216
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:26:08.216
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:26:32.656
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:26:32.656
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:33:53.155
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:33:53.156
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:35:48.407
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:35:48.407
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:38:10.381
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:38:10.381
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:39:29.051
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:39:29.051
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:40:12.117
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:40:12.117
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:42:03.392
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:42:03.392
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:46:00.890
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:46:00.890
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:47:17.464
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:47:17.465
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:48:57.330
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:48:57.330
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:49:22.807
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:49:22.807
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:49:56.551
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:49:56.551
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:50:59.468
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:50:59.468
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:52:25.828
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:52:25.828
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:55:07.868
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:55:07.869
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:55:55.617
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:55:55.618
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:57:21.270
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 15:57:21.271
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:00:00.005
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:00:00.005
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:01:09.517
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:01:09.517
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:02:34.361
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:02:34.361
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:03:30.636
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:03:30.636
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:13:41.973
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:13:41.974
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:16:10.194
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:16:10.194
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:20:11.944
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:20:11.944
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:22:27.990
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:22:27.991
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:24:38.680
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:24:38.681
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:28:36.045
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:28:36.049
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:29:32.326
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:29:32.326
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:30:22.608
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:30:22.608
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:37:43.916
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:37:43.917
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:38:42.749
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:38:42.749
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:43:25.403
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 16:43:25.403
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:01:31.805
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:01:31.805
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:02:45.218
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:02:45.218
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:04:59.602
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:04:59.602
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:06:05.540
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:06:05.540
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:07:18.496
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:07:18.496
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:08:52.716
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:08:52.716
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:09:41.918
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:09:41.918
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:10:17.954
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:10:17.954
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:12:54.651
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:12:54.651
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:17:59.036
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:17:59.036
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:19:32.587
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:19:32.587
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:21:19.064
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:21:19.065
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:22:00.814
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:22:00.814
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:23:56.565
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:23:56.565
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:25:00.099
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:25:00.100
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:25:35.972
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:25:35.972
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:26:44.940
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:26:44.940
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:28:26.878
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:28:26.879
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:32:19.164
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:32:19.164
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:34:11.747
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:34:11.747
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:35:27.978
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:35:27.978
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:39:19.200
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:39:19.201
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:39:57.207
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:39:57.207
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:41:46.870
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:41:46.870
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:43:02.756
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:43:02.756
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:50:44.426
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:50:44.426
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:50:59.266
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:50:59.267
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:51:57.101
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:51:57.101
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:53:27.936
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:53:27.936
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:54:34.510
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:54:34.511
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:56:09.192
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:56:09.192
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:57:05.820
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:57:05.820
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:57:43.506
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:57:43.507
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:58:41.600
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 17:58:41.600
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:46:35.802
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:46:35.803
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:47:07.839
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:47:07.839
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:51:14.277
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:51:14.278
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:51:44.987
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-11 18:51:44.987
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:08:48.759
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:08:48.760
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:09:29.002
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:09:29.002
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:12:10.546
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:12:10.546
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:12:20.494
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:12:20.494
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:30:51.465
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:30:51.466
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:40:14.050
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:40:14.050
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:42:46.813
+!MESSAGE Running ant file: C:\Users\360\Desktop\FRC\RainMakerXVII\build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-03-12 11:42:46.814
+!MESSAGE Targets: deploy, Mode: run

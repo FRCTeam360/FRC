@@ -8,6 +8,7 @@ import org.usfirst.frc.team360.robot.*;
  */
 public class SuperShifter extends Subsystem {
     
+//error here
 	public static DoubleSolenoid superShifter = RobotMap.superShifter;  
     // Put methods for controlling this subsystem
     // here. Call these from Commands.

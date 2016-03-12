@@ -13,7 +13,11 @@ public class NavX extends Subsystem {
 	AHRS ahrs = RobotMap.ahrs; 
 	
 	public double getAngle(){
-		return ahrs.getAngle();				
+		if( ahrs.getAngle() + 180 > 360){
+			return ahrs.getAngle() - 180;		
+		}
+		return ahrs.getAngle() + 180;
+		
 	}
 
 	public void reset(){

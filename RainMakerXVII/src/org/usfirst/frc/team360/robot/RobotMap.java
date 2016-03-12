@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.VictorSP;
+import edu.wpi.first.wpilibj.vision.USBCamera;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -26,29 +27,47 @@ public class RobotMap {
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
 	
-	//
-	public static final double kPNavX = .018;
-	public static final double kINavX = .00001;
-	public static final double kDNavX = .000015;
+	public static double angle = 0;
+	public static double distance = 0;
+	
 	public static VictorSP motorR1 = new VictorSP(0);
 	public static VictorSP motorR2 = new VictorSP(1);
 	public static VictorSP motorL1 = new VictorSP(2);
 	public static VictorSP motorL2 = new VictorSP(3);
+	
 	public static VictorSP intakeMotor = new VictorSP(6); 
 
-	//supershifter pneumatics 
+	//supershifter pneumatics ang
+	
+	public static DigitalInput angle1 = new DigitalInput(6);//1
+	public static DigitalInput angle2 = new DigitalInput(7);//2
+	public static DigitalInput angle3 = new DigitalInput(8);//4
+	public static DigitalInput angle4 = new DigitalInput(9);//8
+	public static DigitalInput angle5 = new DigitalInput(23);//16
+	public static DigitalInput angle6 = new DigitalInput(22);//32
+	public static DigitalInput angle7 = new DigitalInput(21);//64
+	
+	public static DigitalInput distance1 = new DigitalInput(20);//1
+	public static DigitalInput distance2 = new DigitalInput(19);//2
+	public static DigitalInput distance3 = new DigitalInput(18);//4
+	public static DigitalInput distance4 = new DigitalInput(12);//8
+	public static DigitalInput distance5 = new DigitalInput(13);//16
+	public static DigitalInput distance6 = new DigitalInput(11);//32
+	public static DigitalInput distance7 = new DigitalInput(10);//64
+	
 	public static DoubleSolenoid superShifter = new DoubleSolenoid(0, 1);
+	
 	public static DoubleSolenoid catapultTusks = new DoubleSolenoid(5, 4);
+	
 	public static DoubleSolenoid intakeArms = new DoubleSolenoid(2, 3 );
 	
 	public static Encoder encR = new Encoder(3, 2);
 	public static Encoder encL = new Encoder(0, 1);
-
 	
 	public static AHRS ahrs = new AHRS(Port.kMXP);
+	
 	public static DigitalInput intake = new DigitalInput(4);
 	
-	//compressor 
 	public static Compressor compressor = new Compressor();
 	
 }

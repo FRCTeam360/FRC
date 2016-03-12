@@ -20,19 +20,19 @@ public class NavXPID extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	point = Robot.navx.getAngle() + 90;
+    //	point = Robot.navx.getAngle() + 90;
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	speed = Robot.navxpidsubsystem.doPID(point, myLength);
-    	Robot.drivetrain.drive(speed, -speed);
+    	Robot.drivetrain.drive(.5, -.5);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-    	return false;
+    //	return  Robot.navx.getAngle() < point + .5 && Robot.navx.getAngle() > point - .5;
     	//return Robot.navx.getAngle() + 1 >  myLength &&Robot.navx.getAngle() - 1 <  myLength;
+    	return false;
     }
 
     // Called once after isFinished returns true

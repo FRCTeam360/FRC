@@ -31,7 +31,7 @@ public class NavXPIDSubsystem extends Subsystem {
         SmartDashboard.putNumber("pos", Robot.navx.getAngle());
     	integral = integral + (error);
     	derivative = (error - prevError);
-    	output = (RobotMap.kPNavX * error);// + (RobotMap.kINavX * integral) + (RobotMap.kDNavX * derivative);
+    	//output = (RobotMap.kPNavX * error);// + (RobotMap.kINavX * integral) + (RobotMap.kDNavX * derivative);
     	prevError = error;
     	if(output > 1){
     		output = 1;

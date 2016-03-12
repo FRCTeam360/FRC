@@ -4,12 +4,15 @@ import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.PIDController;
 import edu.wpi.first.wpilibj.PIDOutput;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.command.WaitCommand;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import org.usfirst.frc.team360.robot.commands.AutoLowBarCross;
 import org.usfirst.frc.team360.robot.commands.AutoLowBarShoot;
 import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
@@ -22,8 +25,13 @@ import org.usfirst.frc.team360.robot.commands.NavXPID;
 import org.usfirst.frc.team360.robot.commands.PIdNav;
 import org.usfirst.frc.team360.robot.commands.Pressurize;
 import org.usfirst.frc.team360.robot.commands.PrintNavXAngle;
+import org.usfirst.frc.team360.robot.commands.PrintRPIData;
+import org.usfirst.frc.team360.robot.commands.RPIAngle;
+import org.usfirst.frc.team360.robot.commands.RPIDistance;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
+import org.usfirst.frc.team360.robot.commands.TurnToCameraAngle;
+import org.usfirst.frc.team360.robot.commands.driveStraightPID;
 import org.usfirst.frc.team360.robot.commands.getEncs;
 import org.usfirst.frc.team360.robot.subsystems.Catapult;
 import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
@@ -32,6 +40,7 @@ import org.usfirst.frc.team360.robot.subsystems.IntakeMotor;
 import org.usfirst.frc.team360.robot.subsystems.NavX;
 import org.usfirst.frc.team360.robot.subsystems.NavXPIDSubsystem;
 import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
+import org.usfirst.frc.team360.robot.subsystems.RPIServer;
 import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 
 
@@ -42,8 +51,10 @@ import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
-public class Robot extends IterativeRobot implements PIDOutput {
+public class Robot extends IterativeRobot {
 
+	// ENCODERS ON COMP BOT ARE 21.16 ticks per In
+	//ENCODER ON PRACTICE BOT ARE 14.21
 	public static DriveTrain drivetrain;
 	public static SuperShifter supershifter;
 	public static Pneumatics pneumatics;
@@ -52,9 +63,11 @@ public class Robot extends IterativeRobot implements PIDOutput {
 	public static IntakeMotor intakemotor; 
 	public static NavX navx;
 	public static NavXPIDSubsystem navxpidsubsystem;
+	public static RPIServer rpiserver;
 	
     Command joysticktankdrive;
     Command pressurize;
+    Command printrpidata;
     Command shiftup;
     Command shiftdown;
     Command catapultup;
@@ -68,18 +81,13 @@ public class Robot extends IterativeRobot implements PIDOutput {
     Command driveencs;
     Command autoCommand;
     Command pidnav;
+    Command rpiangle;
+    Command rpidistance;
+    Command drivestraightpid;
     CameraServer server;
     
     SendableChooser auto;
-    
-    PIDController turnController;
-    
-    static final double kP = 0.03;
-    static final double kI = 0.00;
-    static final double kD = 0.00;
-    static final double kF = 0.00;
-    static final double kToleranceDegrees = 2.0f;
-    public double speed = 0;
+   
 	public static OI oi;
 
     /**
@@ -89,8 +97,9 @@ public class Robot extends IterativeRobot implements PIDOutput {
      */
     public void robotInit() {
         // instantiate the command used for the autonomous period
+    	try{
     	server = CameraServer.getInstance();
-    	server.setQuality(50);
+    	server.setQuality(100);
     	server.startAutomaticCapture("cam0");
     	
     	supershifter = new SuperShifter();
@@ -101,7 +110,7 @@ public class Robot extends IterativeRobot implements PIDOutput {
     	intakemotor = new IntakeMotor();
     	navx = new NavX();
     	navxpidsubsystem = new NavXPIDSubsystem();
-    	
+    	rpiserver = new RPIServer();
     	pidnav = new PIdNav(90);
     	joysticktankdrive = new JoystickTankDrive();
         pressurize = new Pressurize();
@@ -110,25 +119,27 @@ public class Robot extends IterativeRobot implements PIDOutput {
         catapultdown = new CatapultDown();
         catapultup = new CatapultUp();
         intakearmdown = new IntakeArmDown();
-        navxpid = new NavXPID(90);
+     //   navxpid = new NavXPID(270);
         intakearmup = new IntakeArmUp();
         printnavxangle = new PrintNavXAngle();
         intakemotors = new IntakeMotors();
         getencs = new getEncs();
+        printrpidata = new PrintRPIData();
+        drivestraightpid = new driveStraightPID(.4, 180, 200);
         //driveencs = new DriveEncs(1850, 1);
-        
+        rpiangle = new RPIAngle();
+        rpidistance = new RPIDistance();
 		oi = new OI();
-		
-	      turnController = new PIDController(kP, kI, kD, kF, RobotMap.ahrs, this);
-	      turnController.setInputRange(-180.0f,  180.0f);
-	      turnController.setOutputRange(-1.0, 1.0);
-	      turnController.setAbsoluteTolerance(kToleranceDegrees);
-	      turnController.setContinuous(true);
-	      turnController.setSetpoint(270);
 	      
 	      auto = new SendableChooser();
-	      auto.addDefault("drive", new AutoLowBarShoot());
-	      SmartDashboard.putData("auto" , auto);
+	   //   auto.addDefault("drive", new DriveEncs(2862, 1));
+	  //    auto.addDefault("drive", new DriveEncs(4000, 1));
+	 //	     auto.addDefault("Lowbar Cross auto", new AutoLowBarCross());
+	  //    auto.addDefault("Turn", new PIdNav(90));
+	  //    SmartDashboard.putData("auto" , auto);
+    	} catch(Exception e) {
+			System.out.println(e);
+		}
     }
     
 	
@@ -140,50 +151,45 @@ public class Robot extends IterativeRobot implements PIDOutput {
     public void autonomousInit() {
         // schedule the autonomous command (example)
     	navx.reset();
+    	Timer.delay(.25);
     	drivetrain.resetREnc();
     	autoCommand = (Command) auto.getSelected();
     	if(autoCommand != null){
-    		autoCommand.start();
+    	//	autoCommand.start();
     	}
+    	pidnav.start();
+   // 	drivestraightpid.start();
     	//turnController.enable();
-    //	pidnav.start();
+  //  	pidnav.start();
     //	turnController.enable();
+    //	navxpid.start();
 
     }
-    double integral = 0;
-
-	double prevError = 0;
-	double derivative = 0;
-	double dt = .002;
-	double output = 0;
 
     /**
      * This function is called periodically during autonomous
      */
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
+  //      rpiangle.start();
      //   navxpid.start();
+        
         printnavxangle.start();
-      SmartDashboard.putNumber("encr", drivetrain.getREnc());
-            SmartDashboard.putNumber("encl", drivetrain.getLEnc());
-        
-        //setpoint is 90 -get navx angle
-        
-    	//drivetrain.drive(speed, -speed);
-       // driveencs.start();
-    //    SmartDashboard.putNumber("encr", drivetrain.getREnc());
-    //    SmartDashboard.putNumber("encl", drivetrain.getLEnc());
-    //		SmartDashboard.putNumber("navx", navx.getAngle());
     }
-
     
     public void teleopInit() {
 		// This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out.
+    	if(autoCommand != null){
+        		autoCommand.cancel();
+        }
+
     	navx.reset();
-        
+    	rpiangle.start();
+    	rpidistance.start();
+    	printrpidata.start();
     }
 
     /**
@@ -191,22 +197,27 @@ public class Robot extends IterativeRobot implements PIDOutput {
      * You can use it to reset subsystems before shutting down.
      */
     public void disabledInit(){
-    	turnController.disable();
+    	
     }
 
     /**
      * This function is called periodically during operator control
      */
 	public void teleopPeriodic() {
-        Scheduler.getInstance().run();
-    //    navxpid.start();
-        joysticktankdrive.start();
-        pressurize.start();
-        printnavxangle.start();
-        getencs.start();
-   //     SmartDashboard.putNumber("encr", drivetrain.getREnc());
-   //     SmartDashboard.putNumber("encl", drivetrain.getLEnc());
-   //     SmartDashboard.putBoolean("pneu", RobotMap.intake.get());
+		
+       
+		try {
+			 Scheduler.getInstance().run();
+			    //    navxpid.start();
+			        joysticktankdrive.start();
+			        pressurize.start();
+			        printnavxangle.start();
+			        getencs.start();
+			        rpiangle.start();
+			  //      printrpidata.start();
+		} catch(Exception e) {
+			System.out.println(e);
+		}
     }
     
     /**
@@ -215,11 +226,4 @@ public class Robot extends IterativeRobot implements PIDOutput {
     public void testPeriodic() {
         LiveWindow.run();
     }
-
-
-	@Override
-	public void pidWrite(double output) {
-		// TODO Auto-generated method stub
-		speed = output;
-	}
 }

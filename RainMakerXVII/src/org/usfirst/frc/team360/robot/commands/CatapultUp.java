@@ -45,7 +45,7 @@ public class CatapultUp extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return time.get() > .5; 
+        return time.get() > .6; 
         
     }
 

@@ -1,0 +1,211 @@
+package org.usfirst.frc.team360.robot.commands;
+
+import org.usfirst.frc.team360.robot.Robot;
+import org.usfirst.frc.team360.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+/**
+ *
+ */
+public class PIdNav extends Command {
+	/*double point = 0;
+	double targetAngle = 0;
+	double pastPoint = 0;
+    public PIdNav(double point1) {
+        // Use requires() here to declare subsystem dependencies
+        // eg. requires(chassis);
+    	
+    	requires(Robot.drivetrain);
+    }
+    double speed = 0;
+    double kPNavX = .023;
+   // double kPNavX = .03;
+    double integrel = 0;
+    double kINavX = 0.001;
+ //   double kINavX = 0;
+    double prevError = 0;
+    int direction;// = 1;
+    // Called just before this Command runs the first time
+    protected void initialize() {
+    	double point1 = RobotMap.angle;
+    	integrel = 0;
+    //	SmartDashboard.putNumber("init 1angle", point1);
+    	pastPoint = point1;
+    	if(point1 > 360){
+    		point1 = point1 - 360;
+    	} else if(point1 < 1){
+    		point1 = point1 + 360;
+    	}
+    	this.point = point1;
+    //	SmartDashboard.putNumber("init 1angle", pastPoint);
+    }
+    double error = 0;
+    // Called repeatedly when this Command is scheduled to run
+    protected void execute() {
+    	
+    	SmartDashboard.putNumber("navx angle",  Robot.navx.getAngle());
+    	if(point > Robot.navx.getAngle() && point - Robot.navx.getAngle() <= 180){
+    		error = point - Robot.navx.getAngle();
+    		direction = 1;
+    	} else if(point < Robot.navx.getAngle() && Robot.navx.getAngle()-point >= 180){
+    		error = point + 360 - Robot.navx.getAngle();
+    		direction = 1;
+    	} else if(point < Robot.navx.getAngle() && Robot.navx.getAngle()-point < 180){
+    		error = (Robot.navx.getAngle() - point);
+    		direction = -1;
+    	} else if(point > Robot.navx.getAngle() && point - Robot.navx.getAngle() > 180){
+    		error = (Robot.navx.getAngle() + 360 - point);
+    		direction = -1;
+    	}
+    	speed =  .6;
+    //	integrel += error * kINavX ;
+    	if(Robot.navx.getAngle() > point - 8){
+    //		speed = kPNavX * error + integrel; 
+    	} else {
+    //		speed = .5;
+    	}
+    	
+    //	speed = .5 * direction;
+    	if(speed > 1){
+    		speed = 1;
+    	} else if(speed < -1){
+    		speed = -1;
+    	} 
+    	Robot.drivetrain.drive(speed, -speed);
+    }
+
+    // Make this return true when this Command no longer needs to run execute()
+    protected boolean isFinished() {
+        return  Robot.navx.getAngle() > 90 && Robot.navx.getAngle() < 300;//point + .5 && Robot.navx.getAngle() > point - .5;
+ //       return  Robot.navx.getAngle() < 270 && Robot.navx.getAngle() > 10;//point + .5 && Robot.navx.getAngle() > point - .5;
+    }
+
+    // Called once after isFinished returns true
+    protected void end() {
+    	Robot.drivetrain.stop();
+    }
+
+    // Called when another command which requires one or more of the same
+    // subsystems is scheduled to run
+    protected void interrupted() {
+    	end();
+    }
+}*/
+	double motorSpeed = 0.0;
+	double direction = 0;
+	double currentAngle = 0;
+	double distance = 0;
+    double gainMultiplier = 0.1;
+    double kPStraight = 0.5;
+    double kIStraight = 0.0003;
+    double kDStraight = 0.5;
+    double error = 0;
+    double pAdjustment = 0;
+    double iAdjustment = 0;
+    double dAdjustment = 0;
+    double lastError = 0;
+    double PIDAdjustment = 0;
+    double speed = 0;
+    double way = 1;
+    int n = 0;
+    Timer time;
+    int i = 0;
+    public PIdNav(double direction) {
+        // Use requires() here to declare subsystem dependencies
+        // eg. requires(chassis);
+    //	this.motorSpeed = motorSpeed;
+    	this.direction = direction;
+    //	this.distance = distance;
+    	requires(Robot.drivetrain); 
+    }
+    // Called just before this Command runs the first time
+    protected void initialize() {
+    	dAdjustment = 0;
+    	iAdjustment = 0;
+    	SmartDashboard.putString("done", "going");
+    	n = 0;
+    	i = 0;
+    	pAdjustment = 0;
+    	error = 0;
+    	lastError = 0;
+    	PIDAdjustment = 0;
+    	if(direction > 180){
+    		way = -1;
+    	} else {
+    		way = 1;
+    	}
+    	time = new Timer(); 
+    	time.reset();
+    	time.start();
+    }
+
+    // Called repeatedly when this Command is scheduled to run
+    protected void execute() {
+    	SmartDashboard.putNumber("angle: ", Robot.navx.getAngle());
+      	SmartDashboard.putNumber("angle target: ", direction);
+    	currentAngle = Robot.navx.getAngle();
+    	error = direction - currentAngle;
+    	pAdjustment = error * kPStraight * gainMultiplier;
+    	iAdjustment = iAdjustment + (error * kIStraight * gainMultiplier);
+    	dAdjustment = (error - lastError) * kDStraight * gainMultiplier;
+    	lastError = error;
+    	SmartDashboard.putNumber("error: ", error);
+    	SmartDashboard.putNumber("prop:  ", pAdjustment);
+      	SmartDashboard.putNumber("inte: ", iAdjustment);
+    	PIDAdjustment = pAdjustment + iAdjustment + dAdjustment;
+    	SmartDashboard.putNumber("deriv: ", dAdjustment);
+    	SmartDashboard.putNumber("prop: ", motorSpeed);
+      	SmartDashboard.putNumber("inte: ", iAdjustment);
+      	SmartDashboard.putNumber("right: ", motorSpeed);
+      	SmartDashboard.putNumber("left: ", motorSpeed + PIDAdjustment);
+      	//drive motors may be reverse 10/10 should fix
+    	if(error < 0) {
+    		if(motorSpeed + PIDAdjustment > .3){
+    			speed = .3 * way;
+    		} else if(motorSpeed + PIDAdjustment < -.3){
+    			speed = -.3 * way;
+    		} else {
+    			speed = (motorSpeed + PIDAdjustment) * way;
+    		}
+    		Robot.drivetrain.driveR((speed));
+      		Robot.drivetrain.driveL(-(speed));	
+    	}else{
+    		if(motorSpeed + PIDAdjustment > .3){
+    			speed = .3 * way;
+    		} else if(motorSpeed + PIDAdjustment < -.3){
+    			speed = -.3 * way;
+    		} else {
+    			speed = (motorSpeed + PIDAdjustment) * way;
+    		}
+    		Robot.drivetrain.driveR(-(speed));
+      		Robot.drivetrain.driveL(speed);
+      		if(Robot.navx.getAngle() < 1 + direction && Robot.navx.getAngle() > direction - 1){
+      			n++;
+      			i++;
+      		} else {
+      			n = 0;
+      		}
+    	}
+    }
+
+    // Make this return true when this Command no longer needs to run execute()
+    protected boolean isFinished() {
+        return (Robot.navx.getAngle() < 1 + direction && Robot.navx.getAngle() > direction - 1 && n > 5) || time.get() > .5;
+    	//return false;
+    }
+
+    // Called once after isFinished returns true
+    protected void end() {
+    	Robot.drivetrain.stop();
+    	SmartDashboard.putString("done", "done");
+    }
+
+    // Called when another command which requires one or more of the same
+    // subsystems is scheduled to run
+    protected void interrupted() {
+    	end();
+    }
+}
