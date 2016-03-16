@@ -40,18 +40,18 @@ public class DriveTrain extends Subsystem {
 		return encL.get();
 	}
 	public void drive(double RMotor, double LMotor) {
-		  motorR1.set(-RMotor);
-		  motorR2.set(-RMotor);
-		  motorL1.set(LMotor);
-		  motorL2.set(LMotor);
+		  motorR1.set(RMotor);
+		  motorR2.set(RMotor);
+		  motorL1.set(-LMotor);
+		  motorL2.set(-LMotor);
 	  }
 	  public void driveR(double RMotor){
-		  motorL1.set(-RMotor);
-		  motorL2.set(-RMotor);
+		  motorL1.set(RMotor);
+		  motorL2.set(RMotor);
 	  }
 	  public void driveL(double LMotor){
-		  motorR1.set(LMotor);
-		  motorR2.set(LMotor);
+		  motorR1.set(-LMotor);
+		  motorR2.set(-LMotor);
 	  }
 	  public void stopR(){
 		  motorR1.stopMotor();

@@ -6,10 +6,10 @@ import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
 import org.usfirst.frc.team360.robot.commands.IntakeMotors;
 import org.usfirst.frc.team360.robot.commands.IntakeMotorsOut;
+import org.usfirst.frc.team360.robot.commands.ResetEncs;
 import org.usfirst.frc.team360.robot.commands.ShiftDown;
 import org.usfirst.frc.team360.robot.commands.ShiftUp;
 import org.usfirst.frc.team360.robot.commands.Shoot;
-import org.usfirst.frc.team360.robot.commands.resetEnc;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -41,7 +41,7 @@ public class OI {
     	buttonIntakeMotor.whileHeld(new IntakeMotors());
     	buttonIntakeMotorOut.whileHeld(new IntakeMotorsOut());
     	buttonShoot.whenPressed(new Shoot());
-    	buttonReset.whenPressed(new resetEnc());
+    	buttonReset.whenPressed(new ResetEncs());
     }
 }
 

@@ -20,7 +20,7 @@ public class JoystickTankDrive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if(Math.abs(OI.joyR.getRawAxis(1)) >= .01){
+    	/*if(Math.abs(OI.joyR.getRawAxis(1)) >= .01){
     		Robot.drivetrain.driveR(OI.joyR.getRawAxis(1));
     	} else {
     		Robot.drivetrain.stopR();
@@ -29,6 +29,16 @@ public class JoystickTankDrive extends Command {
     		Robot.drivetrain.driveL(OI.joyL.getRawAxis(1));
     	} else {
     		Robot.drivetrain.stopL();
+    	}*/
+    	if(Math.abs(OI.joyR.getRawAxis(1)) >= .01){
+    		Robot.drivetrain.driveR(-OI.joyR.getRawAxis(1));
+    	} else {
+    		Robot.drivetrain.driveR(0);
+    	}
+    	if(Math.abs(OI.joyL.getRawAxis(1)) >= .01){
+    		Robot.drivetrain.driveL(-OI.joyL.getRawAxis(1));
+    	} else {
+    		Robot.drivetrain.driveL(0);
     	}
     }
 
