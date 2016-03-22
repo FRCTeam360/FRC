@@ -15,6 +15,9 @@ public class Catapult extends Subsystem {
 	public void close() {
 		CatapultTusks.set(DoubleSolenoid.Value.kReverse);
 	}
+	public boolean getCatapultPosition() {
+		return RobotMap.catapult.get();
+	}
   
     // Put methods for controlling this subsystem
     // here. Call these from Commands.

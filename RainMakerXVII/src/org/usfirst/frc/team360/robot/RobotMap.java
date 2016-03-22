@@ -34,7 +34,7 @@ public class RobotMap {
 	public static VictorSP motorR2 = new VictorSP(1);
 	public static VictorSP motorL1 = new VictorSP(2);
 	public static VictorSP motorL2 = new VictorSP(3);
-	
+
 	public static VictorSP intakeMotor = new VictorSP(6); 
 
 	//supershifter pneumatics ang
@@ -67,6 +67,7 @@ public class RobotMap {
 	public static AHRS ahrs = new AHRS(Port.kMXP);
 	
 	public static DigitalInput intake = new DigitalInput(4);
+	public static DigitalInput catapult = new DigitalInput(5);
 	
 	public static Compressor compressor = new Compressor();
 	

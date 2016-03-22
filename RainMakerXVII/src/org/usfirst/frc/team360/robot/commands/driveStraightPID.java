@@ -8,13 +8,13 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 /**
  *
  */
-public class driveStraightPID extends Command {
+public class DriveStraightPID extends Command {
 	// working vals are p = .45 i = .012 d = .011 gain = .1
 	double motorSpeed = 0;
 	double direction = 0;
 	double currentAngle = 0;
 	double distance = 0;
-    double gainMultiplier = 0.1;
+    double gainMultiplier = 0.15;
     double kPStraight = 0.45;
     double kIStraight = 0.012;
     double kDStraight = 0.011;
@@ -24,7 +24,7 @@ public class driveStraightPID extends Command {
     double dAdjustment = 0;
     double lastError = 0;
     double PIDAdjustment = 0;
-    public driveStraightPID(double motorSpeed, double direction, double distance) {
+    public DriveStraightPID(double motorSpeed, double direction, double distance) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	this.motorSpeed = motorSpeed;
@@ -47,13 +47,14 @@ public class driveStraightPID extends Command {
     	currentAngle = Robot.navx.getAngle();
     	error = direction - currentAngle;
     	pAdjustment = (direction - currentAngle) * .45 * .03;
-    	iAdjustment = kIStraight + (error * kIStraight * gainMultiplier);
+    	iAdjustment = iAdjustment + (error * kIStraight * gainMultiplier);
+    	//iAdjustment = kIStraight + (error * kIStraight * gainMultiplier);
     	dAdjustment = (error - lastError) * kDStraight * gainMultiplier;
     	lastError = error;
     	PIDAdjustment = pAdjustment + iAdjustment + dAdjustment;
       	//drive motors may be reverse 10/10 should fix
-    	Robot.drivetrain.driveL(motorSpeed);
-    	Robot.drivetrain.driveR(motorSpeed + PIDAdjustment);
+    	Robot.drivetrain.driveR(motorSpeed);
+    	Robot.drivetrain.driveL(motorSpeed + PIDAdjustment);
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -40,6 +40,16 @@ public class JoystickTankDrive extends Command {
     	} else {
     		Robot.drivetrain.driveL(0);
     	}
+    	/*if(Math.abs(OI.joyDriver.getRawAxis(3)) >= .01){
+    		Robot.drivetrain.driveR(-OI.joyDriver.getRawAxis(3));
+    	} else {
+    		Robot.drivetrain.driveR(0);
+    	}
+    	if(Math.abs(OI.joyDriver.getRawAxis(1)) >= .01){
+    		Robot.drivetrain.driveL(-OI.joyDriver.getRawAxis(1));
+    	} else {
+    		Robot.drivetrain.driveL(0);
+    	}*/
     }
 
     // Make this return true when this Command no longer needs to run execute()

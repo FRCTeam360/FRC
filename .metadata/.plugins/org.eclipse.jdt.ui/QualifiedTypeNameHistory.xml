@@ -32,14 +32,20 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.IntakeMotors"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.IntakeMotorsOut"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Encoder"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.getEncs"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CameraServer"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DigitalInput"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.RobotMap"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.resetEnc"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.DriveEncs"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.PIdNav"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.resetEnc"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.ResetEncs"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.DriveStraightPID"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.AutoBreachRamparts"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.AutoBreachRockWall"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.AutoBreachRoughTerrain"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.GetCatapultPosition"/>
 </qualifiedTypeNameHistroy>

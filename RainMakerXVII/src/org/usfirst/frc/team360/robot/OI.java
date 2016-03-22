@@ -24,9 +24,12 @@ public class OI {
     public static Joystick joyR = new Joystick(0);
     public static Joystick joyL = new Joystick(1);
     public static Joystick joyOI = new Joystick(2); 
+   // public static Joystick joyDriver = new Joystick(4); 
     //joyK is for the separate "joystick" keyboard device....
     public static Button buttonUp = new JoystickButton(joyR, 1);
     public static Button buttonDown = new JoystickButton(joyL, 1);
+  /*  public static Button buttonDriveUp = new JoystickButton(joyDriver, 8);
+    public static Button buttonDriveDown = new JoystickButton(joyDriver, 7);*/
     public static Button buttonReset = new JoystickButton(joyL, 2);
     public static Button buttonIntakeArmUp = new JoystickButton(joyOI, 4);
     public static Button buttonIntakeArmDown = new JoystickButton(joyOI, 2);
@@ -36,6 +39,8 @@ public class OI {
     public OI(){
     	buttonUp.whenPressed(new ShiftUp());
     	buttonDown.whenPressed(new ShiftDown());
+    	/*buttonDriveUp.whenPressed(new ShiftUp());
+    	buttonDriveDown.whenPressed(new ShiftDown());*/
     	buttonIntakeArmUp.whenPressed(new IntakeArmUp());
     	buttonIntakeArmDown.whenPressed(new IntakeArmDown());
     	buttonIntakeMotor.whileHeld(new IntakeMotors());

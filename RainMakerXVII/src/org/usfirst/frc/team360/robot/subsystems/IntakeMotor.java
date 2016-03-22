@@ -1,5 +1,6 @@
 package org.usfirst.frc.team360.robot.subsystems;
 
+import org.usfirst.frc.team360.robot.Robot;
 import org.usfirst.frc.team360.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.VictorSP;
@@ -13,7 +14,12 @@ public class IntakeMotor extends Subsystem {
 	
 	
 	public void runMotor(double speed){
-		IntakeMotor.set(speed);
+		if(Robot.catapult.getCatapultPosition() == false){
+			IntakeMotor.set(speed);
+		} else {
+			IntakeMotor.stopMotor();
+		}
+	
 	}
 	
     public void stop(){

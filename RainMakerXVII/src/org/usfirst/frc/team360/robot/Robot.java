@@ -24,6 +24,7 @@ import org.usfirst.frc.team360.robot.commands.CatapultDown;
 import org.usfirst.frc.team360.robot.commands.CatapultUp;
 import org.usfirst.frc.team360.robot.commands.DriveEncs;
 import org.usfirst.frc.team360.robot.commands.DriveStraightPID;
+import org.usfirst.frc.team360.robot.commands.GetCatapultPosition;
 import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
 import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
 import org.usfirst.frc.team360.robot.commands.IntakeMotors;
@@ -60,7 +61,7 @@ import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
 public class Robot extends IterativeRobot {
 
 	// ENCODERS ON COMP BOT ARE 21.16 ticks per In
-	// ENCODER ON PRACTICE BOT ARE 14.21
+	// ENCODER ON PRACTICE BOT ARE 21.12 but we will default to COMP BOT
 	public static DriveTrain drivetrain;
 	public static SuperShifter supershifter;
 	public static Pneumatics pneumatics;
@@ -91,7 +92,9 @@ public class Robot extends IterativeRobot {
 	Command rpiangle;
 	Command rpidistance;
 	Command drivestraightpid;
+	Command getcatapultposition;
 	CameraServer server;
+	
 	public static enum AutoMode1 {NONE, BREACH, SHOOT, BREACHANDSHOOT};;
 	Integer autoChoice1;
 	static AutoMode1 automode1;
@@ -111,7 +114,7 @@ public class Robot extends IterativeRobot {
 		try {
 			server = CameraServer.getInstance();
 			server.setQuality(100);
-			server.startAutomaticCapture("cam0");
+		//	server.startAutomaticCapture("cam0");
 
 			supershifter = new SuperShifter();
 			pneumatics = new Pneumatics();
@@ -138,6 +141,7 @@ public class Robot extends IterativeRobot {
 			getencs = new getEncs();
 			printrpidata = new PrintRPIData();
 			drivestraightpid = new DriveStraightPID(.4, 180, 200);
+			getcatapultposition = new GetCatapultPosition();
 			// driveencs = new DriveEncs(1850, 1);
 			rpiangle = new RPIAngle();
 			rpidistance = new RPIDistance();
@@ -198,10 +202,11 @@ public class Robot extends IterativeRobot {
 	public void autonomousInit() {
 		// schedule the autonomous command (example)
 		navx.reset();
+		pidnav = new PIdNav(135);
 		Timer.delay(.25);
 		drivetrain.resetREnc();
-		// pidnav.start();
-		//drivestraightpid.start();
+		//pidnav.start();
+		drivestraightpid.start();
 		// turnController.enable();
 		// pidnav.start();
 		// turnController.enable();
@@ -216,6 +221,8 @@ public class Robot extends IterativeRobot {
 		Scheduler.getInstance().run();
 		// rpiangle.start();
 		// navxpid.start();
+		//pidnav.start();
+		
 		printnavxangle.start();
 	}
 
@@ -259,16 +266,18 @@ public class Robot extends IterativeRobot {
 			Scheduler.getInstance().run();
 			// navxpid.start();
 			joysticktankdrive.start();
+			SmartDashboard.putNumber("left", -OI.joyL.getRawAxis(1));
+			SmartDashboard.putNumber("right", -OI.joyR.getRawAxis(1));
 			pressurize.start();
 			printnavxangle.start();
 			getencs.start();
 			rpiangle.start();
 			printrpidata.start();
+			getcatapultposition.start();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 	}
-
 	/**
 	 * This function is called periodically during test mode
 	 */

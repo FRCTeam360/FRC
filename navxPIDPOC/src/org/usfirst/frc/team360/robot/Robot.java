@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * This is a demo program showing the use of the navX MXP to implement
@@ -49,7 +50,7 @@ public class Robot extends SampleRobot implements PIDOutput {
     /* and D constants and test the mechanism.                         */
     
     static final double kP = 0.03;
-    static final double kI = 0.00;
+    static final double kI = 0.00001;
     static final double kD = 0.00;
     static final double kF = 0.00;
     
@@ -82,15 +83,17 @@ public class Robot extends SampleRobot implements PIDOutput {
             DriverStation.reportError("Error instantiating navX MXP:  " + ex.getMessage(), true);
         }
         turnController = new PIDController(kP, kI, kD, kF, ahrs, this);
-        turnController.setInputRange(-180.0f,  180.0f);
+        turnController.setInputRange(0,  360);
         turnController.setOutputRange(-1.0, 1.0);
-        turnController.setAbsoluteTolerance(kToleranceDegrees);
+        turnController.setPercentTolerance(6);
         turnController.setContinuous(true);
         
         /* Add the PID Controller to the Test-mode dashboard, allowing manual  */
         /* tuning of the Turn Controller's P, I and D coefficients.            */
         /* Typically, only the P value needs to be modified.                   */
         LiveWindow.addActuator("DriveSystem", "RotateController", turnController);
+
+      	LiveWindow.addSensor("gyro", "gryo", ahrs);
     }
 
     /**
@@ -116,13 +119,16 @@ public class Robot extends SampleRobot implements PIDOutput {
      * driving".
      */
     public void operatorControl() {
-        myRobot.setSafetyEnabled(true);
-        while (isOperatorControl() && isEnabled()) {
-        	     // stop robot
+    	LiveWindow.run();
+  	  myRobot.setSafetyEnabled(true);
+        while (isEnabled()) {
+      	 
+        	     // stop robot`
             boolean rotateToAngle = false;
             if ( stick.getRawButton(1)) {
                 ahrs.reset();
             }
+            LiveWindow.run();
             if ( stick.getRawButton(2)) {
                 turnController.setSetpoint(0.0f);
                 rotateToAngle = true;
@@ -133,8 +139,14 @@ public class Robot extends SampleRobot implements PIDOutput {
                 turnController.setSetpoint(179.9f);
                 rotateToAngle = true;
             } else if ( stick.getRawButton(5)) {
-                turnController.setSetpoint(-90.0f);
+                turnController.setSetpoint(270.0f);
                 rotateToAngle = true;
+            } else if ( stick.getRawButton(6)) {
+                turnController.setSetpoint(turnController.getSetpoint() + 10);
+                rotateToAngle = true;
+            } else {
+            	turnController.disable();
+            	rotateToAngle = false;
             }
             double currentRotationRate;
             if ( rotateToAngle ) {
@@ -149,12 +161,11 @@ public class Robot extends SampleRobot implements PIDOutput {
                 // Y axis for forward movement, and the current           
                 // calculated rotation rate (or joystick Z axis),         
                 // depending upon whether "rotate to angle" is active.    
-				myRobot.arcadeDrive(0, rotateToAngleRate);
+				myRobot.arcadeDrive(stick.getRawAxis(1), currentRotationRate);
             } catch( RuntimeException ex ) {
                 DriverStation.reportError("Error communicating with drive system:  " + ex.getMessage(), true);
             }
             Timer.delay(0.005);		// wait for a motor update time
-            
         }
     }
 
@@ -162,6 +173,54 @@ public class Robot extends SampleRobot implements PIDOutput {
      * Runs during test mode
      */
     public void test() {
+    	LiveWindow.run();
+    	  myRobot.setSafetyEnabled(true);
+          while (isEnabled()) {
+        	  LiveWindow.run();
+          	     // stop robot`
+              boolean rotateToAngle = false;
+              if ( stick.getRawButton(1)) {
+                  ahrs.reset();
+              }
+              if ( stick.getRawButton(2)) {
+                  turnController.setSetpoint(0.0f);
+                  rotateToAngle = true;
+              } else if ( stick.getRawButton(3)) {
+                  turnController.setSetpoint(90.0f);
+                  rotateToAngle = true;
+              } else if ( stick.getRawButton(4)) {
+                  turnController.setSetpoint(179.9f);
+                  rotateToAngle = true;
+              } else if ( stick.getRawButton(5)) {
+                  turnController.setSetpoint(270.0f);
+                  rotateToAngle = true;
+              } else if ( stick.getRawButton(6)) {
+                  turnController.setSetpoint(turnController.getSetpoint() + 10);
+                  rotateToAngle = true;
+              } else {
+              	turnController.disable();
+              	rotateToAngle = false;
+              }
+              double currentRotationRate;
+              if ( rotateToAngle ) {
+                  turnController.enable();
+                  currentRotationRate = rotateToAngleRate;
+              } else {
+                  turnController.disable();
+                  currentRotationRate = stick.getTwist();
+              }
+              try {
+                 // Use the joystick X axis for lateral movement,          
+                  // Y axis for forward movement, and the current           
+                  // calculated rotation rate (or joystick Z axis),         
+                  // depending upon whether "rotate to angle" is active.    
+  				myRobot.arcadeDrive(stick.getRawAxis(1), currentRotationRate);
+              } catch( RuntimeException ex ) {
+                  DriverStation.reportError("Error communicating with drive system:  " + ex.getMessage(), true);
+              }
+              Timer.delay(0.005);		// wait for a motor update time
+              
+          }
     }
 
     @Override
