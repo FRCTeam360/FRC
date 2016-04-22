@@ -67,9 +67,9 @@ public class RPIServer extends Subsystem {
 			angle += 1;
 		}
 		angle /= 2; //angle is from 0-120 and we want 0-60 so we /2
-		if(angle != 0){
+		
 			retAngle = angle;
-		}
+		
 		return retAngle;
 	}
 	

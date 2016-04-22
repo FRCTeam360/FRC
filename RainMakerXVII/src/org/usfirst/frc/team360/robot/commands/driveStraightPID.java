@@ -10,17 +10,50 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class DriveStraightPID extends Command {
 	// working vals are p = .45 i = .012 d = .011 gain = .1
-	double motorSpeed = 0;
+	/*	double motorSpeed = 0; // something else forward
+		double direction = 0;
+		double currentAngle = 0;
+		double distance = 0;
+	    double gainMultiplier = 0.15;
+	    double kPStraight = 0.45;
+	    double kIStraight = 0.012;
+	    double kDStraight = 0.011;
+	    double error = 0;
+	    double pAdjustment = 0;
+	    double iAdjustment = 0;
+	    double dAdjustment = 0;
+	    double lastError = 0;
+	    double PIDAdjustment = 0;*/
+
+	
+		/*double motorSpeed = 0;// something forward
+		double direction = 0;
+		double currentAngle = 0;
+		double distance = 0;
+	    double gainMultiplier = 0.05;
+	    double kPStraight = 0.45;
+	    double kIStraight = 0.012;
+	    double kDStraight = 0.011;
+	    double error = 0;
+	    double pAdjustment = 0;
+	    double iAdjustment = 0.512;
+	    double dAdjustment = 0;
+	    double lastError = 0;
+	    double PIDAdjustment = 0;*/
+	    // Called repeatedly when this Command is scheduled to run
+	    
+	double motorSpeed = 0; // practice bot back
 	double direction = 0;
 	double currentAngle = 0;
 	double distance = 0;
-    double gainMultiplier = 0.15;
+    double gainMultiplier = 0.4;
     double kPStraight = 0.45;
-    double kIStraight = 0.012;
-    double kDStraight = 0.011;
+    double kIStraight = 0.0015;
+    double kDStraight = 0.022;
     double error = 0;
     double pAdjustment = 0;
-    double iAdjustment = 0;
+   // double iAdjustment = 0.512;
+    double iAdjustment = -.08;
     double dAdjustment = 0;
     double lastError = 0;
     double PIDAdjustment = 0;
@@ -35,7 +68,11 @@ public class DriveStraightPID extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	dAdjustment = 0;
-    	iAdjustment = 0;
+    	if(motorSpeed > 0){
+    		//iAdjustment = 0.25;
+    	} else {
+    		
+    	}
     	pAdjustment = 0;
     	error = 0;
     	lastError = 0;
@@ -53,17 +90,19 @@ public class DriveStraightPID extends Command {
     	lastError = error;
     	PIDAdjustment = pAdjustment + iAdjustment + dAdjustment;
       	//drive motors may be reverse 10/10 should fix
-    	Robot.drivetrain.driveR(motorSpeed);
+    	Robot.drivetrain.driveR(motorSpeed - PIDAdjustment);
     	Robot.drivetrain.driveL(motorSpeed + PIDAdjustment);
+    	SmartDashboard.putNumber("IAdjustment", iAdjustment);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return Math.abs(Robot.drivetrain.getREnc()) > Math.abs(distance);
     }
 
     // Called once after isFinished returns true
     protected void end() {
+    	SmartDashboard.putNumber("i", iAdjustment);
     	Robot.drivetrain.stop();
     }
 

@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team360.robot.*;
+import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 //import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
 /**
  *
@@ -34,7 +35,7 @@ public class DriveTrain extends Subsystem {
 		encR.reset();
 	}
 	public int getREnc(){
-		return encR.get();
+		return encL.get();
 	}
 	public int getLEnc(){
 		return encL.get();
@@ -68,7 +69,7 @@ public class DriveTrain extends Subsystem {
 		  motorR2.stopMotor(); 
 	  }
     public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
+    	setDefaultCommand(new JoystickTankDrive());
     }
 }
 

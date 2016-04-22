@@ -16,9 +16,11 @@ public class AutoBreachLowBar extends CommandGroup {
         // these will run in order.
     	addSequential(new ShiftUp());
     	addSequential(new WaitCommand(.25));
-    	addSequential(new DriveEncs(200, .5));
+    	addSequential(new ResetEncs());
+    	addSequential(new DriveStraightPID(.5, 180, 200));
     	addSequential(new IntakeArmDown());
-    	addSequential( new DriveEncs(2900, .5));
+    	addSequential(new ResetEncs());
+    	addSequential(new DriveStraightPID(.5, 180, 2900));
     	addSequential(new IntakeArmUp());
         // To run multiple commands at the same time,
         // use addParallel()

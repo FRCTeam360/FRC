@@ -1,6 +1,7 @@
 package org.usfirst.frc.team360.robot.commands;
 
 import org.usfirst.frc.team360.robot.Robot;
+import org.usfirst.frc.team360.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -22,8 +23,17 @@ public class IntakeMotors extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
-    	Robot.intakemotor.runMotor(.54);
+    	if(RobotMap.dangerZone == false){
+    		if(Robot.catapult.getCatapultPosition() == false){
+    			//Robot.intakemotor.runMotor(.54);
+    			Robot.intakemotor.runMotor(.7);
+    		} else {
+    			Robot.intakemotor.stop();
+    		}
+    	} else {
+    		//Robot.intakemotor.runMotor(.54);
+    		Robot.intakemotor.runMotor(.7);
+    	}
     }
     
 

@@ -13,6 +13,7 @@ public class Shoot extends CommandGroup {
         //      addSequential(new Command2());
         // these will run in order.
     	addSequential(new CatapultUp());
+    	//addSequential(new PartialCatapultUp());
     	addSequential(new CatapultDown());
     	
         // To run multiple commands at the same time,

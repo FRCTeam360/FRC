@@ -1,6 +1,7 @@
 package org.usfirst.frc.team360.robot.commands;
 
 import org.usfirst.frc.team360.robot.Robot;
+import org.usfirst.frc.team360.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
@@ -22,7 +23,13 @@ public class IntakeArmUp extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.intakearm.open();
+    	if(RobotMap.dangerZone == false){
+    		if(Robot.catapult.getCatapultPosition() == false){
+    			Robot.intakearm.open();
+    		}
+    	} else {
+    		Robot.intakearm.open();
+    	}
     }
 
     // Called repeatedly when this Command is scheduled to run

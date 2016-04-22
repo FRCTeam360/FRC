@@ -1,5 +1,7 @@
 package org.usfirst.frc.team360.robot.commands;
-import org.usfirst.frc.team360.robot.Robot; 
+import org.usfirst.frc.team360.robot.Robot;
+import org.usfirst.frc.team360.robot.RobotMap;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -15,7 +17,13 @@ public class IntakeArmDown extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	Robot.intakearm.close();
+    	if(RobotMap.dangerZone == false){
+    		if(Robot.catapult.getCatapultPosition() == false){
+    			Robot.intakearm.close();
+    		} 
+    	} else {
+			Robot.intakearm.close();
+		}
     }
 
     // Called repeatedly when this Command is scheduled to run

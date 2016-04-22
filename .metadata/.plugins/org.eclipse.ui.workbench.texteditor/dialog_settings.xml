@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Cam" key="selection"/>
+		<item value="disa" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="cam"/>
-			<item value="LiveWindow"/>
-			<item value="try"/>
 			<item value="disa"/>
+			<item value="tele"/>
+			<item value="autoChoice1"/>
+			<item value="SmartDashboard.putData"/>
+			<item value="auto4"/>
+			<item value="auto3"/>
 			<item value="auto1"/>
-			<item value="AutoMode1"/>
-			<item value="disabled"/>
-			<item value="Integer"/>
+			<item value="auto2"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -21,7 +21,6 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.getCameraValue"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.ma"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.VictorSP"/>
-<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.OI"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.DriveTrain"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.DriveFinish"/>
@@ -35,7 +34,6 @@
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.getEncs"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CameraServer"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DigitalInput"/>
-<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.RobotMap"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.DriveEncs"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SendableChooser"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.PIdNav"/>
@@ -48,4 +46,8 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.Robot"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.commands.GetCatapultPosition"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Joystick"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.subsystems.Reverse"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.triggers.DoubleButton"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team360.robot.RobotMap"/>
 </qualifiedTypeNameHistroy>

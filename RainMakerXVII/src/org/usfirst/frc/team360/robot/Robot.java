@@ -1,63 +1,22 @@
-
 package org.usfirst.frc.team360.robot;
 
 import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.PIDController;
-import edu.wpi.first.wpilibj.PIDOutput;
-import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.command.WaitCommand;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.vision.USBCamera;
 
-import org.usfirst.frc.team360.robot.commands.AutoBreachChevalDeFrise;
-import org.usfirst.frc.team360.robot.commands.AutoBreachLowBar;
-import org.usfirst.frc.team360.robot.commands.AutoBreachMoat;
-import org.usfirst.frc.team360.robot.commands.AutoBreachRamparts;
-import org.usfirst.frc.team360.robot.commands.AutoBreachRockWall;
-import org.usfirst.frc.team360.robot.commands.AutoBreachRoughTerrain;
-import org.usfirst.frc.team360.robot.commands.AutoShootPosition1;
-import org.usfirst.frc.team360.robot.commands.CatapultDown;
-import org.usfirst.frc.team360.robot.commands.CatapultUp;
-import org.usfirst.frc.team360.robot.commands.DriveEncs;
-import org.usfirst.frc.team360.robot.commands.DriveStraightPID;
-import org.usfirst.frc.team360.robot.commands.GetCatapultPosition;
-import org.usfirst.frc.team360.robot.commands.IntakeArmDown;
-import org.usfirst.frc.team360.robot.commands.IntakeArmUp;
-import org.usfirst.frc.team360.robot.commands.IntakeMotors;
-import org.usfirst.frc.team360.robot.commands.JoystickTankDrive;
-import org.usfirst.frc.team360.robot.commands.NavXPID;
-import org.usfirst.frc.team360.robot.commands.PIdNav;
-import org.usfirst.frc.team360.robot.commands.Pressurize;
-import org.usfirst.frc.team360.robot.commands.PrintNavXAngle;
-import org.usfirst.frc.team360.robot.commands.PrintRPIData;
-import org.usfirst.frc.team360.robot.commands.RPIAngle;
-import org.usfirst.frc.team360.robot.commands.RPIDistance;
-import org.usfirst.frc.team360.robot.commands.ResetEncs;
-import org.usfirst.frc.team360.robot.commands.ShiftDown;
-import org.usfirst.frc.team360.robot.commands.ShiftUp;
-import org.usfirst.frc.team360.robot.commands.TurnToCameraAngle;
-import org.usfirst.frc.team360.robot.commands.getEncs;
-import org.usfirst.frc.team360.robot.subsystems.Catapult;
-import org.usfirst.frc.team360.robot.subsystems.DriveTrain;
-import org.usfirst.frc.team360.robot.subsystems.IntakeArms;
-import org.usfirst.frc.team360.robot.subsystems.IntakeMotor;
-import org.usfirst.frc.team360.robot.subsystems.NavX;
-import org.usfirst.frc.team360.robot.subsystems.NavXPIDSubsystem;
-import org.usfirst.frc.team360.robot.subsystems.Pneumatics;
-import org.usfirst.frc.team360.robot.subsystems.RPIServer;
-import org.usfirst.frc.team360.robot.subsystems.SuperShifter;
+import org.usfirst.frc.team360.robot.commands.*;
+import org.usfirst.frc.team360.robot.subsystems.*;
 
-/**
- * The VM is configured to automatically run this class, and to call the
- * functions corresponding to each mode, as described in the IterativeRobot
- * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the manifest file in the resource
- * directory.
- */
+import com.ni.vision.NIVision;
+import com.ni.vision.NIVision.Image;
+
 public class Robot extends IterativeRobot {
 
 	// ENCODERS ON COMP BOT ARE 21.16 ticks per In
@@ -69,53 +28,51 @@ public class Robot extends IterativeRobot {
 	public static IntakeArms intakearm;
 	public static IntakeMotor intakemotor;
 	public static NavX navx;
-	public static NavXPIDSubsystem navxpidsubsystem;
 	public static RPIServer rpiserver;
-
-	Command joysticktankdrive;
-	Command pressurize;
-	Command printrpidata;
-	Command shiftup;
-	Command shiftdown;
-	Command catapultup;
-	Command catapultdown;
-	Command intakearmup;
-	Command intakearmdown;
-	Command intakemotors;
-	Command printnavxangle;
-	Command resetencs;
-	Command getencs;
-	Command navxpid;
-	Command driveencs;
-	Command autoCommand;
-	Command pidnav;
-	Command rpiangle;
-	Command rpidistance;
-	Command drivestraightpid;
-	Command getcatapultposition;
-	CameraServer server;
+	public static Lights lights;
 	
-	public static enum AutoMode1 {NONE, BREACH, SHOOT, BREACHANDSHOOT};;
-	Integer autoChoice1;
+	String auto4Str = "auto 4";
+	String auto3Str = "auto 3";
+	String auto2Str = "auto 2";
+	
+	public static enum AutoMode1 {NONE, BREACH, SHOOT, BREACHANDSHOOT, TEST};
+	public static enum AutoMode2 {LOWBAR, MOAT, RAMPARTS, ROCKWALL, ROUGHTERRAIN};
+	public static enum AutoMode3 {POSITION1, POSITION2, POSITION3, POSITION4, POSITION5};
+	public static enum AutoMode4 {RIGHT, CENTER, LEFT};
+	
 	static AutoMode1 automode1;
+	static AutoMode2 automode2;
+	static AutoMode3 automode3;
+	static AutoMode4 automode4;
 	SendableChooser auto;
 	SendableChooser auto1;
 	SendableChooser auto2;
+	SendableChooser auto3;
+	SendableChooser auto4;
 
+	Command printnavxangle;
+	Command autoCommand;
+	Command getencs;
+	Command resetencs;
+	Command rpidistance;
+	Command rpiangle;
+	Command pressurize;
+	Command printrpidata;
+	Command getcatapultposition;
+	
+	CameraServer cam;
+	
+	public Image frame;
+	
 	public static OI oi;
-
-	/**
-	 * This func tion is run when the robot is first started up and should be
-	 * used for any initialization code.
-	 */
+	
 	public void robotInit() {
-		// instantiate the command used for the autonomous period
-		
-		try {
-			server = CameraServer.getInstance();
-			server.setQuality(100);
-		//	server.startAutomaticCapture("cam0");
 
+		try {
+			
+			RobotMap.dangerZone = false;
+			
+			lights = new Lights();
 			supershifter = new SuperShifter();
 			pneumatics = new Pneumatics();
 			drivetrain = new DriveTrain();
@@ -123,107 +80,337 @@ public class Robot extends IterativeRobot {
 			intakearm = new IntakeArms();
 			intakemotor = new IntakeMotor();
 			navx = new NavX();
-			navxpidsubsystem = new NavXPIDSubsystem();
 			rpiserver = new RPIServer();
-			pidnav = new PIdNav(90);
-			joysticktankdrive = new JoystickTankDrive();
-			pressurize = new Pressurize();
-			shiftup = new ShiftUp();
-			shiftdown = new ShiftDown();
-			catapultdown = new CatapultDown();
-			catapultup = new CatapultUp();
-			intakearmdown = new IntakeArmDown();
-			// navxpid = new NavXPID(270);
-			intakearmup = new IntakeArmUp();
-			resetencs = new ResetEncs();
-			printnavxangle = new PrintNavXAngle();
-			intakemotors = new IntakeMotors();
-			getencs = new getEncs();
-			printrpidata = new PrintRPIData();
-			drivestraightpid = new DriveStraightPID(.4, 180, 200);
+			
 			getcatapultposition = new GetCatapultPosition();
-			// driveencs = new DriveEncs(1850, 1);
+			printrpidata = new PrintRPIData();
+			pressurize = new Pressurize();
 			rpiangle = new RPIAngle();
 			rpidistance = new RPIDistance();
-			oi = new OI();
-
-			auto = new SendableChooser();
-			// auto.addDefault("drive", new DriveEncs(2862, 1));
-			// auto.addDefault("drive", new DriveEncs(4000, 1));
-			// auto.addDefault("Lowbar Cross auto", new AutoLowBarCross());
-			// auto.addDefault("Turn", new PIdNav(90));
-			// SmartDashboard.putData("auto" , auto);
+			resetencs = new ResetEncs();
+			getencs = new GetEncs();
+			printnavxangle = new PrintNavXAngle();
 			
+			oi = new OI();
+			
+			RobotMap.lights = new Relay(0);
+			
+			RobotMap.back = new USBCamera("cam0");
+			RobotMap.front = new USBCamera("cam1");
+			RobotMap.back.setFPS(15);
+			RobotMap.front.setFPS(15);
+			RobotMap.back.startCapture();
+			RobotMap.cam = RobotMap.back;
+			RobotMap.frontCam = false;
+			
+			frame = NIVision.imaqCreateImage(NIVision.ImageType.IMAGE_RGB, 0);
+			
+			autoChooserThingy();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public void autoChooserThingy(){
+		auto = new SendableChooser();
+		auto.addDefault("No Auto", automode1.NONE);
+		auto.addObject("breach low bar", new AutoBreachLowBar());
+		auto.addObject("breach moat", new AutoBreachMoat());
+		auto.addObject("breach ramparts", new AutoBreachRamparts());
+		auto.addObject("breach rock wall", new AutoBreachRockWall());
+		auto.addObject("breach rough terrain", new AutoBreachRoughTerrain());
+		auto.addObject("spy box left face", new AutoSpyBotLeft());
+		auto.addObject("Lowbar position 1 shoot center face", new AutoLowBarPosition1CenterFace());
+		auto.addObject("Lowbar position 1 shoot left face", new AutoLowBarPosition1LeftFace());
+		auto.addObject("Moat position 2 shoot center face", new AutoMoatPosition2CenterFace());
+		auto.addObject("Moat position 2 shoot left face", new AutoMoatPosition2LeftFace());
+		auto.addObject("Moat position 3 shoot center face", new AutoMoatPosition3CenterFace());
+		auto.addObject("Moat position 4 shoot center face", new AutoMoatPosition4CenterFace());
+		auto.addObject("Moat position 4 shoot right face", new AutoMoatPosition4RightFace());
+		auto.addObject("Moat position 5 shoot center face", new AutoMoatPosition5CenterFace());
+		auto.addObject("Moat position 5 shoot right face", new AutoMoatPosition5RightFace());
+		auto.addObject("Ramparts position 2 shoot center face", new AutoRampartsPosition2CenterFace());
+		auto.addObject("Ramparts position 2 shoot left face", new AutoRampartsPosition2LeftFace());
+		auto.addObject("Ramparts position 3 shoot center face", new AutoRampartsPosition3CenterFace());
+		auto.addObject("Ramparts position 4 shoot center face", new AutoRampartsPosition4CenterFace());
+		auto.addObject("Ramparts position 4 shoot right face", new AutoRampartsPosition4RightFace());
+		auto.addObject("Ramparts position 5 shoot center face", new AutoRampartsPosition5CenterFace());
+		auto.addObject("Ramparts position 5 shoot right face", new AutoRampartsPosition5RightFace());
+		auto.addObject("Rock Wall position 2 shoot center face", new AutoRockWallPosition2CenterFace());
+		auto.addObject("Rock Wall position 2 shoot left face", new AutoRockWallPosition2LeftFace());
+		auto.addObject("Rock Wall position 3 shoot center face", new AutoRockWallPosition3CenterFace());
+		auto.addObject("Rock Wall position 4 shoot center face", new AutoRockWallPosition4CenterFace());
+		auto.addObject("Rock Wall position 4 shoot right face", new AutoRockWallPosition4RightFace());
+		auto.addObject("Rock Wall position 5 shoot center face", new AutoRockWallPosition5CenterFace());
+		auto.addObject("Rock Wall position 5 shoot right face", new AutoRockWallPosition5RightFace());
+		auto.addObject("Rough Terrain position 2 shoot center face", new AutoRoughTerrainPosition2CenterFace());
+		auto.addObject("Rough Terrain position 2 shoot left face", new AutoRoughTerrainPosition2LeftFace());
+		auto.addObject("Rough Terrain position 3 shoot center face", new AutoRoughTerrainPosition3CenterFace());
+		auto.addObject("Rough Terrain position 4 shoot center face", new AutoRoughTerrainPosition4CenterFace());
+		auto.addObject("Rough Terrain position 4 shoot right face", new AutoRoughTerrainPosition4RightFace());
+		auto.addObject("Rough Terrain position 5 shoot center face", new AutoRoughTerrainPosition5CenterFace());
+		auto.addObject("Rough Terrain position 5 shoot right face", new AutoRoughTerrainPosition5RightFace());
+		SmartDashboard.putData("auto mode", auto);
+	}
+	
+	public void disabledInit() {
+		try {
+			autoChooserThingy();
+			/*auto1 = new SendableChooser();
+			auto1.addDefault("No Auto", automode1.NONE);
+			auto1.addObject("Breach Auto", automode1.BREACH);
+			auto1.addObject("Shoot Auto", automode1.SHOOT);
+			auto1.addObject("Breach and Shoot Auto", automode1.BREACHANDSHOOT);
+			auto1.addObject("Test", automode1.TEST);
+			SmartDashboard.putData("auto mode", auto1);*/
+			rpiangle.start();
+			rpidistance.start();
+			printrpidata.start();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public void disabledPeriodic() {
+		try {
+			
+			Scheduler.getInstance().run();
+			/*AutoMode1 autoChoice = (AutoMode1) auto1.getSelected();
+			auto2 = new SendableChooser();
+			auto3 = new SendableChooser();
+			auto4 = new SendableChooser();
+				switch(autoChoice){
+				default:
+				break;
+				case NONE:
+					auto2.addDefault("Literally Nothing", null);
+					auto3.addDefault("Literally Nothing", null);
+					auto4.addDefault("Literally Nothing", null);
+					SmartDashboard.putData("auto type 2", auto2);
+					SmartDashboard.putData("auto3Str", auto3);
+					SmartDashboard.putData("auto4Str", auto4);
+				break;
+				case BREACH:
+					auto2.addDefault("Literally Nothing", null);
+					auto3.addDefault("Literally Nothing", null);
+					auto4.addDefault("breach low bar", new AutoBreachLowBar());
+					auto4.addObject("breach moat", new AutoBreachMoat());
+					auto4.addObject("breach ramparts", new AutoBreachRamparts());
+					auto4.addObject("breach rock wall", new AutoBreachRockWall());
+					auto4.addObject("breach rough terrain", new AutoBreachRoughTerrain());
+					SmartDashboard.putData("auto type 2", auto2);
+					SmartDashboard.putData("auto3Str", auto3);
+					SmartDashboard.putData("auto4Str", auto4);
+				break;
+				case SHOOT:
+					auto2.addDefault("Literally Nothing", null);
+					auto3.addDefault("Literally Nothing", null);
+					auto4.addDefault("spy box left face", new AutoSpyBotLeft());
+					SmartDashboard.putData("auto type 2", auto2);
+					SmartDashboard.putData("auto3Str", auto3);
+					SmartDashboard.putData("auto4Str", auto4);
+				break;
+				case BREACHANDSHOOT:
+					auto2.addDefault("breach low bar", automode2.LOWBAR);
+					auto2.addObject("breach moat", automode2.MOAT);
+					auto2.addObject("breach ramparts", automode2.RAMPARTS);
+					auto2.addObject("breach rock wall", automode2.ROCKWALL);
+					auto2.addObject("breach rough terrain", automode2.ROUGHTERRAIN);
+					SmartDashboard.putData("auto type 2", auto2);
+					AutoMode2 autoChoice2 = (AutoMode2) auto2.getSelected();
+					switch(autoChoice2){
+						case LOWBAR:
+							autoLowBarBreachAndShoot();
+						break;
+						case MOAT:
+							autoMoatBreachAndShoot();
+						break;
+						case RAMPARTS:
+							autoRampartsBreachAndShoot();
+						break;
+						case ROCKWALL:
+							autoRockWallBreachAndShoot();
+						break;
+						case ROUGHTERRAIN:
+							autoRoughTerrainBreachAndShoot();
+						break;
+					}
+					
+					
+				break;
+				case TEST:
+					auto2.addDefault("Literally Nothing", null);
+					auto3.addDefault("Literally Nothing", null);
+					auto4.addDefault("auto", new AutoLowBarPosition1CenterFace());
+					auto4.addObject("straight", new DriveStraightPID(.95, 180, 2382));
+					SmartDashboard.putData("auto type 2", auto2);
+					SmartDashboard.putData("auto3Str", auto3);
+					SmartDashboard.putData("auto4Str", auto4);
+				break;
+			}
+			*/
+			
+		} catch (Exception e) {
+			DriverStation.reportError(e.toString(), false);
+		}
+	}
+	
+	public void autoLowBarBreachAndShoot(){
+		auto3.addDefault("position 1", automode3.POSITION1);
+		SmartDashboard.putData("auto3Str", auto3);
+		AutoMode3 autoChoice3 = (AutoMode3) auto3.getSelected();
+		switch(autoChoice3){
+			case POSITION1:
+				auto4.addDefault("center face", new AutoLowBarPosition1CenterFace());
+				auto4.addObject("left face", new AutoLowBarPosition1LeftFace());
+			break;
+		}
+		SmartDashboard.putData("auto4Str", auto4);
+	}
+	
+	public void autoMoatBreachAndShoot(){
+		auto3.addDefault("position 2", automode3.POSITION2);
+		auto3.addObject("position 3", automode3.POSITION3);
+		auto3.addObject("position 4", automode3.POSITION4);
+		auto3.addObject("position 5", automode3.POSITION5);
+		SmartDashboard.putData("auto3Str", auto3);
+		AutoMode3 autoChoice3 = (AutoMode3) auto3.getSelected();
+		switch(autoChoice3){
+			case POSITION2:
+				auto4.addDefault("center face", new AutoMoatPosition2CenterFace());
+				auto4.addObject("left face", new AutoMoatPosition2LeftFace());
+			break;
+			case POSITION3:
+				auto4.addDefault("center face", new AutoMoatPosition3CenterFace());
+				auto4.addObject("suprisingly, also center face", new AutoMoatPosition3CenterFace());
+			break;
+			case POSITION4:
+				auto4.addDefault("center face", new AutoMoatPosition4CenterFace());
+				auto4.addObject("right face", new AutoMoatPosition4RightFace());
+				break;
+			case POSITION5:
+				auto4.addDefault("center face", new AutoMoatPosition5CenterFace());
+				auto4.addObject("right face", new AutoMoatPosition5RightFace());
+			break;
+			}
+		SmartDashboard.putData("auto4Str", auto4);
+	}
+	
+	public void autoRampartsBreachAndShoot(){
+		auto3.addDefault("position 2", automode3.POSITION2);
+		auto3.addObject("position 3", automode3.POSITION3);
+		auto3.addObject("position 4", automode3.POSITION4);
+		auto3.addObject("position 5", automode3.POSITION5);
+		SmartDashboard.putData("auto3Str", auto3);
+		AutoMode3 autoChoice3 = (AutoMode3) auto3.getSelected();
+		switch(autoChoice3){
+		case POSITION2:
+			auto4.addDefault("center face", new AutoRampartsPosition2CenterFace());
+			auto4.addObject("left face", new AutoRampartsPosition2LeftFace());
+		break;
+		case POSITION3:
+			auto4.addDefault("center face", new AutoRampartsPosition3CenterFace());
+			auto4.addObject("suprisingly, also center face", new AutoRampartsPosition3CenterFace());
+		break;
+		case POSITION4:
+			auto4.addDefault("center face", new AutoRampartsPosition4CenterFace());
+			auto4.addObject("right face", new AutoRampartsPosition4RightFace());
+			break;
+		case POSITION5:
+			auto4.addDefault("center face", new AutoRampartsPosition5CenterFace());
+			auto4.addObject("right face", new AutoRampartsPosition5RightFace());
+		break;
+		}
+		SmartDashboard.putData("auto4Str", auto4);
+	}
+	
+	public void autoRockWallBreachAndShoot(){
+		auto3.addDefault("position 2", automode3.POSITION2);
+		auto3.addObject("position 3", automode3.POSITION3);
+		auto3.addObject("position 4", automode3.POSITION4);
+		auto3.addObject("position 5", automode3.POSITION5);
+		SmartDashboard.putData("auto3Str", auto3);
+		AutoMode3 autoChoice3 = (AutoMode3) auto3.getSelected();
+		switch(autoChoice3){
+		case POSITION2:
+			auto4.addDefault("center face", new AutoRockWallPosition2CenterFace());
+			auto4.addObject("left face", new AutoRockWallPosition2LeftFace());
+		break;
+		case POSITION3:
+			auto4.addDefault("center face", new AutoRockWallPosition3CenterFace());
+			auto4.addObject("suprisingly, also center face", new AutoRockWallPosition3CenterFace());
+		break;
+		case POSITION4:
+			auto4.addDefault("center face", new AutoRockWallPosition4CenterFace());
+			auto4.addObject("right face", new AutoRockWallPosition4RightFace());
+			break;
+		case POSITION5:
+			auto4.addDefault("center face", new AutoRockWallPosition5CenterFace());
+			auto4.addObject("right face", new AutoRockWallPosition5RightFace());
+		break;
+		}
+		SmartDashboard.putData("auto4Str", auto4);
+	}
+	
+	public void autoRoughTerrainBreachAndShoot(){
+		auto3.addDefault("position 2", automode3.POSITION2);
+		auto3.addObject("position 3", automode3.POSITION3);
+		auto3.addObject("position 4", automode3.POSITION4);
+		auto3.addObject("position 5", automode3.POSITION5);
+		SmartDashboard.putData("auto3Str", auto3);
+		AutoMode3 autoChoice3 = (AutoMode3) auto3.getSelected();
+		switch(autoChoice3){
+		case POSITION2:
+			auto4.addDefault("center face", new AutoRoughTerrainPosition2CenterFace());
+			auto4.addDefault("left face", new AutoRoughTerrainPosition2LeftFace());
+		break;
+		case POSITION3:
+			auto4.addDefault("center face", new AutoRoughTerrainPosition3CenterFace());
+			auto4.addObject("suprisingly, also center face", new AutoRoughTerrainPosition3CenterFace());
+		break;
+		case POSITION4:
+			auto4.addDefault("center face", new AutoRoughTerrainPosition4CenterFace());
+			auto4.addDefault("right face", new AutoRoughTerrainPosition4RightFace());
+			break;
+		case POSITION5:
+			auto4.addDefault("center face", new AutoRoughTerrainPosition5CenterFace());
+			auto4.addDefault("right face", new AutoRoughTerrainPosition5RightFace());
+		break;
+		}
+		SmartDashboard.putData("auto4Str", auto4);
+	}
+	
+	public void autonomousInit() {
+		try{
+			resetencs.start();
+			navx.reset();
+			rpiangle.start();
+			getencs.start();
+			if(auto.getSelected() != null){/* && autoCommand instanceof Command){*/// might work, 50-50
+				autoCommand = (Command)auto.getSelected();
+			}
+			//autoCommand = new DriveStraightPID(.95, 180, 4000);
+			
+			//autoCommand = new AutoDeadReconningreachLowBar();
+			//autoCommand = new AutoLowBarPosition1LeftFace();
+			//autoCommand = new AutoRampartsPosition2CenterFace();
+			//autoCommand = new AutoChevalPosition4CenterFace();
+			if(autoCommand != null){
+				autoCommand.start();
+			}
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 	}
 
-	public void disabledPeriodic() {
-		Scheduler.getInstance().run();
-		//if (autoChoice != null) {
-			// autoCommand.start();
-		//	SmartDashboard.putNumber("auto choice", autoChoice);
-		AutoMode1 autoChoice = (AutoMode1) auto1.getSelected();
-			switch(autoChoice){
-			default:
-				break;
-			case NONE:
-				auto2 = new SendableChooser();
-				auto2.addDefault("Literally Nothing", null);
-				SmartDashboard.putData("auto type", auto2);
-				break;
-			case BREACH:
-				auto2 = new SendableChooser();
-				auto2.addDefault("breach low bar", new AutoBreachLowBar());
-				auto2.addObject("breach cheval de frise", new AutoBreachChevalDeFrise());
-				auto2.addObject("breach moat", new AutoBreachMoat());
-				auto2.addObject("breach ramparts", new AutoBreachRamparts());
-				auto2.addObject("breach rock wall", new AutoBreachRockWall());
-				auto2.addObject("breach rough terrain", new AutoBreachRoughTerrain());
-				SmartDashboard.putData("auto type", auto2);
-				break;
-			case SHOOT:
-				auto2 = new SendableChooser();
-				auto2.addDefault("shoot from spy box", new AutoBreachLowBar());
-				SmartDashboard.putData("auto type", auto2);
-				break;
-			case BREACHANDSHOOT:
-				
-				break;
-				
-			}
-	//	}
-	}
-
-	double setpoint = 0;
-	double error = 0;
-
-	public void autonomousInit() {
-		// schedule the autonomous command (example)
-		navx.reset();
-		pidnav = new PIdNav(135);
-		Timer.delay(.25);
-		drivetrain.resetREnc();
-		//pidnav.start();
-		drivestraightpid.start();
-		// turnController.enable();
-		// pidnav.start();
-		// turnController.enable();
-		// navxpid.start();
-		getencs.start();
-	}
-
-	/**
-	 * This function is called periodically during autonomous
-	 */
 	public void autonomousPeriodic() {
-		Scheduler.getInstance().run();
-		// rpiangle.start();
-		// navxpid.start();
-		//pidnav.start();
-		
-		printnavxangle.start();
+		try{
+			Scheduler.getInstance().run();
+			RobotMap.cam.getImage(frame);
+			CameraServer.getInstance().setImage(frame);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 
 	public void teleopInit() {
@@ -231,57 +418,51 @@ public class Robot extends IterativeRobot {
 		// teleop starts running. If you want the autonomous to
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
-		if (autoCommand != null) {
-			// autoCommand.cancel();
+		try{
+			if (autoCommand != null) {
+				autoCommand.cancel();
+			}
+			RobotMap.dangerZone = false;
+			resetencs.start();
+			navx.reset();
+			rpiangle.start();
+			rpidistance.start();
+			printrpidata.start();
+			getencs.start();
+		} catch (Exception e) {
+			System.out.println(e);
 		}
-		resetencs.start();
-		navx.reset();
-
-		rpiangle.start();
-		rpidistance.start();
-		printrpidata.start();
-		getencs.start();
 	}
 
-	/**
-	 * This function is called when the disabled button is hit. You can use it
-	 * to reset subsystems before shutting down.
-	 */
-	public void disabledInit() {
-		autoChoice1 = 0;
-		auto1 = new SendableChooser();
-		auto1.addDefault("No Auto", automode1.NONE);
-		auto1.addObject("Breach Auto", automode1.BREACH);
-		auto1.addObject("Shoot Auto", automode1.SHOOT);
-		auto1.addObject("Breach and Shoot Auto", automode1.BREACHANDSHOOT);
-		SmartDashboard.putData("auto mode", auto1);
-	}
-
-	/**
-	 * This function is called periodically during operator control
-	 */
 	public void teleopPeriodic() {
-
 		try {
 			Scheduler.getInstance().run();
-			// navxpid.start();
-			joysticktankdrive.start();
-			SmartDashboard.putNumber("left", -OI.joyL.getRawAxis(1));
-			SmartDashboard.putNumber("right", -OI.joyR.getRawAxis(1));
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		try{
 			pressurize.start();
 			printnavxangle.start();
 			getencs.start();
-			rpiangle.start();
 			printrpidata.start();
 			getcatapultposition.start();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+		try{
+			RobotMap.cam.getImage(frame);
+			CameraServer.getInstance().setQuality(100);
+			CameraServer.getInstance().setImage(frame);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
-	/**
-	 * This function is called periodically during test mode
-	 */
+
 	public void testPeriodic() {
-		LiveWindow.run();
+		try{
+			LiveWindow.run();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 }

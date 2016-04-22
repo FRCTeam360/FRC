@@ -24,6 +24,7 @@ public class PrintRPIData extends Command {
     protected void execute() {
     	SmartDashboard.putNumber("distance: ", Robot.rpiserver.getDistance());
       	SmartDashboard.putNumber("angle direct: ", Robot.rpiserver.getAngle());
+      	SmartDashboard.putNumber("turn angle: ", RobotMap.angle);
     }
 
     // Make this return true when this Command no longer needs to run execute()

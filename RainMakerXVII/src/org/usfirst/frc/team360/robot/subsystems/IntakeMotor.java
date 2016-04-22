@@ -14,12 +14,7 @@ public class IntakeMotor extends Subsystem {
 	
 	
 	public void runMotor(double speed){
-		if(Robot.catapult.getCatapultPosition() == false){
 			IntakeMotor.set(speed);
-		} else {
-			IntakeMotor.stopMotor();
-		}
-	
 	}
 	
     public void stop(){

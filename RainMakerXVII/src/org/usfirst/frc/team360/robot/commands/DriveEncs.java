@@ -23,12 +23,12 @@ public class DriveEncs extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute(){
-    	Robot.drivetrain.drive(mySpeed, mySpeed);
+    	Robot.drivetrain.drive(-mySpeed, -mySpeed);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return Robot.drivetrain.getREnc() > myDistance;
+        return Math.abs(Robot.drivetrain.getREnc()) > Math.abs(myDistance);
     }
 
     // Called once after isFinished returns true

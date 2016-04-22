@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.SPI.Port;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.vision.USBCamera;
@@ -28,7 +29,14 @@ public class RobotMap {
     // public static int rangefinderModule = 1;
 	
 	public static double angle = 0;
+	//public static double CameraFudgeFactor = 2; // comp bot
+
+	public static double CameraFudgeFactor = 7;//practice bot
 	public static double distance = 0;
+	
+	public static boolean dangerZone = false;
+	
+	public static Relay lights;
 	
 	public static VictorSP motorR1 = new VictorSP(0);
 	public static VictorSP motorR2 = new VictorSP(1);
@@ -39,13 +47,18 @@ public class RobotMap {
 
 	//supershifter pneumatics ang
 	
-	public static DigitalInput angle1 = new DigitalInput(6);//1
-	public static DigitalInput angle2 = new DigitalInput(7);//2
-	public static DigitalInput angle3 = new DigitalInput(8);//4
-	public static DigitalInput angle4 = new DigitalInput(9);//8
-	public static DigitalInput angle5 = new DigitalInput(23);//16
-	public static DigitalInput angle6 = new DigitalInput(22);//32
-	public static DigitalInput angle7 = new DigitalInput(21);//64
+	public static USBCamera front;
+	public static USBCamera back;
+	public static USBCamera cam;
+	public static boolean frontCam;
+	
+	public static DigitalInput angle1 = new DigitalInput(6);//.5
+	public static DigitalInput angle2 = new DigitalInput(7);//1
+	public static DigitalInput angle3 = new DigitalInput(8);//2
+	public static DigitalInput angle4 = new DigitalInput(9);//4
+	public static DigitalInput angle5 = new DigitalInput(23);//8
+	public static DigitalInput angle6 = new DigitalInput(22);//16
+	public static DigitalInput angle7 = new DigitalInput(21);//32
 	
 	public static DigitalInput distance1 = new DigitalInput(20);//1
 	public static DigitalInput distance2 = new DigitalInput(19);//2

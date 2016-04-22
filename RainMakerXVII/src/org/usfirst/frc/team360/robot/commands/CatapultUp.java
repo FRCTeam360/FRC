@@ -30,22 +30,31 @@ public class CatapultUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	if(RobotMap.intake.get() == true){
-    		Robot.intakearm.close();
-    	}else{
+    	if(RobotMap.dangerZone == false){
+    		if(RobotMap.intake.get() == true){
+    			Robot.intakearm.close();
+    		}else{
 
-    		if(i == 0){
-    			Timer.delay(.1);
-    			time.start();
-    			i++;
+    			if(i == 0){
+    				Timer.delay(.1);
+    				time.start();
+    				i++;
+    			}
+    			Robot.catapult.close();
     		}
-    		Robot.catapult.close();
+    	} else {
+    		if(i == 0){
+				Timer.delay(.1);
+				time.start();
+				i++;
+			}
+			Robot.catapult.close();
     	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return time.get() > .6; 
+        return time.get() > .4; 
         
     }
 

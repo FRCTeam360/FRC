@@ -1,5 +1,6 @@
 package org.usfirst.frc.team360.robot.subsystems;
 import org.usfirst.frc.team360.robot.RobotMap;
+import org.usfirst.frc.team360.robot.commands.CatapultDown;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -24,6 +25,6 @@ public class Catapult extends Subsystem {
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
+        setDefaultCommand(new CatapultDown());
     }
 }
