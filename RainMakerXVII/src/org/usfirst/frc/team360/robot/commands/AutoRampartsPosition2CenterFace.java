@@ -22,7 +22,7 @@ public class AutoRampartsPosition2CenterFace extends CommandGroup {
     	addSequential(new ShiftDown());
     	addSequential(new WaitCommand(.25));
     	addSequential(new ResetEncs());
-    	addSequential(new DriveStraightPID(.95, 180, 2482));
+    	addSequential(new DriveStraightPID(.95, 180, 2782));
     	addSequential(new ResetEncs());
     	addSequential(new DriveStraightPID(.4, 180, 428));
     	addSequential(new ShiftUp());

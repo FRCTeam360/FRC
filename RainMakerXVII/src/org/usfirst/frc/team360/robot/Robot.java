@@ -105,7 +105,7 @@ public class Robot extends IterativeRobot {
 			
 			frame = NIVision.imaqCreateImage(NIVision.ImageType.IMAGE_RGB, 0);
 			
-			autoChooserThingy();
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -114,12 +114,18 @@ public class Robot extends IterativeRobot {
 	public void autoChooserThingy(){
 		auto = new SendableChooser();
 		auto.addDefault("No Auto", automode1.NONE);
+		auto.addObject("breach defense B and D dead reckoned", new AutoDeadReconningBreachBAndDDefenses());
+		auto.addObject("breach low bar dead reckoned", new AutoDeadReconningBreachLowBar());
 		auto.addObject("breach low bar", new AutoBreachLowBar());
+		auto.addObject("breach cheval", new AutoBreachCheval());
 		auto.addObject("breach moat", new AutoBreachMoat());
 		auto.addObject("breach ramparts", new AutoBreachRamparts());
 		auto.addObject("breach rock wall", new AutoBreachRockWall());
 		auto.addObject("breach rough terrain", new AutoBreachRoughTerrain());
 		auto.addObject("spy box left face", new AutoSpyBotLeft());
+		auto.addObject("Cheval position 2 shoot center face", new AutoChevalPosition2CenterFace());
+		auto.addObject("Cheval position 4 shoot center face", new AutoChevalPosition4CenterFace());
+		auto.addObject("Cheval position 5 shoot center face", new AutoChevalPosition5CenterFace());
 		auto.addObject("Lowbar position 1 shoot center face", new AutoLowBarPosition1CenterFace());
 		auto.addObject("Lowbar position 1 shoot left face", new AutoLowBarPosition1LeftFace());
 		auto.addObject("Moat position 2 shoot center face", new AutoMoatPosition2CenterFace());
@@ -150,12 +156,16 @@ public class Robot extends IterativeRobot {
 		auto.addObject("Rough Terrain position 4 shoot right face", new AutoRoughTerrainPosition4RightFace());
 		auto.addObject("Rough Terrain position 5 shoot center face", new AutoRoughTerrainPosition5CenterFace());
 		auto.addObject("Rough Terrain position 5 shoot right face", new AutoRoughTerrainPosition5RightFace());
+		auto.addObject("forward", new DriveStraightPID(.85, 180, 4000));
+		auto.addObject("back", new DriveStraightPID(-.85, 180, 4000));
+
+		auto.addObject("turn", 
+		    	(new PIdNav2(20)));
 		SmartDashboard.putData("auto mode", auto);
 	}
 	
 	public void disabledInit() {
 		try {
-			autoChooserThingy();
 			/*auto1 = new SendableChooser();
 			auto1.addDefault("No Auto", automode1.NONE);
 			auto1.addObject("Breach Auto", automode1.BREACH);
@@ -166,6 +176,8 @@ public class Robot extends IterativeRobot {
 			rpiangle.start();
 			rpidistance.start();
 			printrpidata.start();
+			navx.reset();
+			autoChooserThingy();
 		} catch (Exception e) {
 			System.out.println(e);
 		}

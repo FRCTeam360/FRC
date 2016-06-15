@@ -9,20 +9,20 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class AutoBreachBangBang extends Command {
-	Timer time; 
-	double tirme = 0;
-    public AutoBreachBangBang(double tirme) {
+	Timer timer; 
+	double time = 0;
+    public AutoBreachBangBang(double time1) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	this.tirme = tirme;
+    	time = time1;
     	requires(Robot.drivetrain);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	time = new Timer();
-    	time.reset();
-    	time.start();
+    	timer = new Timer();
+    	timer.reset();
+    	timer.start();
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -32,7 +32,7 @@ public class AutoBreachBangBang extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return time.get() > tirme;
+        return timer.get() > time;
     }
 
     // Called once after isFinished returns true

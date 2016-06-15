@@ -26,13 +26,13 @@ public class IntakeMotors extends Command {
     	if(RobotMap.dangerZone == false){
     		if(Robot.catapult.getCatapultPosition() == false){
     			//Robot.intakemotor.runMotor(.54);
-    			Robot.intakemotor.runMotor(.7);
+    			Robot.intakemotor.runMotor(.75);
     		} else {
     			Robot.intakemotor.stop();
     		}
     	} else {
     		//Robot.intakemotor.runMotor(.54);
-    		Robot.intakemotor.runMotor(.7);
+    		Robot.intakemotor.runMotor(.75);
     	}
     }
     

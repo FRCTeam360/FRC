@@ -29,9 +29,9 @@ public class RobotMap {
     // public static int rangefinderModule = 1;
 	
 	public static double angle = 0;
-	//public static double CameraFudgeFactor = 2; // comp bot
+	public static double CameraFudgeFactor = 1.5; // comp bot
 
-	public static double CameraFudgeFactor = 7;//practice bot
+	//public static double CameraFudgeFactor = 7;//practice bot
 	public static double distance = 0;
 	
 	public static boolean dangerZone = false;

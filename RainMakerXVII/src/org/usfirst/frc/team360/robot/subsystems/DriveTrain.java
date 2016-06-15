@@ -35,10 +35,10 @@ public class DriveTrain extends Subsystem {
 		encR.reset();
 	}
 	public int getREnc(){
-		return encL.get();
+		return encR.get();
 	}
 	public int getLEnc(){
-		return encL.get();
+		return encR.get();
 	}
 	public void drive(double RMotor, double LMotor) {
 		  motorR1.set(RMotor);

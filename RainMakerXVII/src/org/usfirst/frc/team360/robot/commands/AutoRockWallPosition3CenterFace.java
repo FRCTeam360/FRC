@@ -22,7 +22,7 @@ public class AutoRockWallPosition3CenterFace extends CommandGroup {
     	addSequential(new ShiftDown());
     	addSequential(new WaitCommand(.25));
     	addSequential(new ResetEncs());
-    	addSequential(new DriveStraightPID(.8, 180, 2482));
+    	addSequential(new DriveStraightPID(.8, 180, 2782));
     	addSequential(new ResetEncs());
     	addSequential(new DriveStraightPID(.4, 180, 428));
     	addSequential(new ShiftUp());

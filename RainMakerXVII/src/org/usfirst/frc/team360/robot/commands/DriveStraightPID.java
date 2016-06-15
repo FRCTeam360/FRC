@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class DriveStraightPID extends Command {
 	// working vals are p = .45 i = .012 d = .011 gain = .1
-	/*	double motorSpeed = 0; // something else forward
+		double motorSpeed = 0; // practice bot forward
 		double direction = 0;
 		double currentAngle = 0;
 		double distance = 0;
@@ -23,10 +23,43 @@ public class DriveStraightPID extends Command {
 	    double iAdjustment = 0;
 	    double dAdjustment = 0;
 	    double lastError = 0;
-	    double PIDAdjustment = 0;*/
-
-	
-		/*double motorSpeed = 0;// something forward
+	    double PIDAdjustment = 0;
+/*
+	    public void practiceBotForward(){
+	    	 motorSpeed = 0; // practice bot forward
+			 direction = 0;
+			 currentAngle = 0;
+			 distance = 0;
+		     gainMultiplier = 0.15;
+		     kPStraight = 0.45;
+		     kIStraight = 0.012;
+		     kDStraight = 0.011;
+		     error = 0;
+		     pAdjustment = 0;
+		     iAdjustment = 0;
+		     dAdjustment = 0;
+		     lastError = 0;
+		     PIDAdjustment = 0;
+	    }
+	    
+	    public void practiceBotBack(){
+	    	 motorSpeed = 0; // practice bot back
+	    	 direction = 0;
+	    	 currentAngle = 0;
+	    	 distance = 0;
+	         gainMultiplier = 0.4;
+	         kPStraight = 0.45;
+	         kIStraight = 0.0015;
+	         kDStraight = 0.022;
+	         error = 0;
+	         pAdjustment = 0;
+	         iAdjustment = -.08;
+	         dAdjustment = 0;
+	         lastError = 0;
+	         PIDAdjustment = 0;
+	    }*/
+	    
+		/*double motorSpeed = 0;// COMP forward
 		double direction = 0;
 		double currentAngle = 0;
 		double distance = 0;
@@ -42,21 +75,7 @@ public class DriveStraightPID extends Command {
 	    double PIDAdjustment = 0;*/
 	    // Called repeatedly when this Command is scheduled to run
 	    
-	double motorSpeed = 0; // practice bot back
-	double direction = 0;
-	double currentAngle = 0;
-	double distance = 0;
-    double gainMultiplier = 0.4;
-    double kPStraight = 0.45;
-    double kIStraight = 0.0015;
-    double kDStraight = 0.022;
-    double error = 0;
-    double pAdjustment = 0;
-   // double iAdjustment = 0.512;
-    double iAdjustment = -.08;
-    double dAdjustment = 0;
-    double lastError = 0;
-    double PIDAdjustment = 0;
+	
     public DriveStraightPID(double motorSpeed, double direction, double distance) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -70,8 +89,9 @@ public class DriveStraightPID extends Command {
     	dAdjustment = 0;
     	if(motorSpeed > 0){
     		//iAdjustment = 0.25;
+    	//	practiceBotForward();
     	} else {
-    		
+    	//	practiceBotBack();
     	}
     	pAdjustment = 0;
     	error = 0;

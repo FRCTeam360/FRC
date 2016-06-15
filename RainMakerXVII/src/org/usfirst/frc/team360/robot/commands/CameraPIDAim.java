@@ -16,7 +16,7 @@ public class CameraPIDAim extends Command {
 	double direction = 0;
 	double currentAngle = 0;
 	double distance = 0;
-    double gainMultiplier = 0.1;
+    double gainMultiplier = 0.15;
     double kPStraight = 0.5;
     double kIStraight = 0.03;
     double kDStraight = 0.5;
@@ -111,6 +111,7 @@ public class CameraPIDAim extends Command {
   		} else {
   			n = 0;
   		}
+  		SmartDashboard.putNumber("speed: ", speed);
     }
 
     // Make this return true when this Command no longer needs to run execute()

@@ -12,11 +12,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class PIdNav2 extends Command {
 	
-	double motorSpeed = 0.8;
+	double motorSpeed = 0.6;
 	double direction = 0;
 	double currentAngle = 0;
 	double distance = 0;
-    double gainMultiplier = 0.1;
+    double gainMultiplier = 0.15;
     double kPStraight = 0.5;
     double kIStraight = 0.03;
     double kDStraight = 0.5;
@@ -31,6 +31,7 @@ public class PIdNav2 extends Command {
     int n = 0;
     Timer time;
     int i = 0;
+    int x;
     boolean pid = false;
     public PIdNav2(double direction) { //direction is called as 270
         // Use requires() here to declare subsystem dependencies
@@ -46,6 +47,7 @@ public class PIdNav2 extends Command {
     	iAdjustment = 0;
     	SmartDashboard.putString("done", "going");
     	n = 0;
+    	x = 0;
     	i = 0;
     	pAdjustment = 0;
     	error = 0;
@@ -63,14 +65,20 @@ public class PIdNav2 extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	
     	SmartDashboard.putNumber("angle: ", Robot.navx.getAngle());
       	SmartDashboard.putNumber("angle target: ", direction);
     	currentAngle = Robot.navx.getAngle();
     	error = direction - currentAngle;
+    	if(error > -3 && error < 3 && x == 0){
+    		iAdjustment = 0;
+    		x = 1;
+    	}
     	pAdjustment = error * kPStraight * gainMultiplier;
     	iAdjustment = iAdjustment + (error * kIStraight * gainMultiplier);
     	dAdjustment = (error - lastError) * kDStraight * gainMultiplier;
     	lastError = error;
+    	
     	SmartDashboard.putNumber("error: ", error);
     	SmartDashboard.putNumber("prop:  ", pAdjustment);
       	SmartDashboard.putNumber("inte: ", iAdjustment);

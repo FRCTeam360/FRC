@@ -16,7 +16,7 @@ public class AutoChevalPosition4RightFace extends CommandGroup {
     	addSequential(new ShiftUp());
     	addSequential(new WaitCommand(.25));
     	addSequential(new ResetEncs());
-    	addSequential(new DriveStraightPID(-.85, 180, 837));
+    	addSequential(new DriveStraightPID(-.85, 180, 660));
     	addSequential(new IntakeArmDown());
     	addSequential(new ResetEncs());
     	addSequential(new WaitCommand(1));

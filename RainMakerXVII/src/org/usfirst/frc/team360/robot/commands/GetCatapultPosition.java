@@ -1,6 +1,7 @@
 package org.usfirst.frc.team360.robot.commands;
 
 import org.usfirst.frc.team360.robot.Robot;
+import org.usfirst.frc.team360.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -18,6 +19,7 @@ public class GetCatapultPosition extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
     	SmartDashboard.putBoolean("catapultposition", Robot.catapult.getCatapultPosition());
+    	SmartDashboard.putBoolean("intakeposition", RobotMap.intake.get());
     }
 
     // Called repeatedly when this Command is scheduled to run
